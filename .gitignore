@@ -1,1 +1,5 @@
 final_dataset.parquet
+.venv/
+__pycache__/
+*.pt
+collab-sol/

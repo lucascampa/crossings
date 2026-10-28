@@ -1,0 +1,61 @@
+{
+  "model": "logistic_regression",
+  "holdout_year": 2024,
+  "features": [
+    "trainsperweek",
+    "maximumtimetablespeed",
+    "numberofmaintracks",
+    "trafficlane",
+    "highwayspeedlimit",
+    "annualaveragedailytrafficcount",
+    "estimatedpercenttrucks",
+    "pr_total_mm_5y_mean",
+    "wet_days_5y_mean",
+    "freeze_thaw_days_5y_mean",
+    "freezing_days_5y_mean",
+    "hot_days_5y_mean",
+    "tmin_mean_c_5y_mean",
+    "tmax_mean_c_5y_mean",
+    "wind_mean_ms_5y_mean",
+    "high_wind_days_5y_mean",
+    "statecode",
+    "crossingpurposecode",
+    "developmenttypecode",
+    "tracksignaled",
+    "signsorsignals",
+    "highwaypaved",
+    "roadatcrossingcode",
+    "crossingonstatehighwaysystem"
+  ],
+  "numeric_features": [
+    "trainsperweek",
+    "maximumtimetablespeed",
+    "numberofmaintracks",
+    "trafficlane",
+    "highwayspeedlimit",
+    "annualaveragedailytrafficcount",
+    "estimatedpercenttrucks",
+    "pr_total_mm_5y_mean",
+    "wet_days_5y_mean",
+    "freeze_thaw_days_5y_mean",
+    "freezing_days_5y_mean",
+    "hot_days_5y_mean",
+    "tmin_mean_c_5y_mean",
+    "tmax_mean_c_5y_mean",
+    "wind_mean_ms_5y_mean",
+    "high_wind_days_5y_mean"
+  ],
+  "categorical_features": [
+    "statecode",
+    "crossingpurposecode",
+    "developmenttypecode",
+    "tracksignaled",
+    "signsorsignals",
+    "highwaypaved",
+    "roadatcrossingcode",
+    "crossingonstatehighwaysystem"
+  ],
+  "best_params": {
+    "C": 0.0745934328572655
+  }
+}

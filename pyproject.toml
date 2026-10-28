@@ -1,0 +1,19 @@
+[project]
+name = "crossings"
+version = "0.1.0"
+description = "FT-Transformer for grade crossing incident risk"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "collab-sol",
+    "pyarrow",
+    "torch",
+    "rtdl-revisiting-models",
+    "ipykernel",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+collab-sol = { path = "collab-sol", editable = true }
