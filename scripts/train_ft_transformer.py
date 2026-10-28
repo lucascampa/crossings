@@ -76,6 +76,7 @@ import torch
 
 from collab_sol import generate_risk_report, make_expanding_temporal_split, tune_model
 from ft_transformer import (
+    EXCLUDED_FEATURES,
     FTTransformerClassifier,
     make_preprocessor,
     save_calibration_report,
@@ -247,6 +248,7 @@ run_metadata = {
     "feature_count": len(FEATURE_COLUMNS),
     "numeric_features": len(NUMERIC_FEATURES),
     "categorical_features": len(CATEGORICAL_FEATURES),
+    "excluded_features": EXCLUDED_FEATURES,
     "best_params": study.best_params,
     "mean_validation_average_precision": study.best_value,
     "validation_fold_scores": study.best_trial.user_attrs.get("fold_scores"),

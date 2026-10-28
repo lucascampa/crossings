@@ -22,6 +22,35 @@ uv sync --system-certs   # --system-certs only if your network intercepts TLS
 
 One row per crossing per year (`crossingid` x `asof_year`, 2019-2024). The target is `incident`. Never use `severity_target`, `incident_count`, `total_killed`, `total_injured` or `severity_ordinal` as features.
 
+## Features not used
+
+The dataset has 233 columns. The FT-Transformer trains on 224 of them. The 9 it doesn't use are below. The code is the source of truth (`EXCLUDED_FEATURES` in `ft_transformer/preprocess.py`), and every run also records the list in `run.json`. **If you add or remove an exclusion, update that dict and this table.**
+
+**Dropped from the predictors (on the team's advice):**
+
+| Column | Why it was dropped |
+|--------|--------------------|
+| `latitude` | Near-unique per crossing, so it acts like an ID and invites memorization. Many crossings also share identical placeholder coordinates. |
+| `longitude` | Same as `latitude`. |
+| `latlongsourcecode` | The Form 6180.71 (FRA crossing inventory) field recording how the coordinates were obtained: 1 = Actual (surveyed, e.g. GPS), 2 = Estimated (e.g. read off a map). It says how far to trust the coordinates, not anything about crash risk. It is null in ~23% of sample rows, and those rows have ~40x lower incident rate (0.03% vs 1.0-1.4%). That looks like a record-quality or record-age proxy, not physical risk. The text label `latlongsource` is not in the dataset. |
+| `B01001_E001` | ACS total population from the sex-by-age table. Identical to `B01003_E001` in the 50k sample; dropped as a duplicate on the team's advice. |
+| `B03002_E001` | ACS total population from the race/Hispanic table. Same as above. |
+
+**Never predictors, by design:**
+
+| Column | Role |
+|--------|------|
+| `incident` | Target. |
+| `severity_target` | Leaks the label (`none` exactly when `incident` = 0). |
+| `crossingid` | ID; used only to group and report rows. |
+| `asof_year` | Used for the temporal split, not as a feature. |
+
+**For comparisons:** `collab-sol/scripts/train_mlp.py` uses all 229 non-ID, non-target columns, including the three above. The FT-Transformer's feature set therefore differs from the MLP's by those columns unless the other models drop them too.
+
+**Open questions (not yet decided):**
+- `B01001_E001` and `B03002_E001` were dropped as duplicates of `B01003_E001`, which is identical to them in the 50k sample. Confirm they are also identical in the full file.
+- Whether the as-of join can pick up Form 71 revisions made after an incident in the same year (inventories are updated after accidents). If it can, other record-completeness fields may leak the same way as `latlongsourcecode`.
+
 ## Team utilities
 
 No inheritance is required. Define one function for the parameters Optuna searches and one that builds the model; the model only needs `fit(X, y)` and `predict_proba(X)` returning two columns.
