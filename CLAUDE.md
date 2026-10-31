@@ -3,7 +3,7 @@
 ## What this is
 Practicum project (Collab Solutions externship): predict which US highway-rail grade crossings will have an incident in a given year. My assignment is the **FT-Transformer** (Gorishniy et al. 2021). The rest of the team has already run the other models (logistic regression, MLP, etc.), so I only run the FT-Transformer, and only on the sample. **My real deliverable is scaffolding**: code, a run script and instructions so Christian Tapp can make the official run on the full dataset (980k rows) on his own GPU machine by pressing one button. It must produce outputs in the same format as the team's other models so the results compare fairly. Everything here is tested on the 50k sample, on CPU, with tiny settings; the sample numbers are smoke tests, not results.
 
-**Status:** the scaffolding is built (`ft_transformer/`, `scripts/train_ft_transformer.py`) and runs end to end with `--smoke` on CPU. Not yet done: a run on a GPU (the CUDA / `--require-cuda` path is untested), a hand-off note for Christian, and unit tests for the preprocessing and model wrapper. Don't claim model performance from sample runs.
+**Status:** the scaffolding is built (`ft_transformer/`, `scripts/train_ft_transformer.py`) and runs end to end with `--smoke` on CPU, and prints one progress line per epoch. The hand-off note for Christian is `HANDOFF.md`. The full search space is too slow to run on this CPU even on the sample (a 2026-10-31 attempt didn't finish one fold in 35 min), so smoke runs are the only local end-to-end check. Not yet done: a run on a GPU (the CUDA / `--require-cuda` path is untested) and unit tests for the preprocessing and model wrapper. Don't claim model performance from sample runs.
 
 Background: a prior team (Patel & Buddenbaum, May 2026) built FRA grade-crossing risk models with ACS census features. FRA's current tool (GXAPS) plateaus around 70% accuracy. The data is a rare-event problem, and stakeholders want risk tiers / rankings rather than raw scores.
 
@@ -15,7 +15,7 @@ I work locally (VS Code + Claude Code), not in Colab. Setup: `uv sync --system-c
 - `ft_transformer/` (`model.py`, `preprocess.py`, `metrics.py`) and `scripts/train_ft_transformer.py`: the scaffolding for Christian's run. The script mirrors `collab-sol/scripts/train_mlp.py` and its output files; see the README section "Running the FT-Transformer on the full dataset". Test with `uv run python scripts/train_ft_transformer.py --smoke`.
 - `notebooks/utils_demo_local.ipynb`: that demo adapted to local paths on the 50k sample; use it as the template.
 - `docs/FT-Transformer.pdf`: the FT-Transformer paper.
-- `pyproject.toml`, `uv.lock`, `.python-version`: environment. `README.md`: setup, the team utilities, and the full-dataset run instructions. `LICENSE`.
+- `pyproject.toml`, `uv.lock`, `.python-version`: environment. `README.md`: setup, the team utilities, and the full-dataset run instructions. `HANDOFF.md`: short note for Christian's full run (steps, troubleshooting, what to send back). `LICENSE`.
 - `results/`: run outputs, one folder per run (`ft_transformer_<timestamp>/`; `_smoke` suffix for smoke runs; `logistic_demo/` is from the demo notebook).
 
 ## Data

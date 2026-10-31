@@ -16,6 +16,9 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+# Print progress line by line even when output is redirected to a log file.
+sys.stdout.reconfigure(line_buffering=True)
+
 REPO_ROOT = Path(__file__).resolve().parents[1]
 PACKAGE_ROOT = REPO_ROOT / "collab-sol"
 
@@ -188,8 +191,16 @@ BEST_EPOCHS: dict[str, list[int]] = {}
 
 
 def fit_model(model, X_train, y_train, X_valid, y_valid):
-    model.fit_with_validation(X_train, y_train, X_valid, y_valid)
     key = json.dumps(model.tuned_params_, sort_keys=True)
+    # Each trial has its own parameter set, so these counts give trial and fold.
+    trial_number = len(BEST_EPOCHS) + (key not in BEST_EPOCHS)
+    fold_number = len(BEST_EPOCHS.get(key, [])) + 1
+    model.log_prefix = f"trial {trial_number}/{args.trials} | fold {fold_number}/{len(split.folds)}"
+    print(
+        f"{model.log_prefix} | {len(y_train):,} train rows | "
+        f"n_blocks={model.n_blocks} d_block={model.d_block}"
+    )
+    model.fit_with_validation(X_train, y_train, X_valid, y_valid)
     BEST_EPOCHS.setdefault(key, []).append(model.best_epoch_)
 
 
@@ -225,6 +236,7 @@ X_test = preprocessor.transform(X.iloc[test_rows])
 
 model = build_model(study.best_params, random_state=args.seed)
 model.fixed_epochs = final_epochs
+model.log_prefix = "final refit"
 model.fit(X_development, y.iloc[development_rows].to_numpy())
 
 metrics = generate_risk_report(

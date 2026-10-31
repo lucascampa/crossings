@@ -1,0 +1,7 @@
+{
+  "roc_auc": 0.47468277945619336,
+  "brier_score": 0.05889057735147299,
+  "brier_score_prevalence_baseline": 0.00890135895872925,
+  "mean_predicted_risk": 0.23256503703173048,
+  "prevalence": 0.008982035928143712
+}

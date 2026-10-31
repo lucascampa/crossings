@@ -89,6 +89,8 @@ uv run python scripts/train_ft_transformer.py     --dataset /path/to/final_datas
 
 Flags: `--trials` (default 20), `--max-epochs` (50), `--patience` (5), `--batch-size` (1024), `--seed` (42), `--output-dir` (default `results/ft_transformer_<UTC timestamp>/`; a non-empty folder is refused, so earlier runs are never overwritten). `--require-cuda` fails fast if no GPU is visible. If torch doesn't see the GPU, install the CUDA build for that machine from [pytorch.org](https://pytorch.org/get-started/locally/). `--smoke` runs a tiny CPU test on the 50k sample (20% of crossings, 1 trial, 2 epochs, a 1-block model) to check that everything works before the long run; its numbers mean nothing.
 
+Progress is printed one line per epoch, labelled with trial and fold, e.g. `trial 3/20 | fold 2/4 | epoch 7/50 | loss 0.41234 | val PR-AUC 0.0312 (best 0.0350 @ 5) | 42.1 s/epoch`, and `final refit | ...` at the end. Output is line-buffered, so `... > run.log 2>&1` and `tail -f run.log` show it live. Optuna's own log lines number trials from 0.
+
 Each run writes to its output folder:
 
 | File | Contents |
@@ -97,7 +99,7 @@ Each run writes to its output folder:
 | `calibration.json`, `reliability_plot.png` | ROC-AUC, Brier score (and the constant-prevalence Brier baseline), reliability plot |
 | `optuna_trials.csv` | every trial with its per-fold validation scores |
 | `class_balance_by_year.csv`, `class_balance_by_fold.csv` | class balance of every split |
-| `final_training_history.csv` | loss per epoch of the final refit |
+| `final_training_history.csv` | loss and seconds per epoch of the final refit |
 | `run.json` | best parameters, validation scores, test metrics, seed, device, versions, the exact command |
 | `model.pt`, `preprocessor.joblib` | weights and the fitted preprocessing (`model.pt` is gitignored) |
 

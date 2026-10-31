@@ -10,6 +10,7 @@ continuous columns first, then ``n_cat_features`` integer category codes where
 from __future__ import annotations
 
 import copy
+import time
 from typing import Any, Self
 
 import numpy as np
@@ -43,6 +44,8 @@ class FTTransformerClassifier:
         fixed_epochs: int | None = None,
         val_fraction: float = 0.1,
         random_state: int = 42,
+        verbose: bool = True,
+        log_prefix: str = "",
     ) -> None:
         self.n_cat_features = n_cat_features
         self.n_blocks = n_blocks
@@ -60,6 +63,8 @@ class FTTransformerClassifier:
         self.fixed_epochs = fixed_epochs
         self.val_fraction = val_fraction
         self.random_state = random_state
+        self.verbose = verbose
+        self.log_prefix = log_prefix
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.network_: FTTransformer | None = None
         self.cat_cardinalities_: list[int] = []
@@ -184,7 +189,9 @@ class FTTransformerClassifier:
         best_score, best_state, stale = -np.inf, None, 0
         self.history_ = []
 
+        prefix = f"{self.log_prefix} | " if self.log_prefix else ""
         for epoch in range(n_epochs):
+            epoch_start = time.perf_counter()
             network.train()
             epoch_loss = 0.0
             order = torch.randperm(len(continuous), generator=generator)
@@ -222,10 +229,21 @@ class FTTransformerClassifier:
                     best_state = copy.deepcopy(network.state_dict())
                 else:
                     stale += 1
-                    if stale >= self.patience:
-                        self.history_.append(record)
-                        break
+            record["seconds"] = time.perf_counter() - epoch_start
             self.history_.append(record)
+            if self.verbose:
+                print(
+                    f"{prefix}epoch {epoch + 1}/{n_epochs} | loss {epoch_loss:.5f}"
+                    + (
+                        f" | val PR-AUC {score:.4f} (best {best_score:.4f} @ {self.best_epoch_})"
+                        if use_validation
+                        else ""
+                    )
+                    + f" | {record['seconds']:.1f} s/epoch",
+                    flush=True,
+                )
+            if use_validation and stale >= self.patience:
+                break
 
         if best_state is not None:
             network.load_state_dict(best_state)
@@ -233,9 +251,10 @@ class FTTransformerClassifier:
             self.best_epoch_ = self.n_iter_
         self.network_ = network
         print(
-            f"FT-Transformer | device={self.device} | epochs={self.n_iter_} | "
+            f"{prefix}FT-Transformer | device={self.device} | epochs={self.n_iter_} | "
             f"best_epoch={self.best_epoch_} | train_loss={self.loss_:.5f}"
-            + (f" | val_pr_auc={best_score:.4f}" if use_validation else "")
+            + (f" | val_pr_auc={best_score:.4f}" if use_validation else ""),
+            flush=True,
         )
         return self
 
