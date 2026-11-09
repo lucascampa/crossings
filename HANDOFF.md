@@ -8,10 +8,13 @@ Christian, this is everything needed to make the official FT-Transformer run on 
 
 ## Steps
 
+Get the code one of two ways:
+- **From the zip on Google Drive:** unzip it and `cd crossings`. It already contains `collab-sol` and the 50k sample.
+- **From GitHub:** `git clone https://github.com/lucascampa/crossings.git`, `cd crossings`, then `git clone https://github.com/helloimfrei/collab-sol.git collab-sol`.
+
+Then, from the `crossings` folder:
+
 ```sh
-git clone https://github.com/lucascampa/crossings.git
-cd crossings
-git clone https://github.com/helloimfrei/collab-sol.git collab-sol
 uv sync
 
 # 1. Two-minute check on the bundled 50k sample. Must finish with "Saved results to: ..."
@@ -39,7 +42,7 @@ Nobody knows yet how long the full run takes. It's 20 trials × 4 folds, each up
 |---|---|
 | `--require-cuda was given but torch.cuda.is_available() is False` | torch is the CPU build. Install the CUDA build for your machine from [pytorch.org](https://pytorch.org/get-started/locally/) into `.venv`, then rerun. |
 | `CUDA out of memory` | Add `--batch-size 512` (or 256). |
-| `collab-sol not found` | Run the `git clone ... collab-sol` line from the repo root. |
+| `collab-sol not found` | The `collab-sol` folder must sit inside `crossings/`. With the GitHub route, run the `git clone ... collab-sol` line from the repo root. |
 | `... is not empty; earlier runs are never overwritten` | Leave out `--output-dir`, or point it to a new folder. |
 
 ## What to send back
