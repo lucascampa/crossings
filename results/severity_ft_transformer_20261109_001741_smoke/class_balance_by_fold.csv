@@ -1,0 +1,11 @@
+fold,part,property_damage_only,injury,fatal
+validate_2020,train,61,19,9
+validate_2020,validation,43,16,12
+validate_2021,train,104,35,21
+validate_2021,validation,49,24,15
+validate_2022,train,153,59,36
+validate_2022,validation,44,20,16
+validate_2023,train,197,79,52
+validate_2023,validation,56,24,22
+test_2024,train,253,103,74
+test_2024,test,47,17,16

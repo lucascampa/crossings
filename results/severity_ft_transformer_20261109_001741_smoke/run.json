@@ -1,0 +1,65 @@
+{
+  "task": "conditional_severity",
+  "model": "FTTransformerClassifier",
+  "dataset_path": "C:\\Users\\lucas\\dev\\crossings\\final_dataset_sample_50k.parquet",
+  "smoke_run": true,
+  "holdout_year": 2024,
+  "feature_count": 224,
+  "numeric_features": 187,
+  "categorical_features": 37,
+  "excluded_features": {
+    "latitude": "Near-unique per crossing, so it acts like an ID and invites memorization.",
+    "longitude": "Near-unique per crossing, so it acts like an ID and invites memorization.",
+    "latlongsourcecode": "Records how the coordinates were obtained (1 = Actual, 2 = Estimated), not anything about crash risk. Null in ~23% of sample rows, which have ~40x lower incident rate: likely a record-quality proxy.",
+    "B01001_E001": "ACS total population, duplicate of B01003_E001 (kept as the one total-population column).",
+    "B03002_E001": "ACS total population, duplicate of B01003_E001 (kept as the one total-population column)."
+  },
+  "severity_classes": [
+    "property_damage_only",
+    "injury",
+    "fatal"
+  ],
+  "severity_weights": [
+    1.0,
+    2.0,
+    3.0
+  ],
+  "severity_score_definition": "P(property_damage_only) + 2 * P(injury) + 3 * P(fatal)",
+  "best_params": {
+    "n_blocks": 1,
+    "d_block": 64,
+    "attention_dropout": 0.18727005942368125,
+    "ffn_dropout": 0.4753571532049581,
+    "residual_dropout": 0.146398788362281,
+    "learning_rate": 0.00015751320499779721,
+    "weight_decay": 2.9380279387035354e-06
+  },
+  "mean_validation_multiclass_log_loss": 1.1415027615009175,
+  "validation_fold_scores": [
+    1.3360057861169754,
+    1.0398096213467518,
+    1.0971624437009388,
+    1.0930331948390042
+  ],
+  "best_epoch_per_fold": [
+    2,
+    2,
+    2,
+    2
+  ],
+  "final_refit_epochs": 2,
+  "device": "cpu",
+  "n_trials": 1,
+  "max_epochs": 2,
+  "patience": 2,
+  "batch_size": 256,
+  "seed": 42,
+  "test_metrics": {
+    "multiclass_log_loss": 1.0502363022245145,
+    "macro_f1": 0.3366174055829228,
+    "ordinal_mae": 0.6
+  },
+  "torch": "2.15.0+cpu",
+  "python": "3.12.4",
+  "command": "scripts/train_severity_ft_transformer.py --smoke"
+}

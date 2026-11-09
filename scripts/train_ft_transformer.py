@@ -1,6 +1,6 @@
 """Tune and evaluate the FT-Transformer grade-crossing risk model.
 
-Same protocol and outputs as collab-sol's scripts/train_mlp.py: tune with Optuna
+Same protocol and outputs as collab-sol's scripts/train_likelihood_mlp.py: tune with Optuna
 over the expanding temporal folds (validation years 2020-2023), refit once on
 2019-2023, and score the untouched 2024 test year. Adds ROC-AUC, Brier score and
 a reliability plot.

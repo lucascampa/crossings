@@ -1,0 +1,4 @@
+actual_class,property_damage_only,injury,fatal
+property_damage_only,42,5,0
+injury,13,4,0
+fatal,14,2,0

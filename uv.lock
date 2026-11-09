@@ -113,6 +113,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "joblib", marker = "extra == 'models'" },
     { name = "marimo", marker = "extra == 'dev'" },
     { name = "matplotlib" },
     { name = "numpy" },
@@ -121,11 +122,13 @@ requires-dist = [
     { name = "pyarrow" },
     { name = "pyright", marker = "extra == 'dev'" },
     { name = "pytest", marker = "extra == 'dev'" },
+    { name = "rtdl-revisiting-models", marker = "extra == 'models'" },
     { name = "scikit-learn" },
     { name = "shap", marker = "extra == 'explain'" },
-    { name = "torch", marker = "extra == 'gpu'" },
+    { name = "torch", marker = "extra == 'models'" },
+    { name = "xgboost", marker = "extra == 'models'" },
 ]
-provides-extras = ["dev", "explain", "gpu"]
+provides-extras = ["dev", "explain", "models"]
 
 [[package]]
 name = "colorama"

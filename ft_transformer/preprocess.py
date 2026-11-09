@@ -20,7 +20,7 @@ from sklearn.preprocessing import FunctionTransformer, OrdinalEncoder, QuantileT
 ID_COLUMNS = ["crossingid", "asof_year"]
 TARGET_COLUMNS = ["incident", "severity_target"]
 # The final dataset stores its categorical predictors after the numeric ones,
-# starting at this column (same convention as collab-sol's train_mlp.py).
+# starting at this column (same convention as collab-sol's features.py).
 FIRST_CATEGORICAL_COLUMN = "reportingagencytypecode"
 MISSING_LEVEL = "__missing__"
 

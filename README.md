@@ -20,7 +20,7 @@ uv sync --system-certs   # --system-certs only if your network intercepts TLS
 - `make_sample.py` rebuilds the sample: `uv run python make_sample.py final_dataset.parquet out.parquet`.
 - `sample_notes.md` profiles the full file and shows how the sample was checked.
 
-One row per crossing per year (`crossingid` x `asof_year`, 2019-2024). The target is `incident`. Never use `severity_target`, `incident_count`, `total_killed`, `total_injured` or `severity_ordinal` as features.
+One row per crossing per year (`crossingid` x `asof_year`, 2019-2024). The likelihood target is `incident`; the severity model's target is `severity_target` on incident rows (see "Severity model" below). Never use `severity_target`, `incident_count`, `total_killed`, `total_injured` or `severity_ordinal` as features.
 
 ## Features not used
 
@@ -40,12 +40,12 @@ The dataset has 233 columns. The FT-Transformer trains on 224 of them. The 9 it 
 
 | Column | Role |
 |--------|------|
-| `incident` | Target. |
-| `severity_target` | Leaks the label (`none` exactly when `incident` = 0). |
+| `incident` | Target of the likelihood model. In the severity model it is only the row filter (always 1). |
+| `severity_target` | Target of the severity model. For the likelihood model it leaks the label (`none` exactly when `incident` = 0). |
 | `crossingid` | ID; used only to group and report rows. |
 | `asof_year` | Used for the temporal split, not as a feature. |
 
-**For comparisons:** `collab-sol/scripts/train_mlp.py` uses all 229 non-ID, non-target columns, including the three above. The FT-Transformer's feature set therefore differs from the MLP's by those columns unless the other models drop them too.
+**For comparisons:** the team's models in `collab-sol` drop the same five columns (`EXCLUDED_RISK_FEATURES` / `split_risk_feature_columns` in `collab_sol/features.py`), so all models use the same 224 predictors. If either list changes, keep the two in step.
 
 **Open questions (not yet decided):**
 - `B01001_E001` and `B03002_E001` were dropped as duplicates of `B01003_E001`, which is identical to them in the 50k sample. Confirm they are also identical in the full file.
@@ -79,7 +79,7 @@ Optuna maximizes mean validation average precision across the four folds and nev
 
 ## Running the FT-Transformer on the full dataset
 
-One command runs the whole pipeline, with the same protocol as `collab-sol/scripts/train_mlp.py`: Optuna over the four expanding folds, one refit on 2019-2023, one evaluation on 2024.
+One command runs the whole pipeline, with the same protocol as `collab-sol/scripts/train_likelihood_mlp.py`: Optuna over the four expanding folds, one refit on 2019-2023, one evaluation on 2024.
 
 ```sh
 git clone https://github.com/helloimfrei/collab-sol.git collab-sol   # if not already present
@@ -112,6 +112,24 @@ How it differs from the MLP:
 The code is in `ft_transformer/` (`model.py`, `preprocess.py`, `metrics.py`) and `scripts/train_ft_transformer.py`.
 
 Status: the pipeline has been run end to end with `--smoke` on CPU only. The CUDA path (`--require-cuda`, mixed precision) follows the team's MLP code but has not been run on a GPU, so run `--smoke` once on the target machine before the long run.
+
+## Severity model
+
+`scripts/train_severity_ft_transformer.py` is the FT-Transformer version of the team's conditional-severity model (`collab-sol/scripts/train_severity_mlp.py`), with the same protocol so the results compare directly:
+
+- **Cohort and target:** only crossing-years with an incident. Three classes from `severity_target`: `property_damage_only`, `injury`, `fatal` (collab-sol's `SEVERITY_CLASSES`).
+- **Folds:** the same expanding temporal folds and 2024 holdout, built on the incident rows.
+- **Objective:** Optuna minimizes mean validation multiclass log loss. Each fold early-stops on validation log loss. The final refit trains for the median best epoch count, as in the likelihood script.
+- **Loss:** unweighted cross-entropy, as in the team's MLP. Class weights would distort the probabilities that log loss scores and that the two-part combination below needs.
+- **Report:** collab-sol's `generate_severity_report`: `metrics.csv` (log loss, macro F1, ordinal MAE), `severity_scores.csv`, `per_class_metrics.csv`, `confusion_matrix.csv/.png`, `severity_budget.csv`. The severity score is P(property damage) + 2 P(injury) + 3 P(fatal).
+- **Extra output, `severity_scores_all_crossings.csv`:** the same probabilities for **every** 2024 crossing, including the ones with no incident, with `incident` and `actual_class` (`none` for no incident). Read them as "if a crash happens here, how severe". Multiplying by P(incident) from a likelihood model gives unconditional risk, e.g. P(fatal crash) = P(incident) x P(fatal | incident). Two caveats: the model never trained on rows without an incident, so those scores are an extrapolation; and the likelihood models' scores are inflated by `pos_weight`, so recalibrate them before multiplying.
+
+```sh
+uv run python scripts/train_severity_ft_transformer.py --dataset /path/to/final_dataset.parquet --require-cuda
+uv run python scripts/train_severity_ft_transformer.py --smoke    # CPU check on the sample's 510 incident rows
+```
+
+Flags are the same as the likelihood script, except there is no `pos_weight` and `--batch-size` defaults to 256 (the cohort is ~1% of the rows). Output goes to `results/severity_ft_transformer_<UTC timestamp>/`. The sample has only 510 incident rows (90 fatal), so smoke-run numbers mean nothing.
 
 ## Notebooks
 
