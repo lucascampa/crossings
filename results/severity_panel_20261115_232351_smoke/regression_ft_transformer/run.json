@@ -1,0 +1,58 @@
+{
+  "task": "conditional_severity_regression",
+  "model": "ft_transformer",
+  "dataset_path": "C:\\Users\\lucas\\dev\\crossings\\data\\final\\final_dataset_incidents.parquet",
+  "holdout_year": 2024,
+  "feature_count": 224,
+  "excluded_features": {
+    "latitude": "Near-unique crossing coordinate that can act like an ID.",
+    "longitude": "Near-unique crossing coordinate that can act like an ID.",
+    "latlongsourcecode": "Coordinate-provenance metadata and record-quality proxy.",
+    "B01001_E001": "ACS total population duplicated by B01003_E001.",
+    "B03002_E001": "ACS total population duplicated by B01003_E001."
+  },
+  "target_definition": {
+    "property_damage_only": 1.0,
+    "injury": 2.0,
+    "fatal": 3.0
+  },
+  "score_range": [
+    1.0,
+    3.0
+  ],
+  "mean_validation_mae": 0.6507295121749241,
+  "validation_fold_scores": [
+    0.6723080227772394,
+    0.6166647305091222,
+    0.6509734859069188,
+    0.6629718095064163
+  ],
+  "test_metrics": {
+    "mean_absolute_error": 0.6286196554700534,
+    "constant_pdo_mean_absolute_error": 0.5541666666666667
+  },
+  "best_params": {
+    "n_blocks": 1,
+    "d_block": 64,
+    "attention_dropout": 0.1,
+    "ffn_dropout": 0.1,
+    "residual_dropout": 0.0,
+    "learning_rate": 0.0001,
+    "weight_decay": 1e-05
+  },
+  "final_params": {
+    "n_blocks": 1,
+    "d_block": 64,
+    "attention_dropout": 0.1,
+    "ffn_dropout": 0.1,
+    "residual_dropout": 0.0,
+    "learning_rate": 0.0001,
+    "weight_decay": 1e-05
+  },
+  "fixed_epochs": 2,
+  "n_trials": 1,
+  "smoke_run": true,
+  "seed": 42,
+  "python_version": "3.12.4",
+  "command": "C:\\Users\\lucas\\dev\\crossings\\collab-sol\\scripts\\train_severity_regression.py --model ft_transformer --dataset C:\\Users\\lucas\\dev\\crossings\\data\\final\\final_dataset_incidents.parquet --output-dir C:\\Users\\lucas\\dev\\crossings\\results\\severity_panel_20261115_232351_smoke\\regression_ft_transformer --trials 50 --max-epochs 50 --patience 5 --n-jobs -1 --xgboost-device cpu --seed 42 --batch-size 64 --smoke"
+}

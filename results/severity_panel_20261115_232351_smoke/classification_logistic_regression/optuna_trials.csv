@@ -1,0 +1,2 @@
+number,value,datetime_start,datetime_complete,duration,params_C,params_class_weight,user_attrs_fold_scores,user_attrs_validation_years,state
+0,1.0846662298944956,2026-11-15 18:23:58.875610,2026-11-15 18:24:14.542503,0 days 00:00:15.666893,1.0,,"[1.1432569468544467, 0.9971084521752187, 1.2402950935433954, 0.9580044270049213]","[2020, 2021, 2022, 2023]",COMPLETE

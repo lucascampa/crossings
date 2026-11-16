@@ -1,0 +1,4 @@
+class,precision,recall,f1,support
+property_damage_only,0.5939635535307517,1.0,0.7452661664880315,1043
+injury,0.0,0.0,0.0,467
+fatal,0.0,0.0,0.0,246

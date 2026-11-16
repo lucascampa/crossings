@@ -1,0 +1,260 @@
+
+=== classification_logistic_regression ===
+[I 2026-11-15 18:23:58,874] A new study created in memory with name: conditional_severity_classification_logistic_regression
+severity_target  property_damage_only  injury  fatal
+asof_year                                           
+2019                             1041     465    257
+2020                              877     424    182
+2021                             1045     413    219
+2022                             1070     463    249
+2023                             1040     468    237
+2024                             1043     467    246
+Dataset: C:\Users\lucas\dev\crossings\data\final\final_dataset_incidents.parquet
+Using 224 predictors: 187 numeric + 37 categorical
+trial 1/1 | fold 1/4 | preparing data
+trial 1/1 | fold 1/4 | log loss 1.1433 | 1.7 s
+trial 1/1 | fold 2/4 | preparing data
+trial 1/1 | fold 2/4 | log loss 0.9971 | 3.0 s
+trial 1/1 | fold 3/4 | preparing data
+trial 1/1 | fold 3/4 | log loss 1.2403 | 4.8 s
+trial 1/1 | fold 4/4 | preparing data
+trial 1/1 | fold 4/4 | log loss 0.9580 | 6.2 s
+[I 2026-11-15 18:24:14,542] Trial 0 finished with value: 1.0846662298944956 and parameters: {'C': 1.0, 'class_weight': None}. Best is trial 0 with value: 1.0846662298944956.
+Mean validation log loss: 1.0846662298944956
+Best parameters: {'C': 1.0, 'class_weight': None}
+   multiclass_log_loss  macro_f1  ordinal_mae
+0             0.961591  0.369891     0.548975
+Continuous expected-severity MAE: 0.6008343255087403
+Saved results to: C:\Users\lucas\dev\crossings\results\severity_panel_20261115_232351_smoke\classification_logistic_regression
+
+=== classification_xgboost ===
+[I 2026-11-15 18:24:33,430] A new study created in memory with name: conditional_severity_classification_xgboost
+severity_target  property_damage_only  injury  fatal
+asof_year                                           
+2019                             1041     465    257
+2020                              877     424    182
+2021                             1045     413    219
+2022                             1070     463    249
+2023                             1040     468    237
+2024                             1043     467    246
+Dataset: C:\Users\lucas\dev\crossings\data\final\final_dataset_incidents.parquet
+Using 224 predictors: 187 numeric + 37 categorical
+trial 1/1 | fold 1/4 | preparing data
+trial 1/1 | fold 1/4 | log loss 0.8865 | 0.9 s
+trial 1/1 | fold 2/4 | preparing data
+trial 1/1 | fold 2/4 | log loss 0.8601 | 1.1 s
+trial 1/1 | fold 3/4 | preparing data
+trial 1/1 | fold 3/4 | log loss 0.8740 | 1.2 s
+trial 1/1 | fold 4/4 | preparing data
+trial 1/1 | fold 4/4 | log loss 0.8791 | 1.3 s
+[I 2026-11-15 18:24:37,971] Trial 0 finished with value: 0.874949017233432 and parameters: {'n_estimators': 30, 'max_depth': 3, 'learning_rate': 0.1, 'min_child_weight': 1.0, 'subsample': 0.8, 'colsample_bytree': 0.8, 'reg_lambda': 1.0, 'reg_alpha': 0.0}. Best is trial 0 with value: 0.874949017233432.
+Mean validation log loss: 0.874949017233432
+Best parameters: {'n_estimators': 30, 'max_depth': 3, 'learning_rate': 0.1, 'min_child_weight': 1.0, 'subsample': 0.8, 'colsample_bytree': 0.8, 'reg_lambda': 1.0, 'reg_alpha': 0.0}
+   multiclass_log_loss  macro_f1  ordinal_mae
+0             0.884946  0.297695     0.538155
+Continuous expected-severity MAE: 0.6098467151863343
+Saved results to: C:\Users\lucas\dev\crossings\results\severity_panel_20261115_232351_smoke\classification_xgboost
+
+=== classification_mlp ===
+[I 2026-11-15 18:24:46,690] A new study created in memory with name: conditional_severity_classification_mlp
+severity_target  property_damage_only  injury  fatal
+asof_year                                           
+2019                             1041     465    257
+2020                              877     424    182
+2021                             1045     413    219
+2022                             1070     463    249
+2023                             1040     468    237
+2024                             1043     467    246
+Dataset: C:\Users\lucas\dev\crossings\data\final\final_dataset_incidents.parquet
+Using 224 predictors: 187 numeric + 37 categorical
+trial 1/1 | fold 1/4 | preparing data
+PyTorch MLP | device=cpu | epochs=2 | loss=0.964888
+trial 1/1 | fold 1/4 | log loss 0.9479 | 3.7 s
+trial 1/1 | fold 2/4 | preparing data
+PyTorch MLP | device=cpu | epochs=2 | loss=0.903614
+trial 1/1 | fold 2/4 | log loss 0.8882 | 0.6 s
+trial 1/1 | fold 3/4 | preparing data
+PyTorch MLP | device=cpu | epochs=2 | loss=0.913233
+trial 1/1 | fold 3/4 | log loss 1.1872 | 0.6 s
+trial 1/1 | fold 4/4 | preparing data
+PyTorch MLP | device=cpu | epochs=2 | loss=0.882808
+trial 1/1 | fold 4/4 | log loss 0.9064 | 0.8 s
+[I 2026-11-15 18:24:52,382] Trial 0 finished with value: 0.9824238493156746 and parameters: {'hidden_width': 64, 'n_layers': 1, 'dropout': 0.1, 'learning_rate': 0.001, 'weight_decay': 1e-05}. Best is trial 0 with value: 0.9824238493156746.
+Mean validation log loss: 0.9824238493156746
+Best parameters: {'hidden_width': 64, 'n_layers': 1, 'dropout': 0.1, 'learning_rate': 0.001, 'weight_decay': 1e-05}
+PyTorch MLP | device=cpu | epochs=2 | loss=0.886289
+   multiclass_log_loss  macro_f1  ordinal_mae
+0             0.944307  0.314629     0.535308
+Continuous expected-severity MAE: 0.6180895313615189
+Saved results to: C:\Users\lucas\dev\crossings\results\severity_panel_20261115_232351_smoke\classification_mlp
+
+=== classification_ft_transformer ===
+[I 2026-11-15 18:25:02,874] A new study created in memory with name: conditional_severity_classification_ft_transformer
+severity_target  property_damage_only  injury  fatal
+asof_year                                           
+2019                             1041     465    257
+2020                              877     424    182
+2021                             1045     413    219
+2022                             1070     463    249
+2023                             1040     468    237
+2024                             1043     467    246
+Dataset: C:\Users\lucas\dev\crossings\data\final\final_dataset_incidents.parquet
+Using 224 predictors: 187 numeric + 37 categorical
+trial 1/1 | fold 1/4 | preparing data
+epoch 1/2 | loss 0.98165 | validation log loss 0.9369 (best 0.9369 @ 1) | 3.5 s/epoch
+epoch 2/2 | loss 0.94361 | validation log loss 0.9300 (best 0.9300 @ 2) | 3.6 s/epoch
+trial 1/1 | fold 1/4 | log loss 0.9300 | 10.3 s
+trial 1/1 | fold 2/4 | preparing data
+epoch 1/2 | loss 0.96907 | validation log loss 0.9058 (best 0.9058 @ 1) | 6.5 s/epoch
+epoch 2/2 | loss 0.93812 | validation log loss 0.9046 (best 0.9046 @ 2) | 6.3 s/epoch
+trial 1/1 | fold 2/4 | log loss 0.9046 | 14.5 s
+trial 1/1 | fold 3/4 | preparing data
+epoch 1/2 | loss 1.03149 | validation log loss 0.9343 (best 0.9343 @ 1) | 8.9 s/epoch
+epoch 2/2 | loss 0.92915 | validation log loss 0.9313 (best 0.9313 @ 2) | 8.8 s/epoch
+trial 1/1 | fold 3/4 | log loss 0.9313 | 18.9 s
+trial 1/1 | fold 4/4 | preparing data
+epoch 1/2 | loss 0.95799 | validation log loss 0.9325 (best 0.9325 @ 1) | 11.9 s/epoch
+epoch 2/2 | loss 0.92816 | validation log loss 0.9310 (best 0.9310 @ 2) | 12.0 s/epoch
+trial 1/1 | fold 4/4 | log loss 0.9310 | 25.2 s
+[I 2026-11-15 18:26:11,771] Trial 0 finished with value: 0.9242311797663574 and parameters: {'n_blocks': 1, 'd_block': 64, 'attention_dropout': 0.1, 'ffn_dropout': 0.1, 'residual_dropout': 0.0, 'learning_rate': 0.0001, 'weight_decay': 1e-05}. Best is trial 0 with value: 0.9242311797663574.
+Mean validation log loss: 0.9242311797663574
+Best parameters: {'n_blocks': 1, 'd_block': 64, 'attention_dropout': 0.1, 'ffn_dropout': 0.1, 'residual_dropout': 0.0, 'learning_rate': 0.0001, 'weight_decay': 1e-05}
+epoch 1/2 | loss 0.93560 | 15.4 s/epoch
+epoch 2/2 | loss 0.92754 | 14.8 s/epoch
+   multiclass_log_loss  macro_f1  ordinal_mae
+0             0.931896  0.248422     0.546128
+Continuous expected-severity MAE: 0.6442778781059217
+Saved results to: C:\Users\lucas\dev\crossings\results\severity_panel_20261115_232351_smoke\classification_ft_transformer
+
+=== regression_ridge ===
+[I 2026-11-15 18:26:51,545] A new study created in memory with name: conditional_severity_regression_ridge
+           crash_rows  mean_severity
+asof_year                           
+2019              240       1.545833
+2020              240       1.495833
+2021              240       1.412500
+2022              240       1.587500
+2023              240       1.462500
+2024              240       1.554167
+Dataset: C:\Users\lucas\dev\crossings\data\final\final_dataset_incidents.parquet
+Using 224 predictors: 187 numeric + 37 categorical
+trial 1/1 | fold 1/4 | preparing data
+trial 1/1 | fold 1/4 | MAE 0.7283 | 0.1 s
+trial 1/1 | fold 2/4 | preparing data
+trial 1/1 | fold 2/4 | MAE 0.6014 | 0.1 s
+trial 1/1 | fold 3/4 | preparing data
+trial 1/1 | fold 3/4 | MAE 0.6942 | 0.1 s
+trial 1/1 | fold 4/4 | preparing data
+trial 1/1 | fold 4/4 | MAE 0.6102 | 0.2 s
+[I 2026-11-15 18:26:52,088] Trial 0 finished with value: 0.6585364715506633 and parameters: {'alpha': 1.0}. Best is trial 0 with value: 0.6585364715506633.
+Mean validation MAE: 0.6585364715506633
+Best parameters: {'alpha': 1.0}
+   mean_absolute_error  constant_pdo_mean_absolute_error
+0             0.586348                          0.554167
+Saved results to: C:\Users\lucas\dev\crossings\results\severity_panel_20261115_232351_smoke\regression_ridge
+
+=== regression_xgboost ===
+[I 2026-11-15 18:26:58,632] A new study created in memory with name: conditional_severity_regression_xgboost
+           crash_rows  mean_severity
+asof_year                           
+2019              240       1.545833
+2020              240       1.495833
+2021              240       1.412500
+2022              240       1.587500
+2023              240       1.462500
+2024              240       1.554167
+Dataset: C:\Users\lucas\dev\crossings\data\final\final_dataset_incidents.parquet
+Using 224 predictors: 187 numeric + 37 categorical
+trial 1/1 | fold 1/4 | preparing data
+trial 1/1 | fold 1/4 | MAE 0.5965 | 0.3 s
+trial 1/1 | fold 2/4 | preparing data
+trial 1/1 | fold 2/4 | MAE 0.5912 | 0.2 s
+trial 1/1 | fold 3/4 | preparing data
+trial 1/1 | fold 3/4 | MAE 0.6289 | 0.3 s
+trial 1/1 | fold 4/4 | preparing data
+trial 1/1 | fold 4/4 | MAE 0.5869 | 0.4 s
+[I 2026-11-15 18:26:59,868] Trial 0 finished with value: 0.6008617115517457 and parameters: {'n_estimators': 30, 'max_depth': 3, 'learning_rate': 0.1, 'min_child_weight': 1.0, 'subsample': 0.8, 'colsample_bytree': 0.8, 'reg_lambda': 1.0, 'reg_alpha': 0.0}. Best is trial 0 with value: 0.6008617115517457.
+Mean validation MAE: 0.6008617115517457
+Best parameters: {'n_estimators': 30, 'max_depth': 3, 'learning_rate': 0.1, 'min_child_weight': 1.0, 'subsample': 0.8, 'colsample_bytree': 0.8, 'reg_lambda': 1.0, 'reg_alpha': 0.0}
+   mean_absolute_error  constant_pdo_mean_absolute_error
+0             0.602545                          0.554167
+Saved results to: C:\Users\lucas\dev\crossings\results\severity_panel_20261115_232351_smoke\regression_xgboost
+
+=== regression_mlp ===
+[I 2026-11-15 18:27:05,978] A new study created in memory with name: conditional_severity_regression_mlp
+           crash_rows  mean_severity
+asof_year                           
+2019              240       1.545833
+2020              240       1.495833
+2021              240       1.412500
+2022              240       1.587500
+2023              240       1.462500
+2024              240       1.554167
+Dataset: C:\Users\lucas\dev\crossings\data\final\final_dataset_incidents.parquet
+Using 224 predictors: 187 numeric + 37 categorical
+trial 1/1 | fold 1/4 | preparing data
+PyTorch severity regressor | device=cpu | epochs=2 | loss=0.645556
+trial 1/1 | fold 1/4 | MAE 0.6662 | 2.1 s
+trial 1/1 | fold 2/4 | preparing data
+PyTorch severity regressor | device=cpu | epochs=2 | loss=0.594743
+trial 1/1 | fold 2/4 | MAE 0.7242 | 0.1 s
+trial 1/1 | fold 3/4 | preparing data
+PyTorch severity regressor | device=cpu | epochs=2 | loss=0.503263
+trial 1/1 | fold 3/4 | MAE 0.6830 | 0.1 s
+trial 1/1 | fold 4/4 | preparing data
+PyTorch severity regressor | device=cpu | epochs=2 | loss=0.500833
+trial 1/1 | fold 4/4 | MAE 0.6325 | 0.2 s
+[I 2026-11-15 18:27:08,519] Trial 0 finished with value: 0.6764791580537955 and parameters: {'hidden_width': 64, 'n_layers': 1, 'dropout': 0.1, 'learning_rate': 0.001, 'weight_decay': 1e-05}. Best is trial 0 with value: 0.6764791580537955.
+Mean validation MAE: 0.6764791580537955
+Best parameters: {'hidden_width': 64, 'n_layers': 1, 'dropout': 0.1, 'learning_rate': 0.001, 'weight_decay': 1e-05}
+PyTorch severity regressor | device=cpu | epochs=2 | loss=0.495407
+   mean_absolute_error  constant_pdo_mean_absolute_error
+0             0.634289                          0.554167
+Saved results to: C:\Users\lucas\dev\crossings\results\severity_panel_20261115_232351_smoke\regression_mlp
+
+=== regression_ft_transformer ===
+[I 2026-11-15 18:27:15,089] A new study created in memory with name: conditional_severity_regression_ft_transformer
+           crash_rows  mean_severity
+asof_year                           
+2019              240       1.545833
+2020              240       1.495833
+2021              240       1.412500
+2022              240       1.587500
+2023              240       1.462500
+2024              240       1.554167
+Dataset: C:\Users\lucas\dev\crossings\data\final\final_dataset_incidents.parquet
+Using 224 predictors: 187 numeric + 37 categorical
+trial 1/1 | fold 1/4 | preparing data
+c:\Users\lucas\dev\crossings\.venv\Lib\site-packages\sklearn\preprocessing\_data.py:2912: UserWarning: n_quantiles (1000) is greater than the total number of samples (240). n_quantiles is set to n_samples.
+  warnings.warn(
+epoch 1/2 | loss 0.73847 | validation MAE 0.6948 (best 0.6948 @ 1) | 0.3 s/epoch
+epoch 2/2 | loss 0.65814 | validation MAE 0.6723 (best 0.6723 @ 2) | 0.3 s/epoch
+trial 1/1 | fold 1/4 | MAE 0.6723 | 2.9 s
+trial 1/1 | fold 2/4 | preparing data
+c:\Users\lucas\dev\crossings\.venv\Lib\site-packages\sklearn\preprocessing\_data.py:2912: UserWarning: n_quantiles (1000) is greater than the total number of samples (480). n_quantiles is set to n_samples.
+  warnings.warn(
+epoch 1/2 | loss 0.54947 | validation MAE 0.6722 (best 0.6722 @ 1) | 0.6 s/epoch
+epoch 2/2 | loss 0.46932 | validation MAE 0.6167 (best 0.6167 @ 2) | 0.6 s/epoch
+trial 1/1 | fold 2/4 | MAE 0.6167 | 1.5 s
+trial 1/1 | fold 3/4 | preparing data
+c:\Users\lucas\dev\crossings\.venv\Lib\site-packages\sklearn\preprocessing\_data.py:2912: UserWarning: n_quantiles (1000) is greater than the total number of samples (720). n_quantiles is set to n_samples.
+  warnings.warn(
+epoch 1/2 | loss 0.51939 | validation MAE 0.6677 (best 0.6677 @ 1) | 0.8 s/epoch
+epoch 2/2 | loss 0.45509 | validation MAE 0.6510 (best 0.6510 @ 2) | 0.8 s/epoch
+trial 1/1 | fold 3/4 | MAE 0.6510 | 2.0 s
+trial 1/1 | fold 4/4 | preparing data
+c:\Users\lucas\dev\crossings\.venv\Lib\site-packages\sklearn\preprocessing\_data.py:2912: UserWarning: n_quantiles (1000) is greater than the total number of samples (960). n_quantiles is set to n_samples.
+  warnings.warn(
+epoch 1/2 | loss 0.82745 | validation MAE 0.7348 (best 0.7348 @ 1) | 1.1 s/epoch
+epoch 2/2 | loss 0.57884 | validation MAE 0.6630 (best 0.6630 @ 2) | 1.1 s/epoch
+trial 1/1 | fold 4/4 | MAE 0.6630 | 2.5 s
+[I 2026-11-15 18:27:24,021] Trial 0 finished with value: 0.6507295121749241 and parameters: {'n_blocks': 1, 'd_block': 64, 'attention_dropout': 0.1, 'ffn_dropout': 0.1, 'residual_dropout': 0.0, 'learning_rate': 0.0001, 'weight_decay': 1e-05}. Best is trial 0 with value: 0.6507295121749241.
+Mean validation MAE: 0.6507295121749241
+Best parameters: {'n_blocks': 1, 'd_block': 64, 'attention_dropout': 0.1, 'ffn_dropout': 0.1, 'residual_dropout': 0.0, 'learning_rate': 0.0001, 'weight_decay': 1e-05}
+epoch 1/2 | loss 0.60693 | 1.4 s/epoch
+epoch 2/2 | loss 0.49127 | 1.2 s/epoch
+   mean_absolute_error  constant_pdo_mean_absolute_error
+0              0.62862                          0.554167
+Saved results to: C:\Users\lucas\dev\crossings\results\severity_panel_20261115_232351_smoke\regression_ft_transformer
+
+All severity comparison runs completed: C:\Users\lucas\dev\crossings\results\severity_panel_20261115_232351_smoke

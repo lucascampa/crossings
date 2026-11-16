@@ -1,0 +1,58 @@
+{
+  "task": "conditional_severity_regression",
+  "model": "ft_transformer",
+  "dataset_path": "/content/drive/.shortcut-targets-by-id/1aybJZ4jXd3-7a8OKt1zUUJbhHg1Pb-Uv/Team 2/data/processed/final_dataset.parquet",
+  "holdout_year": 2024,
+  "feature_count": 224,
+  "excluded_features": {
+    "latitude": "Near-unique crossing coordinate that can act like an ID.",
+    "longitude": "Near-unique crossing coordinate that can act like an ID.",
+    "latlongsourcecode": "Coordinate-provenance metadata and record-quality proxy.",
+    "B01001_E001": "ACS total population duplicated by B01003_E001.",
+    "B03002_E001": "ACS total population duplicated by B01003_E001."
+  },
+  "target_definition": {
+    "property_damage_only": 1.0,
+    "injury": 2.0,
+    "fatal": 3.0
+  },
+  "score_range": [
+    1.0,
+    3.0
+  ],
+  "mean_validation_mae": 0.5712499863408154,
+  "validation_fold_scores": [
+    0.5721910612372555,
+    0.5599650055720967,
+    0.5718920995490719,
+    0.5809517790048375
+  ],
+  "test_metrics": {
+    "mean_absolute_error": 0.5927361413530988,
+    "constant_pdo_mean_absolute_error": 0.5461275626423691
+  },
+  "best_params": {
+    "n_blocks": 2,
+    "d_block": 128,
+    "attention_dropout": 0.2742245154255087,
+    "ffn_dropout": 0.042694919320371186,
+    "residual_dropout": 0.16495402601415948,
+    "learning_rate": 0.00015408743731794595,
+    "weight_decay": 2.29801879253751e-06
+  },
+  "final_params": {
+    "n_blocks": 2,
+    "d_block": 128,
+    "attention_dropout": 0.2742245154255087,
+    "ffn_dropout": 0.042694919320371186,
+    "residual_dropout": 0.16495402601415948,
+    "learning_rate": 0.00015408743731794595,
+    "weight_decay": 2.29801879253751e-06
+  },
+  "fixed_epochs": 14,
+  "n_trials": 50,
+  "smoke_run": false,
+  "seed": 42,
+  "python_version": "3.13.16",
+  "command": "scripts/train_severity_regression.py --model ft_transformer --dataset /content/drive/MyDrive/Team 2/data/processed/final_dataset.parquet --output-dir /content/drive/MyDrive/Team 2/code/runs/severity_ft_transformer_2026-11-16/regression_ft_transformer --trials 50 --max-epochs 50 --patience 5 --n-jobs -1 --xgboost-device cpu --seed 42 --batch-size 64 --require-cuda"
+}

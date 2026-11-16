@@ -1,0 +1,4 @@
+metric,value
+multiclass_log_loss,0.8849460370905906
+macro_f1,0.2976949530941843
+ordinal_mae,0.5381548974943052

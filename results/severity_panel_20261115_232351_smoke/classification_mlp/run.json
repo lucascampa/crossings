@@ -1,0 +1,57 @@
+{
+  "task": "conditional_severity_classification",
+  "model": "mlp",
+  "dataset_path": "C:\\Users\\lucas\\dev\\crossings\\data\\final\\final_dataset_incidents.parquet",
+  "holdout_year": 2024,
+  "feature_count": 224,
+  "excluded_features": {
+    "latitude": "Near-unique crossing coordinate that can act like an ID.",
+    "longitude": "Near-unique crossing coordinate that can act like an ID.",
+    "latlongsourcecode": "Coordinate-provenance metadata and record-quality proxy.",
+    "B01001_E001": "ACS total population duplicated by B01003_E001.",
+    "B03002_E001": "ACS total population duplicated by B01003_E001."
+  },
+  "severity_classes": [
+    "property_damage_only",
+    "injury",
+    "fatal"
+  ],
+  "severity_weights": [
+    1.0,
+    2.0,
+    3.0
+  ],
+  "mean_validation_log_loss": 0.9824238493156746,
+  "validation_fold_scores": [
+    0.9478777807088635,
+    0.8881933108539146,
+    1.187180077117724,
+    0.9064442285821959
+  ],
+  "test_continuous_severity_mae": 0.6180895313615189,
+  "test_metrics": {
+    "multiclass_log_loss": 0.9443065467181927,
+    "macro_f1": 0.31462943421555006,
+    "ordinal_mae": 0.5353075170842825
+  },
+  "best_params": {
+    "hidden_width": 64,
+    "n_layers": 1,
+    "dropout": 0.1,
+    "learning_rate": 0.001,
+    "weight_decay": 1e-05
+  },
+  "final_params": {
+    "hidden_width": 64,
+    "n_layers": 1,
+    "dropout": 0.1,
+    "learning_rate": 0.001,
+    "weight_decay": 1e-05
+  },
+  "fixed_epochs": null,
+  "n_trials": 1,
+  "smoke_run": true,
+  "seed": 42,
+  "python_version": "3.12.4",
+  "command": "C:\\Users\\lucas\\dev\\crossings\\collab-sol\\scripts\\train_severity_classification.py --model mlp --dataset C:\\Users\\lucas\\dev\\crossings\\data\\final\\final_dataset_incidents.parquet --output-dir C:\\Users\\lucas\\dev\\crossings\\results\\severity_panel_20261115_232351_smoke\\classification_mlp --trials 50 --max-epochs 50 --patience 5 --n-jobs -1 --xgboost-device cpu --seed 42 --batch-size 256 --smoke"
+}

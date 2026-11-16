@@ -1,0 +1,63 @@
+{
+  "task": "conditional_severity_classification",
+  "model": "xgboost",
+  "dataset_path": "C:\\Users\\lucas\\dev\\crossings\\data\\final\\final_dataset_incidents.parquet",
+  "holdout_year": 2024,
+  "feature_count": 224,
+  "excluded_features": {
+    "latitude": "Near-unique crossing coordinate that can act like an ID.",
+    "longitude": "Near-unique crossing coordinate that can act like an ID.",
+    "latlongsourcecode": "Coordinate-provenance metadata and record-quality proxy.",
+    "B01001_E001": "ACS total population duplicated by B01003_E001.",
+    "B03002_E001": "ACS total population duplicated by B01003_E001."
+  },
+  "severity_classes": [
+    "property_damage_only",
+    "injury",
+    "fatal"
+  ],
+  "severity_weights": [
+    1.0,
+    2.0,
+    3.0
+  ],
+  "mean_validation_log_loss": 0.874949017233432,
+  "validation_fold_scores": [
+    0.8865179970144391,
+    0.8601270776512292,
+    0.8740097823056999,
+    0.8791412119623596
+  ],
+  "test_continuous_severity_mae": 0.6098467151863343,
+  "test_metrics": {
+    "multiclass_log_loss": 0.8849460370905906,
+    "macro_f1": 0.2976949530941843,
+    "ordinal_mae": 0.5381548974943052
+  },
+  "best_params": {
+    "n_estimators": 30,
+    "max_depth": 3,
+    "learning_rate": 0.1,
+    "min_child_weight": 1.0,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "reg_lambda": 1.0,
+    "reg_alpha": 0.0
+  },
+  "final_params": {
+    "n_estimators": 30,
+    "max_depth": 3,
+    "learning_rate": 0.1,
+    "min_child_weight": 1.0,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "reg_lambda": 1.0,
+    "reg_alpha": 0.0
+  },
+  "fixed_epochs": null,
+  "n_trials": 1,
+  "smoke_run": true,
+  "seed": 42,
+  "python_version": "3.12.4",
+  "command": "C:\\Users\\lucas\\dev\\crossings\\collab-sol\\scripts\\train_severity_classification.py --model xgboost --dataset C:\\Users\\lucas\\dev\\crossings\\data\\final\\final_dataset_incidents.parquet --output-dir C:\\Users\\lucas\\dev\\crossings\\results\\severity_panel_20261115_232351_smoke\\classification_xgboost --trials 50 --max-epochs 50 --patience 5 --n-jobs -1 --xgboost-device cpu --seed 42 --smoke"
+}

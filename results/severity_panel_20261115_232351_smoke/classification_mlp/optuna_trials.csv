@@ -1,0 +1,2 @@
+number,value,datetime_start,datetime_complete,duration,params_dropout,params_hidden_width,params_learning_rate,params_n_layers,params_weight_decay,user_attrs_fold_scores,user_attrs_validation_years,state
+0,0.9824238493156746,2026-11-15 18:24:46.691698,2026-11-15 18:24:52.382315,0 days 00:00:05.690617,0.1,64,0.001,1,1e-05,"[0.9478777807088635, 0.8881933108539146, 1.187180077117724, 0.9064442285821959]","[2020, 2021, 2022, 2023]",COMPLETE

@@ -1,0 +1,2 @@
+number,value,datetime_start,datetime_complete,duration,params_colsample_bytree,params_learning_rate,params_max_depth,params_min_child_weight,params_n_estimators,params_reg_alpha,params_reg_lambda,params_subsample,user_attrs_fold_scores,user_attrs_validation_years,state
+0,0.874949017233432,2026-11-15 18:24:33.430951,2026-11-15 18:24:37.971776,0 days 00:00:04.540825,0.8,0.1,3,1.0,30,0.0,1.0,0.8,"[0.8865179970144391, 0.8601270776512292, 0.8740097823056999, 0.8791412119623596]","[2020, 2021, 2022, 2023]",COMPLETE

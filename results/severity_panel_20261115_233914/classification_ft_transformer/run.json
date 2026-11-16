@@ -1,0 +1,61 @@
+{
+  "task": "conditional_severity_classification",
+  "model": "ft_transformer",
+  "dataset_path": "/content/drive/.shortcut-targets-by-id/1aybJZ4jXd3-7a8OKt1zUUJbhHg1Pb-Uv/Team 2/data/processed/final_dataset.parquet",
+  "holdout_year": 2024,
+  "feature_count": 224,
+  "excluded_features": {
+    "latitude": "Near-unique crossing coordinate that can act like an ID.",
+    "longitude": "Near-unique crossing coordinate that can act like an ID.",
+    "latlongsourcecode": "Coordinate-provenance metadata and record-quality proxy.",
+    "B01001_E001": "ACS total population duplicated by B01003_E001.",
+    "B03002_E001": "ACS total population duplicated by B01003_E001."
+  },
+  "severity_classes": [
+    "property_damage_only",
+    "injury",
+    "fatal"
+  ],
+  "severity_weights": [
+    1.0,
+    2.0,
+    3.0
+  ],
+  "mean_validation_log_loss": 0.875313663800007,
+  "validation_fold_scores": [
+    0.8759467738201498,
+    0.8674411109059431,
+    0.8719766688133926,
+    0.8858901016605422
+  ],
+  "test_continuous_severity_mae": 0.6064666276494812,
+  "test_metrics": {
+    "multiclass_log_loss": 0.8880104930830016,
+    "macro_f1": 0.3435705666282107,
+    "ordinal_mae": 0.5529612756264237
+  },
+  "best_params": {
+    "n_blocks": 3,
+    "d_block": 192,
+    "attention_dropout": 0.02199829618841421,
+    "ffn_dropout": 0.011875953164995883,
+    "residual_dropout": 0.04580212786864625,
+    "learning_rate": 0.0005107131109552669,
+    "weight_decay": 0.00029812227033415854
+  },
+  "final_params": {
+    "n_blocks": 3,
+    "d_block": 192,
+    "attention_dropout": 0.02199829618841421,
+    "ffn_dropout": 0.011875953164995883,
+    "residual_dropout": 0.04580212786864625,
+    "learning_rate": 0.0005107131109552669,
+    "weight_decay": 0.00029812227033415854
+  },
+  "fixed_epochs": 6,
+  "n_trials": 50,
+  "smoke_run": false,
+  "seed": 42,
+  "python_version": "3.13.16",
+  "command": "scripts/train_severity_classification.py --model ft_transformer --dataset /content/drive/MyDrive/Team 2/data/processed/final_dataset.parquet --output-dir /content/drive/MyDrive/Team 2/code/runs/severity_ft_transformer_2026-11-16/classification_ft_transformer --trials 50 --max-epochs 50 --patience 5 --n-jobs -1 --xgboost-device cpu --seed 42 --batch-size 64 --require-cuda"
+}

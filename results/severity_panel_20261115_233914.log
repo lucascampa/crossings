@@ -1,0 +1,2202 @@
+
+=== classification_logistic_regression === 18:39:15
+[I 2026-11-15 18:39:23,127] A new study created in memory with name: conditional_severity_classification_logistic_regression
+severity_target  property_damage_only  injury  fatal
+asof_year                                           
+2019                             1041     465    257
+2020                              877     424    182
+2021                             1045     413    219
+2022                             1070     463    249
+2023                             1040     468    237
+2024                             1043     467    246
+Dataset: C:\Users\lucas\dev\crossings\data\final\final_dataset_incidents.parquet
+Using 224 predictors: 187 numeric + 37 categorical
+trial 1/50 | fold 1/4 | preparing data
+trial 1/50 | fold 1/4 | log loss 1.0599 | 1.0 s
+trial 1/50 | fold 2/4 | preparing data
+trial 1/50 | fold 2/4 | log loss 0.9661 | 1.6 s
+trial 1/50 | fold 3/4 | preparing data
+trial 1/50 | fold 3/4 | log loss 1.2230 | 2.6 s
+trial 1/50 | fold 4/4 | preparing data
+trial 1/50 | fold 4/4 | log loss 0.9435 | 3.7 s
+[I 2026-11-15 18:39:31,987] Trial 0 finished with value: 1.0481254014610353 and parameters: {'C': 0.1767016940294795, 'class_weight': None}. Best is trial 0 with value: 1.0481254014610353.
+trial 2/50 | fold 1/4 | using cached data
+trial 2/50 | fold 1/4 | log loss 1.2071 | 1.9 s
+trial 2/50 | fold 2/4 | using cached data
+trial 2/50 | fold 2/4 | log loss 1.0140 | 4.4 s
+trial 2/50 | fold 3/4 | using cached data
+trial 2/50 | fold 3/4 | log loss 1.2546 | 5.6 s
+trial 2/50 | fold 4/4 | using cached data
+trial 2/50 | fold 4/4 | log loss 0.9712 | 7.6 s
+[I 2026-11-15 18:39:51,449] Trial 1 finished with value: 1.1116992331863298 and parameters: {'C': 3.907967156822881, 'class_weight': None}. Best is trial 0 with value: 1.0481254014610353.
+trial 3/50 | fold 1/4 | using cached data
+trial 3/50 | fold 1/4 | log loss 0.9030 | 0.3 s
+trial 3/50 | fold 2/4 | using cached data
+trial 3/50 | fold 2/4 | log loss 0.8823 | 0.6 s
+trial 3/50 | fold 3/4 | using cached data
+trial 3/50 | fold 3/4 | log loss 1.1845 | 0.7 s
+trial 3/50 | fold 4/4 | using cached data
+trial 3/50 | fold 4/4 | log loss 0.9002 | 1.2 s
+[I 2026-11-15 18:39:54,234] Trial 2 finished with value: 0.9674906559636927 and parameters: {'C': 0.002231010801867922, 'class_weight': None}. Best is trial 2 with value: 0.9674906559636927.
+trial 4/50 | fold 1/4 | using cached data
+trial 4/50 | fold 1/4 | log loss 1.4637 | 2.8 s
+trial 4/50 | fold 2/4 | using cached data
+trial 4/50 | fold 2/4 | log loss 1.1894 | 5.2 s
+trial 4/50 | fold 3/4 | using cached data
+trial 4/50 | fold 3/4 | log loss 1.5422 | 8.7 s
+trial 4/50 | fold 4/4 | using cached data
+trial 4/50 | fold 4/4 | log loss 1.1443 | 10.9 s
+[I 2026-11-15 18:40:21,859] Trial 3 finished with value: 1.3348709602375224 and parameters: {'C': 17.71884735480682, 'class_weight': 'balanced'}. Best is trial 2 with value: 0.9674906559636927.
+trial 5/50 | fold 1/4 | using cached data
+trial 5/50 | fold 1/4 | log loss 1.3101 | 5.9 s
+trial 5/50 | fold 2/4 | using cached data
+trial 5/50 | fold 2/4 | log loss 1.0314 | 14.3 s
+trial 5/50 | fold 3/4 | using cached data
+trial 5/50 | fold 3/4 | log loss 1.4003 | 18.0 s
+trial 5/50 | fold 4/4 | using cached data
+trial 5/50 | fold 4/4 | log loss 1.0046 | 11.4 s
+[I 2026-11-15 18:41:11,453] Trial 4 finished with value: 1.1865765623536253 and parameters: {'C': 98.77700294007911, 'class_weight': None}. Best is trial 2 with value: 0.9674906559636927.
+trial 6/50 | fold 1/4 | using cached data
+trial 6/50 | fold 1/4 | log loss 1.0849 | 0.2 s
+trial 6/50 | fold 2/4 | using cached data
+trial 6/50 | fold 2/4 | log loss 1.0575 | 0.6 s
+trial 6/50 | fold 3/4 | using cached data
+trial 6/50 | fold 3/4 | log loss 1.3293 | 0.9 s
+trial 6/50 | fold 4/4 | using cached data
+trial 6/50 | fold 4/4 | log loss 1.0697 | 1.4 s
+[I 2026-11-15 18:41:14,543] Trial 5 finished with value: 1.1353600531979509 and parameters: {'C': 0.012601639723276799, 'class_weight': 'balanced'}. Best is trial 2 with value: 0.9674906559636927.
+trial 7/50 | fold 1/4 | using cached data
+trial 7/50 | fold 1/4 | log loss 1.2602 | 1.0 s
+[I 2026-11-15 18:41:15,561] Trial 6 pruned. 
+trial 8/50 | fold 1/4 | using cached data
+trial 8/50 | fold 1/4 | log loss 1.0633 | 0.3 s
+trial 8/50 | fold 2/4 | using cached data
+trial 8/50 | fold 2/4 | log loss 1.0476 | 0.8 s
+trial 8/50 | fold 3/4 | using cached data
+trial 8/50 | fold 3/4 | log loss 1.3227 | 0.7 s
+trial 8/50 | fold 4/4 | using cached data
+trial 8/50 | fold 4/4 | log loss 1.0629 | 1.1 s
+[I 2026-11-15 18:41:18,503] Trial 7 finished with value: 1.1241065825917718 and parameters: {'C': 0.006870101665590026, 'class_weight': 'balanced'}. Best is trial 2 with value: 0.9674906559636927.
+trial 9/50 | fold 1/4 | using cached data
+trial 9/50 | fold 1/4 | log loss 1.1133 | 1.1 s
+[I 2026-11-15 18:41:19,617] Trial 8 pruned. 
+trial 10/50 | fold 1/4 | using cached data
+trial 10/50 | fold 1/4 | log loss 1.1515 | 1.6 s
+[I 2026-11-15 18:41:21,219] Trial 9 pruned. 
+trial 11/50 | fold 1/4 | using cached data
+trial 11/50 | fold 1/4 | log loss 0.9067 | 0.4 s
+trial 11/50 | fold 2/4 | using cached data
+trial 11/50 | fold 2/4 | log loss 0.8863 | 0.5 s
+trial 11/50 | fold 3/4 | using cached data
+trial 11/50 | fold 3/4 | log loss 1.1861 | 0.9 s
+trial 11/50 | fold 4/4 | using cached data
+trial 11/50 | fold 4/4 | log loss 0.9026 | 1.3 s
+[I 2026-11-15 18:41:24,263] Trial 10 finished with value: 0.9703927084068534 and parameters: {'C': 0.003001968983707265, 'class_weight': None}. Best is trial 2 with value: 0.9674906559636927.
+trial 12/50 | fold 1/4 | using cached data
+trial 12/50 | fold 1/4 | log loss 0.9013 | 0.3 s
+trial 12/50 | fold 2/4 | using cached data
+trial 12/50 | fold 2/4 | log loss 0.8804 | 0.5 s
+trial 12/50 | fold 3/4 | using cached data
+trial 12/50 | fold 3/4 | log loss 1.1837 | 0.7 s
+trial 12/50 | fold 4/4 | using cached data
+trial 12/50 | fold 4/4 | log loss 0.8989 | 1.0 s
+[I 2026-11-15 18:41:26,796] Trial 11 finished with value: 0.9660910123894408 and parameters: {'C': 0.0018611473730680897, 'class_weight': None}. Best is trial 11 with value: 0.9660910123894408.
+trial 13/50 | fold 1/4 | using cached data
+trial 13/50 | fold 1/4 | log loss 0.9707 | 0.6 s
+trial 13/50 | fold 2/4 | using cached data
+trial 13/50 | fold 2/4 | log loss 0.9277 | 1.2 s
+trial 13/50 | fold 3/4 | using cached data
+trial 13/50 | fold 3/4 | log loss 1.2033 | 2.0 s
+trial 13/50 | fold 4/4 | using cached data
+trial 13/50 | fold 4/4 | log loss 0.9237 | 3.0 s
+[I 2026-11-15 18:41:33,588] Trial 12 finished with value: 1.0063775234219279 and parameters: {'C': 0.024719052286660794, 'class_weight': None}. Best is trial 11 with value: 0.9660910123894408.
+trial 14/50 | fold 1/4 | using cached data
+trial 14/50 | fold 1/4 | log loss 0.9679 | 0.5 s
+trial 14/50 | fold 2/4 | using cached data
+trial 14/50 | fold 2/4 | log loss 0.9263 | 1.2 s
+trial 14/50 | fold 3/4 | using cached data
+trial 14/50 | fold 3/4 | log loss 1.2027 | 1.9 s
+trial 14/50 | fold 4/4 | using cached data
+trial 14/50 | fold 4/4 | log loss 0.9230 | 2.9 s
+[I 2026-11-15 18:41:40,087] Trial 13 finished with value: 1.0049828088871275 and parameters: {'C': 0.023009256425247898, 'class_weight': None}. Best is trial 11 with value: 0.9660910123894408.
+trial 15/50 | fold 1/4 | using cached data
+trial 15/50 | fold 1/4 | log loss 0.8994 | 0.2 s
+trial 15/50 | fold 2/4 | using cached data
+trial 15/50 | fold 2/4 | log loss 0.8774 | 0.4 s
+trial 15/50 | fold 3/4 | using cached data
+trial 15/50 | fold 3/4 | log loss 1.1828 | 0.8 s
+trial 15/50 | fold 4/4 | using cached data
+trial 15/50 | fold 4/4 | log loss 0.8968 | 0.8 s
+[I 2026-11-15 18:41:42,390] Trial 14 finished with value: 0.9640857599797803 and parameters: {'C': 0.0012671261542656204, 'class_weight': None}. Best is trial 14 with value: 0.9640857599797803.
+trial 16/50 | fold 1/4 | using cached data
+trial 16/50 | fold 1/4 | log loss 1.0410 | 0.2 s
+[I 2026-11-15 18:41:42,559] Trial 15 pruned. 
+trial 17/50 | fold 1/4 | using cached data
+trial 17/50 | fold 1/4 | log loss 1.5499 | 4.6 s
+[I 2026-11-15 18:41:47,144] Trial 16 pruned. 
+trial 18/50 | fold 1/4 | using cached data
+trial 18/50 | fold 1/4 | log loss 0.8990 | 0.3 s
+trial 18/50 | fold 2/4 | using cached data
+trial 18/50 | fold 2/4 | log loss 0.8766 | 0.4 s
+trial 18/50 | fold 3/4 | using cached data
+trial 18/50 | fold 3/4 | log loss 1.1826 | 0.9 s
+trial 18/50 | fold 4/4 | using cached data
+trial 18/50 | fold 4/4 | log loss 0.8961 | 1.3 s
+[I 2026-11-15 18:41:49,982] Trial 17 finished with value: 0.9635893199213094 and parameters: {'C': 0.0010757075323438244, 'class_weight': None}. Best is trial 17 with value: 0.9635893199213094.
+trial 19/50 | fold 1/4 | using cached data
+trial 19/50 | fold 1/4 | log loss 0.9399 | 0.4 s
+trial 19/50 | fold 2/4 | using cached data
+trial 19/50 | fold 2/4 | log loss 0.9112 | 0.8 s
+trial 19/50 | fold 3/4 | using cached data
+trial 19/50 | fold 3/4 | log loss 1.1960 | 1.6 s
+trial 19/50 | fold 4/4 | using cached data
+trial 19/50 | fold 4/4 | log loss 0.9153 | 2.2 s
+[I 2026-11-15 18:41:54,953] Trial 18 finished with value: 0.9906134428652253 and parameters: {'C': 0.011258789623027664, 'class_weight': None}. Best is trial 17 with value: 0.9635893199213094.
+trial 20/50 | fold 1/4 | using cached data
+trial 20/50 | fold 1/4 | log loss 1.0316 | 0.6 s
+[I 2026-11-15 18:41:55,538] Trial 19 pruned. 
+trial 21/50 | fold 1/4 | using cached data
+trial 21/50 | fold 1/4 | log loss 1.1964 | 0.7 s
+[I 2026-11-15 18:41:56,204] Trial 20 pruned. 
+trial 22/50 | fold 1/4 | using cached data
+trial 22/50 | fold 1/4 | log loss 0.8990 | 0.2 s
+trial 22/50 | fold 2/4 | using cached data
+trial 22/50 | fold 2/4 | log loss 0.8765 | 0.4 s
+trial 22/50 | fold 3/4 | using cached data
+trial 22/50 | fold 3/4 | log loss 1.1826 | 0.7 s
+trial 22/50 | fold 4/4 | using cached data
+trial 22/50 | fold 4/4 | log loss 0.8960 | 0.9 s
+[I 2026-11-15 18:41:58,398] Trial 21 finished with value: 0.9635431782097132 and parameters: {'C': 0.0010473991642705991, 'class_weight': None}. Best is trial 21 with value: 0.9635431782097132.
+trial 23/50 | fold 1/4 | using cached data
+trial 23/50 | fold 1/4 | log loss 0.8991 | 0.2 s
+trial 23/50 | fold 2/4 | using cached data
+trial 23/50 | fold 2/4 | log loss 0.8767 | 0.5 s
+trial 23/50 | fold 3/4 | using cached data
+trial 23/50 | fold 3/4 | log loss 1.1826 | 0.8 s
+trial 23/50 | fold 4/4 | using cached data
+trial 23/50 | fold 4/4 | log loss 0.8961 | 0.9 s
+[I 2026-11-15 18:42:00,681] Trial 22 finished with value: 0.9636273540477552 and parameters: {'C': 0.0010820478238735742, 'class_weight': None}. Best is trial 21 with value: 0.9635431782097132.
+trial 24/50 | fold 1/4 | using cached data
+trial 24/50 | fold 1/4 | log loss 0.9174 | 0.3 s
+trial 24/50 | fold 2/4 | using cached data
+trial 24/50 | fold 2/4 | log loss 0.8958 | 0.6 s
+trial 24/50 | fold 3/4 | using cached data
+trial 24/50 | fold 3/4 | log loss 1.1898 | 1.0 s
+trial 24/50 | fold 4/4 | using cached data
+trial 24/50 | fold 4/4 | log loss 0.9075 | 1.5 s
+[I 2026-11-15 18:42:04,144] Trial 23 finished with value: 0.9776345141538014 and parameters: {'C': 0.005271233003260571, 'class_weight': None}. Best is trial 21 with value: 0.9635431782097132.
+trial 25/50 | fold 1/4 | using cached data
+trial 25/50 | fold 1/4 | log loss 0.8991 | 0.2 s
+trial 25/50 | fold 2/4 | using cached data
+trial 25/50 | fold 2/4 | log loss 0.8766 | 0.6 s
+trial 25/50 | fold 3/4 | using cached data
+trial 25/50 | fold 3/4 | log loss 1.1826 | 0.8 s
+trial 25/50 | fold 4/4 | using cached data
+trial 25/50 | fold 4/4 | log loss 0.8960 | 0.9 s
+[I 2026-11-15 18:42:06,648] Trial 24 finished with value: 0.9635957364999637 and parameters: {'C': 0.0010647371822237641, 'class_weight': None}. Best is trial 21 with value: 0.9635431782097132.
+trial 26/50 | fold 1/4 | using cached data
+trial 26/50 | fold 1/4 | log loss 0.9322 | 0.3 s
+[I 2026-11-15 18:42:06,972] Trial 25 pruned. 
+trial 27/50 | fold 1/4 | using cached data
+trial 27/50 | fold 1/4 | log loss 1.0006 | 0.7 s
+[I 2026-11-15 18:42:07,693] Trial 26 pruned. 
+trial 28/50 | fold 1/4 | using cached data
+trial 28/50 | fold 1/4 | log loss 1.1261 | 0.3 s
+[I 2026-11-15 18:42:08,025] Trial 27 pruned. 
+trial 29/50 | fold 1/4 | using cached data
+trial 29/50 | fold 1/4 | log loss 0.9155 | 0.3 s
+trial 29/50 | fold 2/4 | using cached data
+trial 29/50 | fold 2/4 | log loss 0.8941 | 0.6 s
+trial 29/50 | fold 3/4 | using cached data
+trial 29/50 | fold 3/4 | log loss 1.1892 | 1.0 s
+trial 29/50 | fold 4/4 | using cached data
+trial 29/50 | fold 4/4 | log loss 0.9067 | 1.4 s
+[I 2026-11-15 18:42:11,319] Trial 28 finished with value: 0.976353187003493 and parameters: {'C': 0.004832769203526145, 'class_weight': None}. Best is trial 21 with value: 0.9635431782097132.
+trial 30/50 | fold 1/4 | using cached data
+trial 30/50 | fold 1/4 | log loss 0.8990 | 0.2 s
+trial 30/50 | fold 2/4 | using cached data
+trial 30/50 | fold 2/4 | log loss 0.8765 | 0.4 s
+trial 30/50 | fold 3/4 | using cached data
+trial 30/50 | fold 3/4 | log loss 1.1826 | 0.8 s
+trial 30/50 | fold 4/4 | using cached data
+trial 30/50 | fold 4/4 | log loss 0.8959 | 0.8 s
+[I 2026-11-15 18:42:13,543] Trial 29 finished with value: 0.9635023168240775 and parameters: {'C': 0.001017488883880302, 'class_weight': None}. Best is trial 29 with value: 0.9635023168240775.
+trial 31/50 | fold 1/4 | using cached data
+trial 31/50 | fold 1/4 | log loss 0.9128 | 0.3 s
+trial 31/50 | fold 2/4 | using cached data
+trial 31/50 | fold 2/4 | log loss 0.8919 | 0.6 s
+trial 31/50 | fold 3/4 | using cached data
+trial 31/50 | fold 3/4 | log loss 1.1883 | 1.0 s
+trial 31/50 | fold 4/4 | using cached data
+trial 31/50 | fold 4/4 | log loss 0.9056 | 1.4 s
+[I 2026-11-15 18:42:16,837] Trial 30 finished with value: 0.974642510456811 and parameters: {'C': 0.004261827597485342, 'class_weight': None}. Best is trial 29 with value: 0.9635023168240775.
+trial 32/50 | fold 1/4 | using cached data
+trial 32/50 | fold 1/4 | log loss 0.8995 | 0.2 s
+trial 32/50 | fold 2/4 | using cached data
+trial 32/50 | fold 2/4 | log loss 0.8777 | 0.4 s
+trial 32/50 | fold 3/4 | using cached data
+trial 32/50 | fold 3/4 | log loss 1.1828 | 0.8 s
+trial 32/50 | fold 4/4 | using cached data
+trial 32/50 | fold 4/4 | log loss 0.8970 | 0.9 s
+[I 2026-11-15 18:42:19,187] Trial 31 finished with value: 0.9642551038893468 and parameters: {'C': 0.0013245336646662217, 'class_weight': None}. Best is trial 29 with value: 0.9635023168240775.
+trial 33/50 | fold 1/4 | using cached data
+trial 33/50 | fold 1/4 | log loss 0.9411 | 0.4 s
+[I 2026-11-15 18:42:19,558] Trial 32 pruned. 
+trial 34/50 | fold 1/4 | using cached data
+trial 34/50 | fold 1/4 | log loss 1.0432 | 0.3 s
+[I 2026-11-15 18:42:19,813] Trial 33 pruned. 
+trial 35/50 | fold 1/4 | using cached data
+trial 35/50 | fold 1/4 | log loss 0.9051 | 0.4 s
+trial 35/50 | fold 2/4 | using cached data
+trial 35/50 | fold 2/4 | log loss 0.8846 | 0.5 s
+trial 35/50 | fold 3/4 | using cached data
+trial 35/50 | fold 3/4 | log loss 1.1854 | 0.8 s
+trial 35/50 | fold 4/4 | using cached data
+trial 35/50 | fold 4/4 | log loss 0.9015 | 1.2 s
+[I 2026-11-15 18:42:22,603] Trial 34 finished with value: 0.9691527589837272 and parameters: {'C': 0.002676866110113472, 'class_weight': None}. Best is trial 29 with value: 0.9635023168240775.
+trial 36/50 | fold 1/4 | using cached data
+trial 36/50 | fold 1/4 | log loss 0.8991 | 0.2 s
+trial 36/50 | fold 2/4 | using cached data
+trial 36/50 | fold 2/4 | log loss 0.8769 | 0.4 s
+trial 36/50 | fold 3/4 | using cached data
+trial 36/50 | fold 3/4 | log loss 1.1827 | 0.7 s
+trial 36/50 | fold 4/4 | using cached data
+trial 36/50 | fold 4/4 | log loss 0.8963 | 0.8 s
+[I 2026-11-15 18:42:24,752] Trial 35 finished with value: 0.9637424143333733 and parameters: {'C': 0.0011335811582620968, 'class_weight': None}. Best is trial 29 with value: 0.9635023168240775.
+trial 37/50 | fold 1/4 | using cached data
+trial 37/50 | fold 1/4 | log loss 0.9064 | 0.3 s
+trial 37/50 | fold 2/4 | using cached data
+trial 37/50 | fold 2/4 | log loss 0.8860 | 0.5 s
+trial 37/50 | fold 3/4 | using cached data
+trial 37/50 | fold 3/4 | log loss 1.1860 | 0.8 s
+trial 37/50 | fold 4/4 | using cached data
+trial 37/50 | fold 4/4 | log loss 0.9023 | 1.3 s
+[I 2026-11-15 18:42:27,772] Trial 36 finished with value: 0.970171001566954 and parameters: {'C': 0.002945828927637597, 'class_weight': None}. Best is trial 29 with value: 0.9635023168240775.
+trial 38/50 | fold 1/4 | using cached data
+trial 38/50 | fold 1/4 | log loss 1.0013 | 0.7 s
+[I 2026-11-15 18:42:28,502] Trial 37 pruned. 
+trial 39/50 | fold 1/4 | using cached data
+trial 39/50 | fold 1/4 | log loss 1.2829 | 3.2 s
+[I 2026-11-15 18:42:31,741] Trial 38 pruned. 
+trial 40/50 | fold 1/4 | using cached data
+trial 40/50 | fold 1/4 | log loss 0.9190 | 0.3 s
+[I 2026-11-15 18:42:32,037] Trial 39 pruned. 
+trial 41/50 | fold 1/4 | using cached data
+trial 41/50 | fold 1/4 | log loss 1.3419 | 1.6 s
+[I 2026-11-15 18:42:33,617] Trial 40 pruned. 
+trial 42/50 | fold 1/4 | using cached data
+trial 42/50 | fold 1/4 | log loss 0.8991 | 0.2 s
+trial 42/50 | fold 2/4 | using cached data
+trial 42/50 | fold 2/4 | log loss 0.8765 | 0.4 s
+trial 42/50 | fold 3/4 | using cached data
+trial 42/50 | fold 3/4 | log loss 1.1826 | 0.8 s
+trial 42/50 | fold 4/4 | using cached data
+trial 42/50 | fold 4/4 | log loss 0.8959 | 0.8 s
+[I 2026-11-15 18:42:35,745] Trial 41 finished with value: 0.9635115476851472 and parameters: {'C': 0.0010141275657622282, 'class_weight': None}. Best is trial 29 with value: 0.9635023168240775.
+trial 43/50 | fold 1/4 | using cached data
+trial 43/50 | fold 1/4 | log loss 0.8991 | 0.2 s
+trial 43/50 | fold 2/4 | using cached data
+trial 43/50 | fold 2/4 | log loss 0.8765 | 0.4 s
+trial 43/50 | fold 3/4 | using cached data
+trial 43/50 | fold 3/4 | log loss 1.1826 | 0.6 s
+trial 43/50 | fold 4/4 | using cached data
+trial 43/50 | fold 4/4 | log loss 0.8959 | 0.8 s
+[I 2026-11-15 18:42:37,840] Trial 42 finished with value: 0.9635289673555287 and parameters: {'C': 0.0010301461200627146, 'class_weight': None}. Best is trial 29 with value: 0.9635023168240775.
+trial 44/50 | fold 1/4 | using cached data
+trial 44/50 | fold 1/4 | log loss 0.9038 | 0.3 s
+trial 44/50 | fold 2/4 | using cached data
+trial 44/50 | fold 2/4 | log loss 0.8832 | 0.4 s
+trial 44/50 | fold 3/4 | using cached data
+trial 44/50 | fold 3/4 | log loss 1.1848 | 0.7 s
+trial 44/50 | fold 4/4 | using cached data
+trial 44/50 | fold 4/4 | log loss 0.9007 | 1.2 s
+[I 2026-11-15 18:42:40,445] Trial 43 finished with value: 0.9681418473311774 and parameters: {'C': 0.002404768266297029, 'class_weight': None}. Best is trial 29 with value: 0.9635023168240775.
+trial 45/50 | fold 1/4 | using cached data
+trial 45/50 | fold 1/4 | log loss 1.0547 | 0.3 s
+[I 2026-11-15 18:42:40,723] Trial 44 pruned. 
+trial 46/50 | fold 1/4 | using cached data
+trial 46/50 | fold 1/4 | log loss 0.9032 | 0.3 s
+trial 46/50 | fold 2/4 | using cached data
+trial 46/50 | fold 2/4 | log loss 0.8826 | 0.6 s
+trial 46/50 | fold 3/4 | using cached data
+trial 46/50 | fold 3/4 | log loss 1.1846 | 0.7 s
+trial 46/50 | fold 4/4 | using cached data
+trial 46/50 | fold 4/4 | log loss 0.9004 | 1.1 s
+[I 2026-11-15 18:42:43,426] Trial 45 finished with value: 0.9676738137163773 and parameters: {'C': 0.0022838833753271817, 'class_weight': None}. Best is trial 29 with value: 0.9635023168240775.
+trial 47/50 | fold 1/4 | using cached data
+trial 47/50 | fold 1/4 | log loss 0.9575 | 0.5 s
+[I 2026-11-15 18:42:43,949] Trial 46 pruned. 
+trial 48/50 | fold 1/4 | using cached data
+trial 48/50 | fold 1/4 | log loss 0.9220 | 0.3 s
+[I 2026-11-15 18:42:44,299] Trial 47 pruned. 
+trial 49/50 | fold 1/4 | using cached data
+trial 49/50 | fold 1/4 | log loss 1.3292 | 8.8 s
+[I 2026-11-15 18:42:53,134] Trial 48 pruned. 
+trial 50/50 | fold 1/4 | using cached data
+trial 50/50 | fold 1/4 | log loss 0.9023 | 0.7 s
+trial 50/50 | fold 2/4 | using cached data
+trial 50/50 | fold 2/4 | log loss 0.8815 | 1.2 s
+trial 50/50 | fold 3/4 | using cached data
+trial 50/50 | fold 3/4 | log loss 1.1842 | 1.8 s
+trial 50/50 | fold 4/4 | using cached data
+trial 50/50 | fold 4/4 | log loss 0.8997 | 2.8 s
+[I 2026-11-15 18:42:59,654] Trial 49 finished with value: 0.9669069125475973 and parameters: {'C': 0.002077937306356191, 'class_weight': None}. Best is trial 29 with value: 0.9635023168240775.
+Mean validation log loss: 0.9635023168240775
+Best parameters: {'C': 0.001017488883880302, 'class_weight': None}
+   multiclass_log_loss  macro_f1  ordinal_mae
+0             0.903233  0.308562     0.539294
+Continuous expected-severity MAE: 0.6127226947292498
+Saved results to: C:\Users\lucas\dev\crossings\results\severity_panel_20261115_233914\classification_logistic_regression
+
+=== regression_ridge === 18:43:08
+[I 2026-11-15 18:43:21,602] A new study created in memory with name: conditional_severity_regression_ridge
+           crash_rows  mean_severity
+asof_year                           
+2019             1763       1.555303
+2020             1483       1.531355
+2021             1677       1.507454
+2022             1782       1.539282
+2023             1745       1.539828
+2024             1756       1.546128
+Dataset: C:\Users\lucas\dev\crossings\data\final\final_dataset_incidents.parquet
+Using 224 predictors: 187 numeric + 37 categorical
+trial 1/50 | fold 1/4 | preparing data
+trial 1/50 | fold 1/4 | MAE 0.5946 | 2.5 s
+trial 1/50 | fold 2/4 | preparing data
+trial 1/50 | fold 2/4 | MAE 0.6032 | 4.8 s
+trial 1/50 | fold 3/4 | preparing data
+trial 1/50 | fold 3/4 | MAE 0.6119 | 6.9 s
+trial 1/50 | fold 4/4 | preparing data
+trial 1/50 | fold 4/4 | MAE 0.5935 | 9.7 s
+[I 2026-11-15 18:43:45,453] Trial 0 finished with value: 0.600796663039598 and parameters: {'alpha': 0.017670169402947963}. Best is trial 0 with value: 0.600796663039598.
+trial 2/50 | fold 1/4 | using cached data
+trial 2/50 | fold 1/4 | MAE 0.5962 | 0.3 s
+trial 2/50 | fold 2/4 | using cached data
+trial 2/50 | fold 2/4 | MAE 0.6019 | 0.6 s
+trial 2/50 | fold 3/4 | using cached data
+trial 2/50 | fold 3/4 | MAE 0.6109 | 1.1 s
+trial 2/50 | fold 4/4 | using cached data
+trial 2/50 | fold 4/4 | MAE 0.5963 | 1.7 s
+[I 2026-11-15 18:43:49,206] Trial 1 finished with value: 0.6013067164187289 and parameters: {'alpha': 50.61576888752309}. Best is trial 0 with value: 0.600796663039598.
+trial 3/50 | fold 1/4 | using cached data
+trial 3/50 | fold 1/4 | MAE 0.5934 | 1.0 s
+trial 3/50 | fold 2/4 | using cached data
+trial 3/50 | fold 2/4 | MAE 0.6017 | 1.8 s
+trial 3/50 | fold 3/4 | using cached data
+trial 3/50 | fold 3/4 | MAE 0.6109 | 3.3 s
+trial 3/50 | fold 4/4 | using cached data
+trial 3/50 | fold 4/4 | MAE 0.5936 | 5.1 s
+[I 2026-11-15 18:44:00,427] Trial 2 finished with value: 0.5998792443373712 and parameters: {'alpha': 2.465832945854912}. Best is trial 2 with value: 0.5998792443373712.
+trial 4/50 | fold 1/4 | using cached data
+trial 4/50 | fold 1/4 | MAE 0.5941 | 1.5 s
+trial 4/50 | fold 2/4 | using cached data
+trial 4/50 | fold 2/4 | MAE 0.6026 | 3.4 s
+trial 4/50 | fold 3/4 | using cached data
+trial 4/50 | fold 3/4 | MAE 0.6115 | 5.6 s
+trial 4/50 | fold 4/4 | using cached data
+trial 4/50 | fold 4/4 | MAE 0.5935 | 7.4 s
+[I 2026-11-15 18:44:18,190] Trial 3 finished with value: 0.6004393730552376 and parameters: {'alpha': 0.39079671568228835}. Best is trial 2 with value: 0.5998792443373712.
+trial 5/50 | fold 1/4 | using cached data
+trial 5/50 | fold 1/4 | MAE 0.5947 | 2.2 s
+trial 5/50 | fold 2/4 | using cached data
+trial 5/50 | fold 2/4 | MAE 0.6032 | 4.2 s
+trial 5/50 | fold 3/4 | using cached data
+trial 5/50 | fold 3/4 | MAE 0.6119 | 6.6 s
+trial 5/50 | fold 4/4 | using cached data
+trial 5/50 | fold 4/4 | MAE 0.5935 | 8.7 s
+[I 2026-11-15 18:44:39,848] Trial 4 finished with value: 0.6008484474514095 and parameters: {'alpha': 0.0008632008168602544}. Best is trial 2 with value: 0.5998792443373712.
+trial 6/50 | fold 1/4 | using cached data
+trial 6/50 | fold 1/4 | MAE 0.5947 | 2.1 s
+[I 2026-11-15 18:44:41,982] Trial 5 pruned. 
+trial 7/50 | fold 1/4 | using cached data
+trial 7/50 | fold 1/4 | MAE 0.5947 | 1.9 s
+[I 2026-11-15 18:44:43,884] Trial 6 pruned. 
+trial 8/50 | fold 1/4 | using cached data
+trial 8/50 | fold 1/4 | MAE 0.5946 | 0.4 s
+trial 8/50 | fold 2/4 | using cached data
+trial 8/50 | fold 2/4 | MAE 0.6011 | 1.1 s
+trial 8/50 | fold 3/4 | using cached data
+trial 8/50 | fold 3/4 | MAE 0.6105 | 1.8 s
+trial 8/50 | fold 4/4 | using cached data
+trial 8/50 | fold 4/4 | MAE 0.5946 | 2.7 s
+[I 2026-11-15 18:44:49,941] Trial 7 finished with value: 0.600179668268646 and parameters: {'alpha': 15.741890047456648}. Best is trial 2 with value: 0.5998792443373712.
+trial 9/50 | fold 1/4 | using cached data
+trial 9/50 | fold 1/4 | MAE 0.5941 | 1.5 s
+trial 9/50 | fold 2/4 | using cached data
+trial 9/50 | fold 2/4 | MAE 0.6026 | 3.2 s
+trial 9/50 | fold 3/4 | using cached data
+trial 9/50 | fold 3/4 | MAE 0.6115 | 5.5 s
+trial 9/50 | fold 4/4 | using cached data
+trial 9/50 | fold 4/4 | MAE 0.5935 | 7.0 s
+[I 2026-11-15 18:45:07,132] Trial 8 finished with value: 0.6004289634767451 and parameters: {'alpha': 0.4042872735027334}. Best is trial 2 with value: 0.5998792443373712.
+trial 10/50 | fold 1/4 | using cached data
+trial 10/50 | fold 1/4 | MAE 0.5935 | 1.1 s
+trial 10/50 | fold 2/4 | using cached data
+trial 10/50 | fold 2/4 | MAE 0.6019 | 2.3 s
+trial 10/50 | fold 3/4 | using cached data
+trial 10/50 | fold 3/4 | MAE 0.6110 | 3.8 s
+trial 10/50 | fold 4/4 | using cached data
+trial 10/50 | fold 4/4 | MAE 0.5936 | 5.5 s
+[I 2026-11-15 18:45:19,833] Trial 9 finished with value: 0.5999838892294005 and parameters: {'alpha': 1.7718847354806828}. Best is trial 2 with value: 0.5998792443373712.
+trial 11/50 | fold 1/4 | using cached data
+trial 11/50 | fold 1/4 | MAE 0.5947 | 2.4 s
+[I 2026-11-15 18:45:22,211] Trial 10 pruned. 
+trial 12/50 | fold 1/4 | using cached data
+trial 12/50 | fold 1/4 | MAE 0.5933 | 0.8 s
+trial 12/50 | fold 2/4 | using cached data
+trial 12/50 | fold 2/4 | MAE 0.6015 | 1.6 s
+trial 12/50 | fold 3/4 | using cached data
+trial 12/50 | fold 3/4 | MAE 0.6108 | 3.1 s
+trial 12/50 | fold 4/4 | using cached data
+trial 12/50 | fold 4/4 | MAE 0.5937 | 4.6 s
+[I 2026-11-15 18:45:32,314] Trial 11 finished with value: 0.5998215628128118 and parameters: {'alpha': 3.009717825235654}. Best is trial 11 with value: 0.5998215628128118.
+trial 13/50 | fold 1/4 | using cached data
+trial 13/50 | fold 1/4 | MAE 0.5936 | 1.0 s
+trial 13/50 | fold 2/4 | using cached data
+trial 13/50 | fold 2/4 | MAE 0.6020 | 2.3 s
+trial 13/50 | fold 3/4 | using cached data
+trial 13/50 | fold 3/4 | MAE 0.6111 | 4.2 s
+trial 13/50 | fold 4/4 | using cached data
+trial 13/50 | fold 4/4 | MAE 0.5935 | 5.8 s
+[I 2026-11-15 18:45:45,571] Trial 12 finished with value: 0.6000406518747882 and parameters: {'alpha': 1.5021275801396485}. Best is trial 11 with value: 0.5998215628128118.
+trial 14/50 | fold 1/4 | using cached data
+trial 14/50 | fold 1/4 | MAE 0.5935 | 0.8 s
+trial 14/50 | fold 2/4 | using cached data
+trial 14/50 | fold 2/4 | MAE 0.6012 | 1.6 s
+trial 14/50 | fold 3/4 | using cached data
+trial 14/50 | fold 3/4 | MAE 0.6106 | 2.7 s
+trial 14/50 | fold 4/4 | using cached data
+trial 14/50 | fold 4/4 | MAE 0.5939 | 3.8 s
+[I 2026-11-15 18:45:54,525] Trial 13 finished with value: 0.5997890672357492 and parameters: {'alpha': 5.675243077335928}. Best is trial 13 with value: 0.5997890672357492.
+trial 15/50 | fold 1/4 | using cached data
+trial 15/50 | fold 1/4 | MAE 0.5944 | 0.5 s
+[I 2026-11-15 18:45:55,023] Trial 14 pruned. 
+trial 16/50 | fold 1/4 | using cached data
+trial 16/50 | fold 1/4 | MAE 0.5946 | 1.9 s
+[I 2026-11-15 18:45:56,937] Trial 15 pruned. 
+trial 17/50 | fold 1/4 | using cached data
+trial 17/50 | fold 1/4 | MAE 0.5964 | 0.2 s
+[I 2026-11-15 18:45:57,183] Trial 16 pruned. 
+trial 18/50 | fold 1/4 | using cached data
+trial 18/50 | fold 1/4 | MAE 0.5943 | 1.8 s
+[I 2026-11-15 18:45:58,961] Trial 17 pruned. 
+trial 19/50 | fold 1/4 | using cached data
+trial 19/50 | fold 1/4 | MAE 0.5938 | 0.7 s
+trial 19/50 | fold 2/4 | using cached data
+trial 19/50 | fold 2/4 | MAE 0.6011 | 1.5 s
+trial 19/50 | fold 3/4 | using cached data
+trial 19/50 | fold 3/4 | MAE 0.6105 | 2.4 s
+trial 19/50 | fold 4/4 | using cached data
+trial 19/50 | fold 4/4 | MAE 0.5940 | 3.3 s
+[I 2026-11-15 18:46:06,904] Trial 18 finished with value: 0.59986881509479 and parameters: {'alpha': 7.767163739947159}. Best is trial 13 with value: 0.5997890672357492.
+trial 20/50 | fold 1/4 | using cached data
+trial 20/50 | fold 1/4 | MAE 0.5943 | 2.0 s
+[I 2026-11-15 18:46:08,916] Trial 19 pruned. 
+trial 21/50 | fold 1/4 | using cached data
+trial 21/50 | fold 1/4 | MAE 0.5934 | 0.8 s
+trial 21/50 | fold 2/4 | using cached data
+trial 21/50 | fold 2/4 | MAE 0.6012 | 1.9 s
+trial 21/50 | fold 3/4 | using cached data
+trial 21/50 | fold 3/4 | MAE 0.6107 | 3.0 s
+trial 21/50 | fold 4/4 | using cached data
+trial 21/50 | fold 4/4 | MAE 0.5938 | 4.0 s
+[I 2026-11-15 18:46:18,663] Trial 20 finished with value: 0.5997617958097523 and parameters: {'alpha': 4.5222008114384895}. Best is trial 20 with value: 0.5997617958097523.
+trial 22/50 | fold 1/4 | using cached data
+trial 22/50 | fold 1/4 | MAE 0.5934 | 0.7 s
+trial 22/50 | fold 2/4 | using cached data
+trial 22/50 | fold 2/4 | MAE 0.6012 | 1.6 s
+trial 22/50 | fold 3/4 | using cached data
+trial 22/50 | fold 3/4 | MAE 0.6106 | 2.8 s
+trial 22/50 | fold 4/4 | using cached data
+trial 22/50 | fold 4/4 | MAE 0.5938 | 3.9 s
+[I 2026-11-15 18:46:27,700] Trial 21 finished with value: 0.5997634358813482 and parameters: {'alpha': 4.931829350496032}. Best is trial 20 with value: 0.5997617958097523.
+trial 23/50 | fold 1/4 | using cached data
+trial 23/50 | fold 1/4 | MAE 0.5938 | 0.6 s
+[I 2026-11-15 18:46:28,295] Trial 22 pruned. 
+trial 24/50 | fold 1/4 | using cached data
+trial 24/50 | fold 1/4 | MAE 0.5959 | 0.3 s
+[I 2026-11-15 18:46:28,599] Trial 23 pruned. 
+trial 25/50 | fold 1/4 | using cached data
+trial 25/50 | fold 1/4 | MAE 0.5938 | 1.4 s
+[I 2026-11-15 18:46:30,014] Trial 24 pruned. 
+trial 26/50 | fold 1/4 | using cached data
+trial 26/50 | fold 1/4 | MAE 0.5934 | 0.7 s
+trial 26/50 | fold 2/4 | using cached data
+trial 26/50 | fold 2/4 | MAE 0.6012 | 1.7 s
+trial 26/50 | fold 3/4 | using cached data
+trial 26/50 | fold 3/4 | MAE 0.6106 | 2.7 s
+trial 26/50 | fold 4/4 | using cached data
+trial 26/50 | fold 4/4 | MAE 0.5938 | 3.9 s
+[I 2026-11-15 18:46:39,068] Trial 25 finished with value: 0.5997687135642094 and parameters: {'alpha': 5.20533428709253}. Best is trial 20 with value: 0.5997617958097523.
+trial 27/50 | fold 1/4 | using cached data
+trial 27/50 | fold 1/4 | MAE 0.5953 | 0.4 s
+[I 2026-11-15 18:46:39,483] Trial 26 pruned. 
+trial 28/50 | fold 1/4 | using cached data
+trial 28/50 | fold 1/4 | MAE 0.5967 | 0.3 s
+[I 2026-11-15 18:46:39,788] Trial 27 pruned. 
+trial 29/50 | fold 1/4 | using cached data
+trial 29/50 | fold 1/4 | MAE 0.5945 | 2.1 s
+[I 2026-11-15 18:46:41,931] Trial 28 pruned. 
+trial 30/50 | fold 1/4 | using cached data
+trial 30/50 | fold 1/4 | MAE 0.5939 | 1.6 s
+[I 2026-11-15 18:46:43,499] Trial 29 pruned. 
+trial 31/50 | fold 1/4 | using cached data
+trial 31/50 | fold 1/4 | MAE 0.5934 | 0.7 s
+trial 31/50 | fold 2/4 | using cached data
+trial 31/50 | fold 2/4 | MAE 0.6012 | 1.6 s
+trial 31/50 | fold 3/4 | using cached data
+trial 31/50 | fold 3/4 | MAE 0.6106 | 2.5 s
+trial 31/50 | fold 4/4 | using cached data
+trial 31/50 | fold 4/4 | MAE 0.5938 | 4.3 s
+[I 2026-11-15 18:46:52,649] Trial 30 finished with value: 0.5997695853564986 and parameters: {'alpha': 5.240819387218543}. Best is trial 20 with value: 0.5997617958097523.
+trial 32/50 | fold 1/4 | using cached data
+trial 32/50 | fold 1/4 | MAE 0.5934 | 0.8 s
+trial 32/50 | fold 2/4 | using cached data
+trial 32/50 | fold 2/4 | MAE 0.6013 | 1.8 s
+trial 32/50 | fold 3/4 | using cached data
+trial 32/50 | fold 3/4 | MAE 0.6107 | 2.9 s
+trial 32/50 | fold 4/4 | using cached data
+trial 32/50 | fold 4/4 | MAE 0.5938 | 4.8 s
+[I 2026-11-15 18:47:02,914] Trial 31 finished with value: 0.5997598041390405 and parameters: {'alpha': 4.300171040208694}. Best is trial 31 with value: 0.5997598041390405.
+trial 33/50 | fold 1/4 | using cached data
+trial 33/50 | fold 1/4 | MAE 0.5946 | 0.5 s
+[I 2026-11-15 18:47:03,408] Trial 32 pruned. 
+trial 34/50 | fold 1/4 | using cached data
+trial 34/50 | fold 1/4 | MAE 0.5933 | 0.9 s
+trial 34/50 | fold 2/4 | using cached data
+trial 34/50 | fold 2/4 | MAE 0.6014 | 1.8 s
+trial 34/50 | fold 3/4 | using cached data
+trial 34/50 | fold 3/4 | MAE 0.6108 | 3.1 s
+trial 34/50 | fold 4/4 | using cached data
+trial 34/50 | fold 4/4 | MAE 0.5937 | 5.0 s
+[I 2026-11-15 18:47:14,138] Trial 33 finished with value: 0.5997969817651604 and parameters: {'alpha': 3.2818853354708244}. Best is trial 31 with value: 0.5997598041390405.
+trial 35/50 | fold 1/4 | using cached data
+trial 35/50 | fold 1/4 | MAE 0.5937 | 1.3 s
+[I 2026-11-15 18:47:15,419] Trial 34 pruned. 
+trial 36/50 | fold 1/4 | using cached data
+trial 36/50 | fold 1/4 | MAE 0.5957 | 0.4 s
+[I 2026-11-15 18:47:15,833] Trial 35 pruned. 
+trial 37/50 | fold 1/4 | using cached data
+trial 37/50 | fold 1/4 | MAE 0.5933 | 0.8 s
+trial 37/50 | fold 2/4 | using cached data
+trial 37/50 | fold 2/4 | MAE 0.6015 | 1.9 s
+trial 37/50 | fold 3/4 | using cached data
+trial 37/50 | fold 3/4 | MAE 0.6108 | 3.5 s
+trial 37/50 | fold 4/4 | using cached data
+trial 37/50 | fold 4/4 | MAE 0.5937 | 4.7 s
+[I 2026-11-15 18:47:26,701] Trial 36 finished with value: 0.5998168561985231 and parameters: {'alpha': 3.02401239287167}. Best is trial 31 with value: 0.5997598041390405.
+trial 38/50 | fold 1/4 | using cached data
+trial 38/50 | fold 1/4 | MAE 0.5941 | 1.5 s
+[I 2026-11-15 18:47:28,181] Trial 37 pruned. 
+trial 39/50 | fold 1/4 | using cached data
+trial 39/50 | fold 1/4 | MAE 0.5943 | 0.5 s
+[I 2026-11-15 18:47:28,678] Trial 38 pruned. 
+trial 40/50 | fold 1/4 | using cached data
+trial 40/50 | fold 1/4 | MAE 0.5933 | 0.8 s
+trial 40/50 | fold 2/4 | using cached data
+trial 40/50 | fold 2/4 | MAE 0.6013 | 1.7 s
+trial 40/50 | fold 3/4 | using cached data
+trial 40/50 | fold 3/4 | MAE 0.6107 | 3.3 s
+trial 40/50 | fold 4/4 | using cached data
+trial 40/50 | fold 4/4 | MAE 0.5937 | 4.1 s
+[I 2026-11-15 18:47:38,666] Trial 39 finished with value: 0.5997669689891637 and parameters: {'alpha': 3.8850736457060577}. Best is trial 31 with value: 0.5997598041390405.
+trial 41/50 | fold 1/4 | using cached data
+trial 41/50 | fold 1/4 | MAE 0.5935 | 1.0 s
+[I 2026-11-15 18:47:39,642] Trial 40 pruned. 
+trial 42/50 | fold 1/4 | using cached data
+trial 42/50 | fold 1/4 | MAE 0.5935 | 0.8 s
+trial 42/50 | fold 2/4 | using cached data
+trial 42/50 | fold 2/4 | MAE 0.6012 | 1.6 s
+trial 42/50 | fold 3/4 | using cached data
+trial 42/50 | fold 3/4 | MAE 0.6106 | 2.7 s
+trial 42/50 | fold 4/4 | using cached data
+trial 42/50 | fold 4/4 | MAE 0.5938 | 3.9 s
+[I 2026-11-15 18:47:48,725] Trial 41 finished with value: 0.5997702318867189 and parameters: {'alpha': 5.2822487963523015}. Best is trial 31 with value: 0.5997598041390405.
+trial 43/50 | fold 1/4 | using cached data
+trial 43/50 | fold 1/4 | MAE 0.5940 | 1.4 s
+[I 2026-11-15 18:47:50,089] Trial 42 pruned. 
+trial 44/50 | fold 1/4 | using cached data
+trial 44/50 | fold 1/4 | MAE 0.5941 | 0.5 s
+[I 2026-11-15 18:47:50,579] Trial 43 pruned. 
+trial 45/50 | fold 1/4 | using cached data
+trial 45/50 | fold 1/4 | MAE 0.5952 | 0.4 s
+[I 2026-11-15 18:47:50,994] Trial 44 pruned. 
+trial 46/50 | fold 1/4 | using cached data
+trial 46/50 | fold 1/4 | MAE 0.5933 | 0.9 s
+trial 46/50 | fold 2/4 | using cached data
+trial 46/50 | fold 2/4 | MAE 0.6014 | 1.9 s
+trial 46/50 | fold 3/4 | using cached data
+trial 46/50 | fold 3/4 | MAE 0.6108 | 3.2 s
+trial 46/50 | fold 4/4 | using cached data
+trial 46/50 | fold 4/4 | MAE 0.5937 | 4.5 s
+[I 2026-11-15 18:48:01,546] Trial 45 finished with value: 0.599794468834602 and parameters: {'alpha': 3.3221682500899163}. Best is trial 31 with value: 0.5997598041390405.
+trial 47/50 | fold 1/4 | using cached data
+trial 47/50 | fold 1/4 | MAE 0.5935 | 1.2 s
+[I 2026-11-15 18:48:02,724] Trial 46 pruned. 
+trial 48/50 | fold 1/4 | using cached data
+trial 48/50 | fold 1/4 | MAE 0.5942 | 1.9 s
+[I 2026-11-15 18:48:04,646] Trial 47 pruned. 
+trial 49/50 | fold 1/4 | using cached data
+trial 49/50 | fold 1/4 | MAE 0.5947 | 2.1 s
+[I 2026-11-15 18:48:06,765] Trial 48 pruned. 
+trial 50/50 | fold 1/4 | using cached data
+trial 50/50 | fold 1/4 | MAE 0.5934 | 0.8 s
+trial 50/50 | fold 2/4 | using cached data
+trial 50/50 | fold 2/4 | MAE 0.6012 | 1.7 s
+trial 50/50 | fold 3/4 | using cached data
+trial 50/50 | fold 3/4 | MAE 0.6106 | 2.8 s
+trial 50/50 | fold 4/4 | using cached data
+trial 50/50 | fold 4/4 | MAE 0.5938 | 4.3 s
+[I 2026-11-15 18:48:16,353] Trial 49 finished with value: 0.5997642581905069 and parameters: {'alpha': 4.830679960226675}. Best is trial 31 with value: 0.5997598041390405.
+Mean validation MAE: 0.5997598041390405
+Best parameters: {'alpha': 4.300171040208694}
+   mean_absolute_error  constant_pdo_mean_absolute_error
+0             0.598022                          0.546128
+Saved results to: C:\Users\lucas\dev\crossings\results\severity_panel_20261115_233914\regression_ridge
+
+=== classification_xgboost === 18:48:23
+[I 2026-11-15 18:48:34,338] A new study created in memory with name: conditional_severity_classification_xgboost
+severity_target  property_damage_only  injury  fatal
+asof_year                                           
+2019                             1041     465    257
+2020                              877     424    182
+2021                             1045     413    219
+2022                             1070     463    249
+2023                             1040     468    237
+2024                             1043     467    246
+Dataset: C:\Users\lucas\dev\crossings\data\final\final_dataset_incidents.parquet
+Using 224 predictors: 187 numeric + 37 categorical
+trial 1/50 | fold 1/4 | preparing data
+trial 1/50 | fold 1/4 | log loss 0.8994 | 4.7 s
+trial 1/50 | fold 2/4 | preparing data
+trial 1/50 | fold 2/4 | log loss 0.8660 | 6.3 s
+trial 1/50 | fold 3/4 | preparing data
+trial 1/50 | fold 3/4 | log loss 0.8789 | 7.5 s
+trial 1/50 | fold 4/4 | preparing data
+trial 1/50 | fold 4/4 | log loss 0.8940 | 9.0 s
+[I 2026-11-15 18:49:01,892] Trial 0 finished with value: 0.8845646894673481 and parameters: {'n_estimators': 300, 'max_depth': 8, 'learning_rate': 0.08960785365368121, 'min_child_weight': 7.6611007077713635, 'subsample': 0.6624074561769746, 'colsample_bytree': 0.5779972601681014, 'reg_lambda': 0.0019517224641449498, 'reg_alpha': 1.574189004745663}. Best is trial 0 with value: 0.8845646894673481.
+trial 2/50 | fold 1/4 | using cached data
+trial 2/50 | fold 1/4 | log loss 0.8878 | 10.6 s
+trial 2/50 | fold 2/4 | using cached data
+trial 2/50 | fold 2/4 | log loss 0.8641 | 13.0 s
+trial 2/50 | fold 3/4 | using cached data
+trial 2/50 | fold 3/4 | log loss 0.8688 | 23.9 s
+trial 2/50 | fold 4/4 | using cached data
+trial 2/50 | fold 4/4 | log loss 0.8818 | 19.6 s
+[I 2026-11-15 18:50:08,978] Trial 1 finished with value: 0.8756333238571484 and parameters: {'n_estimators': 500, 'max_depth': 6, 'learning_rate': 0.010636066512540286, 'min_child_weight': 27.08160864249967, 'subsample': 0.9329770563201687, 'colsample_bytree': 0.6061695553391381, 'reg_lambda': 0.008111941985431923, 'reg_alpha': 0.00012601639723276795}. Best is trial 1 with value: 0.8756333238571484.
+trial 3/50 | fold 1/4 | using cached data
+trial 3/50 | fold 1/4 | log loss 0.8881 | 4.3 s
+trial 3/50 | fold 2/4 | using cached data
+trial 3/50 | fold 2/4 | log loss 0.8618 | 5.5 s
+trial 3/50 | fold 3/4 | using cached data
+trial 3/50 | fold 3/4 | log loss 0.8712 | 8.1 s
+trial 3/50 | fold 4/4 | using cached data
+trial 3/50 | fold 4/4 | log loss 0.8830 | 6.4 s
+[I 2026-11-15 18:50:33,272] Trial 2 finished with value: 0.8760136341500038 and parameters: {'n_estimators': 300, 'max_depth': 5, 'learning_rate': 0.03647316284911211, 'min_child_weight': 2.6926552514864723, 'subsample': 0.8447411578889518, 'colsample_bytree': 0.569746930326021, 'reg_lambda': 0.028888383623653185, 'reg_alpha': 0.0015782327810795573}. Best is trial 1 with value: 0.8756333238571484.
+trial 4/50 | fold 1/4 | using cached data
+trial 4/50 | fold 1/4 | log loss 0.8890 | 7.6 s
+trial 4/50 | fold 2/4 | using cached data
+trial 4/50 | fold 2/4 | log loss 0.8660 | 11.5 s
+trial 4/50 | fold 3/4 | using cached data
+trial 4/50 | fold 3/4 | log loss 0.8693 | 18.7 s
+trial 4/50 | fold 4/4 | using cached data
+trial 4/50 | fold 4/4 | log loss 0.8803 | 20.0 s
+[I 2026-11-15 18:51:31,148] Trial 3 finished with value: 0.8761174282583363 and parameters: {'n_estimators': 400, 'max_depth': 7, 'learning_rate': 0.018187859051288217, 'min_child_weight': 5.748924681991978, 'subsample': 0.836965827544817, 'colsample_bytree': 0.5232252063599989, 'reg_lambda': 1.0907475835157696, 'reg_alpha': 0.00010547383621352031}. Best is trial 1 with value: 0.8756333238571484.
+trial 5/50 | fold 1/4 | using cached data
+trial 5/50 | fold 1/4 | log loss 0.8993 | 2.5 s
+trial 5/50 | fold 2/4 | using cached data
+trial 5/50 | fold 2/4 | log loss 0.8715 | 3.6 s
+trial 5/50 | fold 3/4 | using cached data
+trial 5/50 | fold 3/4 | log loss 0.8863 | 4.1 s
+trial 5/50 | fold 4/4 | using cached data
+trial 5/50 | fold 4/4 | log loss 0.8911 | 5.1 s
+[I 2026-11-15 18:51:46,443] Trial 4 finished with value: 0.8870717115783967 and parameters: {'n_estimators': 100, 'max_depth': 8, 'learning_rate': 0.18043311207136256, 'min_child_weight': 15.635108708133458, 'subsample': 0.7218455076693483, 'colsample_bytree': 0.5488360570031919, 'reg_lambda': 2.6373339933815254, 'reg_alpha': 0.004374364439939076}. Best is trial 1 with value: 0.8756333238571484.
+trial 6/50 | fold 1/4 | using cached data
+trial 6/50 | fold 1/4 | log loss 0.8960 | 3.7 s
+[I 2026-11-15 18:51:50,192] Trial 5 pruned. 
+trial 7/50 | fold 1/4 | using cached data
+trial 7/50 | fold 1/4 | log loss 0.8882 | 2.0 s
+trial 7/50 | fold 2/4 | using cached data
+trial 7/50 | fold 2/4 | log loss 0.8640 | 2.3 s
+trial 7/50 | fold 3/4 | using cached data
+trial 7/50 | fold 3/4 | log loss 0.8701 | 3.1 s
+trial 7/50 | fold 4/4 | using cached data
+trial 7/50 | fold 4/4 | log loss 0.8797 | 3.1 s
+[I 2026-11-15 18:52:00,741] Trial 6 finished with value: 0.875480646391591 and parameters: {'n_estimators': 500, 'max_depth': 3, 'learning_rate': 0.18258230439200238, 'min_child_weight': 13.962563737015762, 'subsample': 0.9757995766256756, 'colsample_bytree': 0.9474136752138245, 'reg_lambda': 0.9761125443110458, 'reg_alpha': 3.398172415010594}. Best is trial 6 with value: 0.875480646391591.
+trial 8/50 | fold 1/4 | using cached data
+trial 8/50 | fold 1/4 | log loss 0.8990 | 2.6 s
+[I 2026-11-15 18:52:03,373] Trial 7 pruned. 
+trial 9/50 | fold 1/4 | using cached data
+trial 9/50 | fold 1/4 | log loss 0.8899 | 10.1 s
+[I 2026-11-15 18:52:13,491] Trial 8 pruned. 
+trial 10/50 | fold 1/4 | using cached data
+trial 10/50 | fold 1/4 | log loss 0.8924 | 3.3 s
+[I 2026-11-15 18:52:16,843] Trial 9 pruned. 
+trial 11/50 | fold 1/4 | using cached data
+trial 11/50 | fold 1/4 | log loss 0.8917 | 3.2 s
+[I 2026-11-15 18:52:20,098] Trial 10 pruned. 
+trial 12/50 | fold 1/4 | using cached data
+trial 12/50 | fold 1/4 | log loss 0.8889 | 2.8 s
+[I 2026-11-15 18:52:22,944] Trial 11 pruned. 
+trial 13/50 | fold 1/4 | using cached data
+trial 13/50 | fold 1/4 | log loss 0.8886 | 6.1 s
+[I 2026-11-15 18:52:29,065] Trial 12 pruned. 
+trial 14/50 | fold 1/4 | using cached data
+trial 14/50 | fold 1/4 | log loss 0.8866 | 9.8 s
+trial 14/50 | fold 2/4 | using cached data
+trial 14/50 | fold 2/4 | log loss 0.8641 | 11.4 s
+trial 14/50 | fold 3/4 | using cached data
+trial 14/50 | fold 3/4 | log loss 0.8669 | 17.2 s
+trial 14/50 | fold 4/4 | using cached data
+trial 14/50 | fold 4/4 | log loss 0.8818 | 17.5 s
+[I 2026-11-15 18:53:25,014] Trial 13 finished with value: 0.874852403849243 and parameters: {'n_estimators': 400, 'max_depth': 4, 'learning_rate': 0.011753181569446844, 'min_child_weight': 19.245252057185954, 'subsample': 0.9014246090734108, 'colsample_bytree': 0.8751119629382376, 'reg_lambda': 0.07353438572554341, 'reg_alpha': 0.06511385818137069}. Best is trial 13 with value: 0.874852403849243.
+trial 15/50 | fold 1/4 | using cached data
+trial 15/50 | fold 1/4 | log loss 0.8860 | 4.0 s
+trial 15/50 | fold 2/4 | using cached data
+trial 15/50 | fold 2/4 | log loss 0.8627 | 3.9 s
+trial 15/50 | fold 3/4 | using cached data
+trial 15/50 | fold 3/4 | log loss 0.8683 | 8.6 s
+trial 15/50 | fold 4/4 | using cached data
+trial 15/50 | fold 4/4 | log loss 0.8800 | 5.6 s
+[I 2026-11-15 18:53:47,057] Trial 14 finished with value: 0.8742660523759768 and parameters: {'n_estimators': 500, 'max_depth': 2, 'learning_rate': 0.03594814700506855, 'min_child_weight': 13.332472211839233, 'subsample': 0.9315365699662606, 'colsample_bytree': 0.9610321820106913, 'reg_lambda': 0.8295529945525407, 'reg_alpha': 0.0762992256017591}. Best is trial 14 with value: 0.8742660523759768.
+trial 16/50 | fold 1/4 | using cached data
+trial 16/50 | fold 1/4 | log loss 0.8885 | 5.7 s
+[I 2026-11-15 18:53:52,776] Trial 15 pruned. 
+trial 17/50 | fold 1/4 | using cached data
+trial 17/50 | fold 1/4 | log loss 0.8843 | 2.6 s
+trial 17/50 | fold 2/4 | using cached data
+trial 17/50 | fold 2/4 | log loss 0.8630 | 2.4 s
+trial 17/50 | fold 3/4 | using cached data
+trial 17/50 | fold 3/4 | log loss 0.8689 | 5.3 s
+trial 17/50 | fold 4/4 | using cached data
+trial 17/50 | fold 4/4 | log loss 0.8805 | 4.3 s
+[I 2026-11-15 18:54:07,439] Trial 16 finished with value: 0.8741778926239911 and parameters: {'n_estimators': 500, 'max_depth': 2, 'learning_rate': 0.06959254349407401, 'min_child_weight': 27.008463901847282, 'subsample': 0.9272926444156186, 'colsample_bytree': 0.9106819779121837, 'reg_lambda': 0.36725828770446417, 'reg_alpha': 0.1740438201937841}. Best is trial 16 with value: 0.8741778926239911.
+trial 18/50 | fold 1/4 | using cached data
+trial 18/50 | fold 1/4 | log loss 0.8870 | 3.6 s
+trial 18/50 | fold 2/4 | using cached data
+trial 18/50 | fold 2/4 | log loss 0.8629 | 4.4 s
+trial 18/50 | fold 3/4 | using cached data
+trial 18/50 | fold 3/4 | log loss 0.8702 | 8.5 s
+trial 18/50 | fold 4/4 | using cached data
+trial 18/50 | fold 4/4 | log loss 0.8809 | 6.4 s
+[I 2026-11-15 18:54:30,381] Trial 17 finished with value: 0.8752461756896013 and parameters: {'n_estimators': 500, 'max_depth': 2, 'learning_rate': 0.04641109989685085, 'min_child_weight': 29.518872387434904, 'subsample': 0.9538230988556237, 'colsample_bytree': 0.9924781642114701, 'reg_lambda': 1.494439672289678, 'reg_alpha': 8.496086792206963}. Best is trial 16 with value: 0.8741778926239911.
+trial 19/50 | fold 1/4 | using cached data
+trial 19/50 | fold 1/4 | log loss 0.8851 | 2.2 s
+trial 19/50 | fold 2/4 | using cached data
+trial 19/50 | fold 2/4 | log loss 0.8659 | 2.1 s
+trial 19/50 | fold 3/4 | using cached data
+trial 19/50 | fold 3/4 | log loss 0.8705 | 3.2 s
+[I 2026-11-15 18:54:37,812] Trial 18 pruned. 
+trial 20/50 | fold 1/4 | using cached data
+trial 20/50 | fold 1/4 | log loss 0.8867 | 4.2 s
+trial 20/50 | fold 2/4 | using cached data
+trial 20/50 | fold 2/4 | log loss 0.8620 | 4.7 s
+trial 20/50 | fold 3/4 | using cached data
+trial 20/50 | fold 3/4 | log loss 0.8698 | 10.7 s
+trial 20/50 | fold 4/4 | using cached data
+trial 20/50 | fold 4/4 | log loss 0.8816 | 10.7 s
+[I 2026-11-15 18:55:08,165] Trial 19 finished with value: 0.8750398439768924 and parameters: {'n_estimators': 500, 'max_depth': 2, 'learning_rate': 0.030181861043501505, 'min_child_weight': 16.515089896623028, 'subsample': 0.8651053313928876, 'colsample_bytree': 0.9284217171807851, 'reg_lambda': 0.43463837528623, 'reg_alpha': 7.872615590394867}. Best is trial 16 with value: 0.8741778926239911.
+trial 21/50 | fold 1/4 | using cached data
+trial 21/50 | fold 1/4 | log loss 0.8870 | 2.7 s
+trial 21/50 | fold 2/4 | using cached data
+trial 21/50 | fold 2/4 | log loss 0.8657 | 2.6 s
+[I 2026-11-15 18:55:13,472] Trial 20 pruned. 
+trial 22/50 | fold 1/4 | using cached data
+trial 22/50 | fold 1/4 | log loss 0.8861 | 3.5 s
+trial 22/50 | fold 2/4 | using cached data
+trial 22/50 | fold 2/4 | log loss 0.8633 | 3.5 s
+trial 22/50 | fold 3/4 | using cached data
+trial 22/50 | fold 3/4 | log loss 0.8691 | 7.2 s
+trial 22/50 | fold 4/4 | using cached data
+trial 22/50 | fold 4/4 | log loss 0.8809 | 6.1 s
+[I 2026-11-15 18:55:33,722] Trial 21 finished with value: 0.8748411648484057 and parameters: {'n_estimators': 600, 'max_depth': 2, 'learning_rate': 0.044228633738003426, 'min_child_weight': 18.42600593217815, 'subsample': 0.9631651984799796, 'colsample_bytree': 0.9400904100244052, 'reg_lambda': 0.06938048410227919, 'reg_alpha': 1.5498374042296543}. Best is trial 16 with value: 0.8741778926239911.
+trial 23/50 | fold 1/4 | using cached data
+trial 23/50 | fold 1/4 | log loss 0.8832 | 3.3 s
+trial 23/50 | fold 2/4 | using cached data
+trial 23/50 | fold 2/4 | log loss 0.8628 | 2.8 s
+trial 23/50 | fold 3/4 | using cached data
+trial 23/50 | fold 3/4 | log loss 0.8687 | 5.7 s
+trial 23/50 | fold 4/4 | using cached data
+trial 23/50 | fold 4/4 | log loss 0.8811 | 4.6 s
+[I 2026-11-15 18:55:50,035] Trial 22 finished with value: 0.8739527593585023 and parameters: {'n_estimators': 500, 'max_depth': 2, 'learning_rate': 0.055665842049797715, 'min_child_weight': 24.116700029648587, 'subsample': 0.9244263888022286, 'colsample_bytree': 0.9256070683737001, 'reg_lambda': 0.09362752049877382, 'reg_alpha': 0.00843543496283616}. Best is trial 22 with value: 0.8739527593585023.
+trial 24/50 | fold 1/4 | using cached data
+trial 24/50 | fold 1/4 | log loss 0.8863 | 2.4 s
+trial 24/50 | fold 2/4 | using cached data
+trial 24/50 | fold 2/4 | log loss 0.8639 | 2.3 s
+[I 2026-11-15 18:55:54,722] Trial 23 pruned. 
+trial 25/50 | fold 1/4 | using cached data
+trial 25/50 | fold 1/4 | log loss 0.8839 | 2.1 s
+trial 25/50 | fold 2/4 | using cached data
+trial 25/50 | fold 2/4 | log loss 0.8628 | 2.2 s
+trial 25/50 | fold 3/4 | using cached data
+trial 25/50 | fold 3/4 | log loss 0.8686 | 5.3 s
+trial 25/50 | fold 4/4 | using cached data
+trial 25/50 | fold 4/4 | log loss 0.8805 | 4.0 s
+[I 2026-11-15 18:56:08,408] Trial 24 finished with value: 0.8739564540141802 and parameters: {'n_estimators': 500, 'max_depth': 2, 'learning_rate': 0.09775898561134756, 'min_child_weight': 27.488181203081382, 'subsample': 0.9901607544058428, 'colsample_bytree': 0.9310202554417357, 'reg_lambda': 0.3143222268763458, 'reg_alpha': 0.07590651494439137}. Best is trial 22 with value: 0.8739527593585023.
+trial 26/50 | fold 1/4 | using cached data
+trial 26/50 | fold 1/4 | log loss 0.8842 | 3.5 s
+trial 26/50 | fold 2/4 | using cached data
+trial 26/50 | fold 2/4 | log loss 0.8628 | 2.8 s
+trial 26/50 | fold 3/4 | using cached data
+trial 26/50 | fold 3/4 | log loss 0.8688 | 5.5 s
+trial 26/50 | fold 4/4 | using cached data
+trial 26/50 | fold 4/4 | log loss 0.8807 | 5.3 s
+[I 2026-11-15 18:56:25,508] Trial 25 finished with value: 0.8741466617699554 and parameters: {'n_estimators': 400, 'max_depth': 2, 'learning_rate': 0.0557404781183459, 'min_child_weight': 22.366371993014152, 'subsample': 0.9382395009724049, 'colsample_bytree': 0.8800400320092748, 'reg_lambda': 4.359671876097033, 'reg_alpha': 0.7117853699496256}. Best is trial 22 with value: 0.8739527593585023.
+trial 27/50 | fold 1/4 | using cached data
+trial 27/50 | fold 1/4 | log loss 0.8845 | 3.3 s
+trial 27/50 | fold 2/4 | using cached data
+trial 27/50 | fold 2/4 | log loss 0.8637 | 3.0 s
+trial 27/50 | fold 3/4 | using cached data
+trial 27/50 | fold 3/4 | log loss 0.8696 | 5.5 s
+trial 27/50 | fold 4/4 | using cached data
+trial 27/50 | fold 4/4 | log loss 0.8802 | 5.0 s
+[I 2026-11-15 18:56:42,396] Trial 26 finished with value: 0.8744846185496021 and parameters: {'n_estimators': 400, 'max_depth': 3, 'learning_rate': 0.06621961915323238, 'min_child_weight': 16.806095266727795, 'subsample': 0.9999068518692882, 'colsample_bytree': 0.8817205184327727, 'reg_lambda': 0.6412354304932834, 'reg_alpha': 0.5950654462504816}. Best is trial 22 with value: 0.8739527593585023.
+trial 28/50 | fold 1/4 | using cached data
+trial 28/50 | fold 1/4 | log loss 0.8835 | 3.6 s
+trial 28/50 | fold 2/4 | using cached data
+trial 28/50 | fold 2/4 | log loss 0.8626 | 3.4 s
+trial 28/50 | fold 3/4 | using cached data
+trial 28/50 | fold 3/4 | log loss 0.8685 | 7.6 s
+trial 28/50 | fold 4/4 | using cached data
+trial 28/50 | fold 4/4 | log loss 0.8799 | 6.8 s
+[I 2026-11-15 18:57:03,741] Trial 27 finished with value: 0.8736284644407446 and parameters: {'n_estimators': 500, 'max_depth': 2, 'learning_rate': 0.045462931311488715, 'min_child_weight': 14.107316909148894, 'subsample': 0.9334074450678106, 'colsample_bytree': 0.9185256720133376, 'reg_lambda': 0.011521165056368085, 'reg_alpha': 0.002991878766129172}. Best is trial 27 with value: 0.8736284644407446.
+trial 29/50 | fold 1/4 | using cached data
+trial 29/50 | fold 1/4 | log loss 0.8854 | 3.8 s
+trial 29/50 | fold 2/4 | using cached data
+trial 29/50 | fold 2/4 | log loss 0.8635 | 4.1 s
+trial 29/50 | fold 3/4 | using cached data
+trial 29/50 | fold 3/4 | log loss 0.8671 | 11.6 s
+trial 29/50 | fold 4/4 | using cached data
+trial 29/50 | fold 4/4 | log loss 0.8813 | 6.2 s
+[I 2026-11-15 18:57:29,412] Trial 28 finished with value: 0.8743258601126533 and parameters: {'n_estimators': 400, 'max_depth': 2, 'learning_rate': 0.03298405819929022, 'min_child_weight': 16.447250038958234, 'subsample': 0.8857256543571052, 'colsample_bytree': 0.9089063379327111, 'reg_lambda': 0.05722678362534696, 'reg_alpha': 0.00020522075430765363}. Best is trial 27 with value: 0.8736284644407446.
+trial 30/50 | fold 1/4 | using cached data
+trial 30/50 | fold 1/4 | log loss 0.8882 | 2.6 s
+[I 2026-11-15 18:57:31,974] Trial 29 pruned. 
+trial 31/50 | fold 1/4 | using cached data
+trial 31/50 | fold 1/4 | log loss 0.8860 | 3.3 s
+trial 31/50 | fold 2/4 | using cached data
+trial 31/50 | fold 2/4 | log loss 0.8628 | 3.0 s
+trial 31/50 | fold 3/4 | using cached data
+trial 31/50 | fold 3/4 | log loss 0.8668 | 6.2 s
+trial 31/50 | fold 4/4 | using cached data
+trial 31/50 | fold 4/4 | log loss 0.8794 | 4.5 s
+[I 2026-11-15 18:57:48,978] Trial 30 finished with value: 0.8737375077006726 and parameters: {'n_estimators': 500, 'max_depth': 2, 'learning_rate': 0.055535139630778205, 'min_child_weight': 8.408123077771798, 'subsample': 0.9232299417513788, 'colsample_bytree': 0.9172892942346876, 'reg_lambda': 0.0633808327849112, 'reg_alpha': 0.007607577629334229}. Best is trial 27 with value: 0.8736284644407446.
+trial 32/50 | fold 1/4 | using cached data
+trial 32/50 | fold 1/4 | log loss 0.8827 | 2.1 s
+trial 32/50 | fold 2/4 | using cached data
+trial 32/50 | fold 2/4 | log loss 0.8630 | 2.2 s
+trial 32/50 | fold 3/4 | using cached data
+trial 32/50 | fold 3/4 | log loss 0.8689 | 5.2 s
+trial 32/50 | fold 4/4 | using cached data
+trial 32/50 | fold 4/4 | log loss 0.8806 | 3.4 s
+[I 2026-11-15 18:58:01,903] Trial 31 finished with value: 0.8737983036787731 and parameters: {'n_estimators': 500, 'max_depth': 2, 'learning_rate': 0.10006397057220395, 'min_child_weight': 24.586619351011652, 'subsample': 0.9431866198136302, 'colsample_bytree': 0.8620549333081251, 'reg_lambda': 0.21253479128897668, 'reg_alpha': 0.006110273123502285}. Best is trial 27 with value: 0.8736284644407446.
+trial 33/50 | fold 1/4 | using cached data
+trial 33/50 | fold 1/4 | log loss 0.8847 | 4.1 s
+trial 33/50 | fold 2/4 | using cached data
+trial 33/50 | fold 2/4 | log loss 0.8628 | 4.1 s
+trial 33/50 | fold 3/4 | using cached data
+trial 33/50 | fold 3/4 | log loss 0.8670 | 10.4 s
+trial 33/50 | fold 4/4 | using cached data
+trial 33/50 | fold 4/4 | log loss 0.8811 | 7.8 s
+[I 2026-11-15 18:58:28,318] Trial 32 finished with value: 0.8738898154920184 and parameters: {'n_estimators': 500, 'max_depth': 2, 'learning_rate': 0.03421698898078412, 'min_child_weight': 14.97298934075477, 'subsample': 0.9175345424841889, 'colsample_bytree': 0.827491098181417, 'reg_lambda': 0.007392581307570238, 'reg_alpha': 0.0011020281653185316}. Best is trial 27 with value: 0.8736284644407446.
+trial 34/50 | fold 1/4 | using cached data
+trial 34/50 | fold 1/4 | log loss 0.8859 | 4.3 s
+trial 34/50 | fold 2/4 | using cached data
+trial 34/50 | fold 2/4 | log loss 0.8627 | 5.1 s
+trial 34/50 | fold 3/4 | using cached data
+trial 34/50 | fold 3/4 | log loss 0.8675 | 12.2 s
+trial 34/50 | fold 4/4 | using cached data
+trial 34/50 | fold 4/4 | log loss 0.8799 | 8.8 s
+[I 2026-11-15 18:58:58,630] Trial 33 finished with value: 0.8740002722999555 and parameters: {'n_estimators': 500, 'max_depth': 2, 'learning_rate': 0.026618715462556283, 'min_child_weight': 13.553491564396813, 'subsample': 0.9002399459973075, 'colsample_bytree': 0.8868538621181863, 'reg_lambda': 0.004830670341941153, 'reg_alpha': 0.0015216222010059955}. Best is trial 27 with value: 0.8736284644407446.
+trial 35/50 | fold 1/4 | using cached data
+trial 35/50 | fold 1/4 | log loss 0.8848 | 5.0 s
+trial 35/50 | fold 2/4 | using cached data
+trial 35/50 | fold 2/4 | log loss 0.8629 | 3.9 s
+trial 35/50 | fold 3/4 | using cached data
+trial 35/50 | fold 3/4 | log loss 0.8674 | 10.2 s
+trial 35/50 | fold 4/4 | using cached data
+trial 35/50 | fold 4/4 | log loss 0.8802 | 6.2 s
+[I 2026-11-15 18:59:23,860] Trial 34 finished with value: 0.8738303872199361 and parameters: {'n_estimators': 500, 'max_depth': 2, 'learning_rate': 0.034558726935214994, 'min_child_weight': 8.509731647503688, 'subsample': 0.9568795209001169, 'colsample_bytree': 0.9501473973532648, 'reg_lambda': 0.012180442689643713, 'reg_alpha': 0.00027638364257927565}. Best is trial 27 with value: 0.8736284644407446.
+trial 36/50 | fold 1/4 | using cached data
+trial 36/50 | fold 1/4 | log loss 0.8857 | 4.1 s
+trial 36/50 | fold 2/4 | using cached data
+trial 36/50 | fold 2/4 | log loss 0.8637 | 3.9 s
+[I 2026-11-15 18:59:31,864] Trial 35 pruned. 
+trial 37/50 | fold 1/4 | using cached data
+trial 37/50 | fold 1/4 | log loss 0.8864 | 3.5 s
+[I 2026-11-15 18:59:35,332] Trial 36 pruned. 
+trial 38/50 | fold 1/4 | using cached data
+trial 38/50 | fold 1/4 | log loss 0.8848 | 3.2 s
+trial 38/50 | fold 2/4 | using cached data
+trial 38/50 | fold 2/4 | log loss 0.8659 | 3.2 s
+[I 2026-11-15 18:59:41,688] Trial 37 pruned. 
+trial 39/50 | fold 1/4 | using cached data
+trial 39/50 | fold 1/4 | log loss 0.8852 | 3.2 s
+trial 39/50 | fold 2/4 | using cached data
+trial 39/50 | fold 2/4 | log loss 0.8626 | 3.3 s
+trial 39/50 | fold 3/4 | using cached data
+trial 39/50 | fold 3/4 | log loss 0.8679 | 6.1 s
+trial 39/50 | fold 4/4 | using cached data
+trial 39/50 | fold 4/4 | log loss 0.8798 | 6.1 s
+[I 2026-11-15 19:00:00,412] Trial 38 finished with value: 0.873889708522718 and parameters: {'n_estimators': 500, 'max_depth': 2, 'learning_rate': 0.04882990420343075, 'min_child_weight': 8.608861706331519, 'subsample': 0.95634146066087, 'colsample_bytree': 0.8463846083151999, 'reg_lambda': 0.01980219297251957, 'reg_alpha': 0.020935141983334064}. Best is trial 27 with value: 0.8736284644407446.
+trial 40/50 | fold 1/4 | using cached data
+trial 40/50 | fold 1/4 | log loss 0.8851 | 3.3 s
+trial 40/50 | fold 2/4 | using cached data
+trial 40/50 | fold 2/4 | log loss 0.8631 | 3.0 s
+trial 40/50 | fold 3/4 | using cached data
+trial 40/50 | fold 3/4 | log loss 0.8693 | 6.2 s
+[I 2026-11-15 19:00:12,936] Trial 39 pruned. 
+trial 41/50 | fold 1/4 | using cached data
+trial 41/50 | fold 1/4 | log loss 0.8844 | 5.0 s
+trial 41/50 | fold 2/4 | using cached data
+trial 41/50 | fold 2/4 | log loss 0.8631 | 4.5 s
+trial 41/50 | fold 3/4 | using cached data
+trial 41/50 | fold 3/4 | log loss 0.8683 | 8.7 s
+trial 41/50 | fold 4/4 | using cached data
+trial 41/50 | fold 4/4 | log loss 0.8804 | 6.0 s
+[I 2026-11-15 19:00:37,043] Trial 40 finished with value: 0.8740649896605656 and parameters: {'n_estimators': 600, 'max_depth': 2, 'learning_rate': 0.03300734055330672, 'min_child_weight': 8.091376405142615, 'subsample': 0.9808886718340069, 'colsample_bytree': 0.9222118820127947, 'reg_lambda': 0.002737606982074276, 'reg_alpha': 0.0007821252046913584}. Best is trial 27 with value: 0.8736284644407446.
+trial 42/50 | fold 1/4 | using cached data
+trial 42/50 | fold 1/4 | log loss 0.8839 | 3.2 s
+trial 42/50 | fold 2/4 | using cached data
+trial 42/50 | fold 2/4 | log loss 0.8621 | 2.7 s
+trial 42/50 | fold 3/4 | using cached data
+trial 42/50 | fold 3/4 | log loss 0.8671 | 6.4 s
+trial 42/50 | fold 4/4 | using cached data
+trial 42/50 | fold 4/4 | log loss 0.8796 | 4.3 s
+[I 2026-11-15 19:00:53,773] Trial 41 finished with value: 0.873162533481841 and parameters: {'n_estimators': 600, 'max_depth': 2, 'learning_rate': 0.05956986797681642, 'min_child_weight': 8.240339838450948, 'subsample': 0.9355732689354642, 'colsample_bytree': 0.9102965454067622, 'reg_lambda': 0.01384801938305647, 'reg_alpha': 0.0020817143170041618}. Best is trial 41 with value: 0.873162533481841.
+trial 43/50 | fold 1/4 | using cached data
+trial 43/50 | fold 1/4 | log loss 0.8846 | 3.3 s
+trial 43/50 | fold 2/4 | using cached data
+trial 43/50 | fold 2/4 | log loss 0.8630 | 3.1 s
+trial 43/50 | fold 3/4 | using cached data
+trial 43/50 | fold 3/4 | log loss 0.8662 | 7.9 s
+trial 43/50 | fold 4/4 | using cached data
+trial 43/50 | fold 4/4 | log loss 0.8803 | 4.7 s
+[I 2026-11-15 19:01:12,885] Trial 42 finished with value: 0.8735232649142911 and parameters: {'n_estimators': 500, 'max_depth': 2, 'learning_rate': 0.04728382138191712, 'min_child_weight': 7.721066348063467, 'subsample': 0.9223414458538496, 'colsample_bytree': 0.935013589299006, 'reg_lambda': 0.003922604140600018, 'reg_alpha': 0.006009393604949022}. Best is trial 41 with value: 0.873162533481841.
+trial 44/50 | fold 1/4 | using cached data
+trial 44/50 | fold 1/4 | log loss 0.8850 | 3.4 s
+trial 44/50 | fold 2/4 | using cached data
+trial 44/50 | fold 2/4 | log loss 0.8629 | 3.8 s
+trial 44/50 | fold 3/4 | using cached data
+trial 44/50 | fold 3/4 | log loss 0.8677 | 9.4 s
+trial 44/50 | fold 4/4 | using cached data
+trial 44/50 | fold 4/4 | log loss 0.8805 | 6.2 s
+[I 2026-11-15 19:01:35,652] Trial 43 finished with value: 0.8740184077465809 and parameters: {'n_estimators': 600, 'max_depth': 2, 'learning_rate': 0.039341852048803874, 'min_child_weight': 14.483092596695679, 'subsample': 0.914480963440778, 'colsample_bytree': 0.8661419211133753, 'reg_lambda': 0.0363743571618023, 'reg_alpha': 0.005380290369718341}. Best is trial 41 with value: 0.873162533481841.
+trial 45/50 | fold 1/4 | using cached data
+trial 45/50 | fold 1/4 | log loss 0.8869 | 3.5 s
+[I 2026-11-15 19:01:39,143] Trial 44 pruned. 
+trial 46/50 | fold 1/4 | using cached data
+trial 46/50 | fold 1/4 | log loss 0.8853 | 3.3 s
+trial 46/50 | fold 2/4 | using cached data
+trial 46/50 | fold 2/4 | log loss 0.8628 | 3.8 s
+trial 46/50 | fold 3/4 | using cached data
+trial 46/50 | fold 3/4 | log loss 0.8663 | 7.8 s
+trial 46/50 | fold 4/4 | using cached data
+trial 46/50 | fold 4/4 | log loss 0.8806 | 4.8 s
+[I 2026-11-15 19:01:58,843] Trial 45 finished with value: 0.8737297408831171 and parameters: {'n_estimators': 400, 'max_depth': 2, 'learning_rate': 0.04434220289755502, 'min_child_weight': 8.478623669741694, 'subsample': 0.9439059347719574, 'colsample_bytree': 0.9809640818781815, 'reg_lambda': 0.015127397403431466, 'reg_alpha': 0.02251399007108943}. Best is trial 41 with value: 0.873162533481841.
+trial 47/50 | fold 1/4 | using cached data
+trial 47/50 | fold 1/4 | log loss 0.8843 | 2.9 s
+trial 47/50 | fold 2/4 | using cached data
+trial 47/50 | fold 2/4 | log loss 0.8627 | 3.0 s
+trial 47/50 | fold 3/4 | using cached data
+trial 47/50 | fold 3/4 | log loss 0.8696 | 5.2 s
+[I 2026-11-15 19:02:09,942] Trial 46 pruned. 
+trial 48/50 | fold 1/4 | using cached data
+trial 48/50 | fold 1/4 | log loss 0.8840 | 3.3 s
+trial 48/50 | fold 2/4 | using cached data
+trial 48/50 | fold 2/4 | log loss 0.8634 | 3.0 s
+trial 48/50 | fold 3/4 | using cached data
+trial 48/50 | fold 3/4 | log loss 0.8658 | 7.9 s
+trial 48/50 | fold 4/4 | using cached data
+trial 48/50 | fold 4/4 | log loss 0.8799 | 4.5 s
+[I 2026-11-15 19:02:28,567] Trial 47 finished with value: 0.8732922128341996 and parameters: {'n_estimators': 600, 'max_depth': 2, 'learning_rate': 0.05264921116476475, 'min_child_weight': 9.312599427575078, 'subsample': 0.9194421936390142, 'colsample_bytree': 0.9058553829415738, 'reg_lambda': 0.038339627044987654, 'reg_alpha': 0.0007527696552351062}. Best is trial 41 with value: 0.873162533481841.
+trial 49/50 | fold 1/4 | using cached data
+trial 49/50 | fold 1/4 | log loss 0.8856 | 2.4 s
+[I 2026-11-15 19:02:30,997] Trial 48 pruned. 
+trial 50/50 | fold 1/4 | using cached data
+trial 50/50 | fold 1/4 | log loss 0.8845 | 2.9 s
+trial 50/50 | fold 2/4 | using cached data
+trial 50/50 | fold 2/4 | log loss 0.8636 | 2.7 s
+[I 2026-11-15 19:02:36,622] Trial 49 pruned. 
+Mean validation log loss: 0.873162533481841
+Best parameters: {'n_estimators': 600, 'max_depth': 2, 'learning_rate': 0.05956986797681642, 'min_child_weight': 8.240339838450948, 'subsample': 0.9355732689354642, 'colsample_bytree': 0.9102965454067622, 'reg_lambda': 0.01384801938305647, 'reg_alpha': 0.0020817143170041618}
+   multiclass_log_loss  macro_f1  ordinal_mae
+0              0.88694  0.304341     0.537016
+Continuous expected-severity MAE: 0.610461239819968
+Saved results to: C:\Users\lucas\dev\crossings\results\severity_panel_20261115_233914\classification_xgboost
+
+=== regression_xgboost === 19:02:43
+[I 2026-11-15 19:02:54,141] A new study created in memory with name: conditional_severity_regression_xgboost
+           crash_rows  mean_severity
+asof_year                           
+2019             1763       1.555303
+2020             1483       1.531355
+2021             1677       1.507454
+2022             1782       1.539282
+2023             1745       1.539828
+2024             1756       1.546128
+Dataset: C:\Users\lucas\dev\crossings\data\final\final_dataset_incidents.parquet
+Using 224 predictors: 187 numeric + 37 categorical
+trial 1/50 | fold 1/4 | preparing data
+trial 1/50 | fold 1/4 | MAE 0.5963 | 3.8 s
+trial 1/50 | fold 2/4 | preparing data
+trial 1/50 | fold 2/4 | MAE 0.6064 | 4.1 s
+trial 1/50 | fold 3/4 | preparing data
+trial 1/50 | fold 3/4 | MAE 0.5947 | 7.9 s
+trial 1/50 | fold 4/4 | preparing data
+trial 1/50 | fold 4/4 | MAE 0.5980 | 6.4 s
+[I 2026-11-15 19:03:16,315] Trial 0 finished with value: 0.5988143973950389 and parameters: {'n_estimators': 300, 'max_depth': 8, 'learning_rate': 0.08960785365368121, 'min_child_weight': 7.6611007077713635, 'subsample': 0.6624074561769746, 'colsample_bytree': 0.5779972601681014, 'reg_lambda': 0.0019517224641449498, 'reg_alpha': 1.574189004745663}. Best is trial 0 with value: 0.5988143973950389.
+trial 2/50 | fold 1/4 | using cached data
+trial 2/50 | fold 1/4 | MAE 0.5936 | 10.3 s
+trial 2/50 | fold 2/4 | using cached data
+trial 2/50 | fold 2/4 | MAE 0.6035 | 12.5 s
+trial 2/50 | fold 3/4 | using cached data
+trial 2/50 | fold 3/4 | MAE 0.5929 | 14.1 s
+trial 2/50 | fold 4/4 | using cached data
+trial 2/50 | fold 4/4 | MAE 0.5960 | 14.3 s
+[I 2026-11-15 19:04:07,549] Trial 1 finished with value: 0.5964807895281323 and parameters: {'n_estimators': 500, 'max_depth': 6, 'learning_rate': 0.010636066512540286, 'min_child_weight': 27.08160864249967, 'subsample': 0.9329770563201687, 'colsample_bytree': 0.6061695553391381, 'reg_lambda': 0.008111941985431923, 'reg_alpha': 0.00012601639723276795}. Best is trial 1 with value: 0.5964807895281323.
+trial 3/50 | fold 1/4 | using cached data
+trial 3/50 | fold 1/4 | MAE 0.5967 | 3.6 s
+trial 3/50 | fold 2/4 | using cached data
+trial 3/50 | fold 2/4 | MAE 0.6016 | 4.5 s
+trial 3/50 | fold 3/4 | using cached data
+trial 3/50 | fold 3/4 | MAE 0.5918 | 5.5 s
+trial 3/50 | fold 4/4 | using cached data
+trial 3/50 | fold 4/4 | MAE 0.5951 | 7.8 s
+[I 2026-11-15 19:04:28,959] Trial 2 finished with value: 0.5962996954238989 and parameters: {'n_estimators': 300, 'max_depth': 5, 'learning_rate': 0.03647316284911211, 'min_child_weight': 2.6926552514864723, 'subsample': 0.8447411578889518, 'colsample_bytree': 0.569746930326021, 'reg_lambda': 0.028888383623653185, 'reg_alpha': 0.0015782327810795573}. Best is trial 2 with value: 0.5962996954238989.
+trial 4/50 | fold 1/4 | using cached data
+trial 4/50 | fold 1/4 | MAE 0.5947 | 8.3 s
+trial 4/50 | fold 2/4 | using cached data
+trial 4/50 | fold 2/4 | MAE 0.6034 | 8.6 s
+trial 4/50 | fold 3/4 | using cached data
+trial 4/50 | fold 3/4 | MAE 0.5907 | 14.2 s
+trial 4/50 | fold 4/4 | using cached data
+trial 4/50 | fold 4/4 | MAE 0.5959 | 13.1 s
+[I 2026-11-15 19:05:13,199] Trial 3 finished with value: 0.5961541313551203 and parameters: {'n_estimators': 400, 'max_depth': 7, 'learning_rate': 0.018187859051288217, 'min_child_weight': 5.748924681991978, 'subsample': 0.836965827544817, 'colsample_bytree': 0.5232252063599989, 'reg_lambda': 1.0907475835157696, 'reg_alpha': 0.00010547383621352031}. Best is trial 3 with value: 0.5961541313551203.
+trial 5/50 | fold 1/4 | using cached data
+trial 5/50 | fold 1/4 | MAE 0.5978 | 2.0 s
+trial 5/50 | fold 2/4 | using cached data
+trial 5/50 | fold 2/4 | MAE 0.6108 | 2.6 s
+trial 5/50 | fold 3/4 | using cached data
+trial 5/50 | fold 3/4 | MAE 0.5846 | 4.0 s
+trial 5/50 | fold 4/4 | using cached data
+trial 5/50 | fold 4/4 | MAE 0.6032 | 3.2 s
+[I 2026-11-15 19:05:24,998] Trial 4 finished with value: 0.5991187163065603 and parameters: {'n_estimators': 100, 'max_depth': 8, 'learning_rate': 0.18043311207136256, 'min_child_weight': 15.635108708133458, 'subsample': 0.7218455076693483, 'colsample_bytree': 0.5488360570031919, 'reg_lambda': 2.6373339933815254, 'reg_alpha': 0.004374364439939076}. Best is trial 3 with value: 0.5961541313551203.
+trial 6/50 | fold 1/4 | using cached data
+trial 6/50 | fold 1/4 | MAE 0.6078 | 2.2 s
+[I 2026-11-15 19:05:27,161] Trial 5 pruned. 
+trial 7/50 | fold 1/4 | using cached data
+trial 7/50 | fold 1/4 | MAE 0.5927 | 1.7 s
+trial 7/50 | fold 2/4 | using cached data
+trial 7/50 | fold 2/4 | MAE 0.5960 | 2.1 s
+trial 7/50 | fold 3/4 | using cached data
+trial 7/50 | fold 3/4 | MAE 0.5838 | 3.7 s
+trial 7/50 | fold 4/4 | using cached data
+trial 7/50 | fold 4/4 | MAE 0.5997 | 2.3 s
+[I 2026-11-15 19:05:36,931] Trial 6 finished with value: 0.5930554251458755 and parameters: {'n_estimators': 500, 'max_depth': 3, 'learning_rate': 0.18258230439200238, 'min_child_weight': 13.962563737015762, 'subsample': 0.9757995766256756, 'colsample_bytree': 0.9474136752138245, 'reg_lambda': 0.9761125443110458, 'reg_alpha': 3.398172415010594}. Best is trial 6 with value: 0.5930554251458755.
+trial 8/50 | fold 1/4 | using cached data
+trial 8/50 | fold 1/4 | MAE 0.6098 | 1.7 s
+[I 2026-11-15 19:05:38,621] Trial 7 pruned. 
+trial 9/50 | fold 1/4 | using cached data
+trial 9/50 | fold 1/4 | MAE 0.5951 | 6.6 s
+trial 9/50 | fold 2/4 | using cached data
+trial 9/50 | fold 2/4 | MAE 0.6037 | 7.8 s
+trial 9/50 | fold 3/4 | using cached data
+trial 9/50 | fold 3/4 | MAE 0.5931 | 8.5 s
+trial 9/50 | fold 4/4 | using cached data
+trial 9/50 | fold 4/4 | MAE 0.5954 | 9.0 s
+[I 2026-11-15 19:06:10,571] Trial 8 finished with value: 0.5968413917214701 and parameters: {'n_estimators': 300, 'max_depth': 5, 'learning_rate': 0.015252697030515175, 'min_child_weight': 15.30883741573138, 'subsample': 0.6298202574719083, 'colsample_bytree': 0.9934434683002586, 'reg_lambda': 7.264803074826735, 'reg_alpha': 0.00015570196345516618}. Best is trial 6 with value: 0.5930554251458755.
+trial 10/50 | fold 1/4 | using cached data
+trial 10/50 | fold 1/4 | MAE 0.5984 | 2.6 s
+[I 2026-11-15 19:06:13,153] Trial 9 pruned. 
+trial 11/50 | fold 1/4 | using cached data
+trial 11/50 | fold 1/4 | MAE 0.5972 | 3.5 s
+[I 2026-11-15 19:06:16,708] Trial 10 pruned. 
+trial 12/50 | fold 1/4 | using cached data
+trial 12/50 | fold 1/4 | MAE 0.5985 | 2.8 s
+[I 2026-11-15 19:06:19,547] Trial 11 pruned. 
+trial 13/50 | fold 1/4 | using cached data
+trial 13/50 | fold 1/4 | MAE 0.6037 | 1.9 s
+[I 2026-11-15 19:06:21,426] Trial 12 pruned. 
+trial 14/50 | fold 1/4 | using cached data
+trial 14/50 | fold 1/4 | MAE 0.5934 | 2.6 s
+trial 14/50 | fold 2/4 | using cached data
+trial 14/50 | fold 2/4 | MAE 0.6053 | 2.9 s
+trial 14/50 | fold 3/4 | using cached data
+trial 14/50 | fold 3/4 | MAE 0.5928 | 4.0 s
+trial 14/50 | fold 4/4 | using cached data
+trial 14/50 | fold 4/4 | MAE 0.5937 | 4.0 s
+[I 2026-11-15 19:06:34,980] Trial 13 finished with value: 0.5962823254109345 and parameters: {'n_estimators': 600, 'max_depth': 7, 'learning_rate': 0.126995098919891, 'min_child_weight': 19.19117454627416, 'subsample': 0.9505063072754911, 'colsample_bytree': 0.8570007181143819, 'reg_lambda': 0.2834555767219555, 'reg_alpha': 0.11366224155421156}. Best is trial 6 with value: 0.5930554251458755.
+trial 15/50 | fold 1/4 | using cached data
+trial 15/50 | fold 1/4 | MAE 0.5960 | 6.3 s
+[I 2026-11-15 19:06:41,293] Trial 14 pruned. 
+trial 16/50 | fold 1/4 | using cached data
+trial 16/50 | fold 1/4 | MAE 0.5913 | 4.3 s
+trial 16/50 | fold 2/4 | using cached data
+trial 16/50 | fold 2/4 | MAE 0.6022 | 2.6 s
+trial 16/50 | fold 3/4 | using cached data
+trial 16/50 | fold 3/4 | MAE 0.5880 | 4.8 s
+trial 16/50 | fold 4/4 | using cached data
+trial 16/50 | fold 4/4 | MAE 0.5985 | 3.2 s
+[I 2026-11-15 19:06:56,208] Trial 15 finished with value: 0.5950051460114665 and parameters: {'n_estimators': 400, 'max_depth': 6, 'learning_rate': 0.08174794145784715, 'min_child_weight': 12.473208484551323, 'subsample': 0.917056843963131, 'colsample_bytree': 0.5462861420174921, 'reg_lambda': 2.7624727680538994, 'reg_alpha': 6.759306126035881e-05}. Best is trial 6 with value: 0.5930554251458755.
+trial 17/50 | fold 1/4 | using cached data
+trial 17/50 | fold 1/4 | MAE 0.5989 | 1.9 s
+[I 2026-11-15 19:06:58,068] Trial 16 pruned. 
+trial 18/50 | fold 1/4 | using cached data
+trial 18/50 | fold 1/4 | MAE 0.5954 | 1.8 s
+[I 2026-11-15 19:06:59,847] Trial 17 pruned. 
+trial 19/50 | fold 1/4 | using cached data
+trial 19/50 | fold 1/4 | MAE 0.5923 | 2.8 s
+trial 19/50 | fold 2/4 | using cached data
+trial 19/50 | fold 2/4 | MAE 0.6008 | 3.0 s
+trial 19/50 | fold 3/4 | using cached data
+trial 19/50 | fold 3/4 | MAE 0.5890 | 6.4 s
+trial 19/50 | fold 4/4 | using cached data
+trial 19/50 | fold 4/4 | MAE 0.5958 | 3.4 s
+[I 2026-11-15 19:07:15,453] Trial 18 finished with value: 0.5944906065528306 and parameters: {'n_estimators': 500, 'max_depth': 3, 'learning_rate': 0.09483994153080137, 'min_child_weight': 12.343584977148645, 'subsample': 0.9200475089877637, 'colsample_bytree': 0.6938426955530833, 'reg_lambda': 9.590194878485608, 'reg_alpha': 0.049978435898561026}. Best is trial 6 with value: 0.5930554251458755.
+trial 20/50 | fold 1/4 | using cached data
+trial 20/50 | fold 1/4 | MAE 0.5923 | 2.7 s
+trial 20/50 | fold 2/4 | using cached data
+trial 20/50 | fold 2/4 | MAE 0.5990 | 4.6 s
+trial 20/50 | fold 3/4 | using cached data
+trial 20/50 | fold 3/4 | MAE 0.5869 | 3.9 s
+trial 20/50 | fold 4/4 | using cached data
+trial 20/50 | fold 4/4 | MAE 0.5918 | 4.0 s
+[I 2026-11-15 19:07:30,626] Trial 19 finished with value: 0.5925166664646566 and parameters: {'n_estimators': 500, 'max_depth': 4, 'learning_rate': 0.12368586882671186, 'min_child_weight': 25.691671288149028, 'subsample': 0.9593322712972133, 'colsample_bytree': 0.8691280750308036, 'reg_lambda': 11.863136178953463, 'reg_alpha': 0.043762261239881056}. Best is trial 19 with value: 0.5925166664646566.
+trial 21/50 | fold 1/4 | using cached data
+trial 21/50 | fold 1/4 | MAE 0.5917 | 2.4 s
+trial 21/50 | fold 2/4 | using cached data
+trial 21/50 | fold 2/4 | MAE 0.5914 | 3.1 s
+trial 21/50 | fold 3/4 | using cached data
+trial 21/50 | fold 3/4 | MAE 0.5815 | 4.0 s
+trial 21/50 | fold 4/4 | using cached data
+trial 21/50 | fold 4/4 | MAE 0.5979 | 2.7 s
+[I 2026-11-15 19:07:42,820] Trial 20 finished with value: 0.5906184678540498 and parameters: {'n_estimators': 500, 'max_depth': 5, 'learning_rate': 0.1532613133492773, 'min_child_weight': 14.49814282421438, 'subsample': 0.9506860346235533, 'colsample_bytree': 0.8357246268372629, 'reg_lambda': 2.098923853620025, 'reg_alpha': 3.0913907367732985}. Best is trial 20 with value: 0.5906184678540498.
+trial 22/50 | fold 1/4 | using cached data
+trial 22/50 | fold 1/4 | MAE 0.5920 | 2.6 s
+trial 22/50 | fold 2/4 | using cached data
+trial 22/50 | fold 2/4 | MAE 0.5999 | 3.6 s
+trial 22/50 | fold 3/4 | using cached data
+trial 22/50 | fold 3/4 | MAE 0.5915 | 3.1 s
+trial 22/50 | fold 4/4 | using cached data
+trial 22/50 | fold 4/4 | MAE 0.5972 | 3.0 s
+[I 2026-11-15 19:07:55,154] Trial 21 finished with value: 0.595148673545294 and parameters: {'n_estimators': 300, 'max_depth': 4, 'learning_rate': 0.11078106841519282, 'min_child_weight': 17.4670110581003, 'subsample': 0.9283641793243026, 'colsample_bytree': 0.8584125658670402, 'reg_lambda': 0.35173115989458403, 'reg_alpha': 0.2839193230491128}. Best is trial 20 with value: 0.5906184678540498.
+trial 23/50 | fold 1/4 | using cached data
+trial 23/50 | fold 1/4 | MAE 0.5988 | 2.8 s
+[I 2026-11-15 19:07:57,953] Trial 22 pruned. 
+trial 24/50 | fold 1/4 | using cached data
+trial 24/50 | fold 1/4 | MAE 0.5939 | 1.8 s
+[I 2026-11-15 19:07:59,781] Trial 23 pruned. 
+trial 25/50 | fold 1/4 | using cached data
+trial 25/50 | fold 1/4 | MAE 0.5922 | 2.7 s
+trial 25/50 | fold 2/4 | using cached data
+trial 25/50 | fold 2/4 | MAE 0.5974 | 3.5 s
+trial 25/50 | fold 3/4 | using cached data
+trial 25/50 | fold 3/4 | MAE 0.5860 | 3.1 s
+trial 25/50 | fold 4/4 | using cached data
+trial 25/50 | fold 4/4 | MAE 0.5970 | 2.3 s
+[I 2026-11-15 19:08:11,342] Trial 24 finished with value: 0.5931653444548701 and parameters: {'n_estimators': 500, 'max_depth': 3, 'learning_rate': 0.1811788957973581, 'min_child_weight': 21.146068186926467, 'subsample': 0.9861195078225574, 'colsample_bytree': 0.7866234580137763, 'reg_lambda': 0.93563558977227, 'reg_alpha': 5.7236077296902375}. Best is trial 20 with value: 0.5906184678540498.
+trial 26/50 | fold 1/4 | using cached data
+trial 26/50 | fold 1/4 | MAE 0.5932 | 1.9 s
+[I 2026-11-15 19:08:13,272] Trial 25 pruned. 
+trial 27/50 | fold 1/4 | using cached data
+trial 27/50 | fold 1/4 | MAE 0.5932 | 2.2 s
+[I 2026-11-15 19:08:15,457] Trial 26 pruned. 
+trial 28/50 | fold 1/4 | using cached data
+trial 28/50 | fold 1/4 | MAE 0.5935 | 1.9 s
+[I 2026-11-15 19:08:17,319] Trial 27 pruned. 
+trial 29/50 | fold 1/4 | using cached data
+trial 29/50 | fold 1/4 | MAE 0.6006 | 1.1 s
+[I 2026-11-15 19:08:18,446] Trial 28 pruned. 
+trial 30/50 | fold 1/4 | using cached data
+trial 30/50 | fold 1/4 | MAE 0.6013 | 1.7 s
+[I 2026-11-15 19:08:20,172] Trial 29 pruned. 
+trial 31/50 | fold 1/4 | using cached data
+trial 31/50 | fold 1/4 | MAE 0.5983 | 2.5 s
+[I 2026-11-15 19:08:22,660] Trial 30 pruned. 
+trial 32/50 | fold 1/4 | using cached data
+trial 32/50 | fold 1/4 | MAE 0.5933 | 2.0 s
+[I 2026-11-15 19:08:24,664] Trial 31 pruned. 
+trial 33/50 | fold 1/4 | using cached data
+trial 33/50 | fold 1/4 | MAE 0.5991 | 1.8 s
+[I 2026-11-15 19:08:26,504] Trial 32 pruned. 
+trial 34/50 | fold 1/4 | using cached data
+trial 34/50 | fold 1/4 | MAE 0.5994 | 1.4 s
+[I 2026-11-15 19:08:27,941] Trial 33 pruned. 
+trial 35/50 | fold 1/4 | using cached data
+trial 35/50 | fold 1/4 | MAE 0.5957 | 2.3 s
+[I 2026-11-15 19:08:30,236] Trial 34 pruned. 
+trial 36/50 | fold 1/4 | using cached data
+trial 36/50 | fold 1/4 | MAE 0.5910 | 1.7 s
+trial 36/50 | fold 2/4 | using cached data
+trial 36/50 | fold 2/4 | MAE 0.5956 | 2.0 s
+trial 36/50 | fold 3/4 | using cached data
+trial 36/50 | fold 3/4 | MAE 0.5868 | 2.6 s
+trial 36/50 | fold 4/4 | using cached data
+trial 36/50 | fold 4/4 | MAE 0.5933 | 2.4 s
+[I 2026-11-15 19:08:38,904] Trial 35 finished with value: 0.591668856360307 and parameters: {'n_estimators': 500, 'max_depth': 3, 'learning_rate': 0.19656474109903144, 'min_child_weight': 17.4859896050818, 'subsample': 0.8891772734093907, 'colsample_bytree': 0.8062603459555248, 'reg_lambda': 11.573079700056354, 'reg_alpha': 5.639185855903718}. Best is trial 20 with value: 0.5906184678540498.
+trial 37/50 | fold 1/4 | using cached data
+trial 37/50 | fold 1/4 | MAE 0.5956 | 2.9 s
+[I 2026-11-15 19:08:41,855] Trial 36 pruned. 
+trial 38/50 | fold 1/4 | using cached data
+trial 38/50 | fold 1/4 | MAE 0.5931 | 2.2 s
+[I 2026-11-15 19:08:44,079] Trial 37 pruned. 
+trial 39/50 | fold 1/4 | using cached data
+trial 39/50 | fold 1/4 | MAE 0.5967 | 2.1 s
+[I 2026-11-15 19:08:46,230] Trial 38 pruned. 
+trial 40/50 | fold 1/4 | using cached data
+trial 40/50 | fold 1/4 | MAE 0.5963 | 1.4 s
+[I 2026-11-15 19:08:47,649] Trial 39 pruned. 
+trial 41/50 | fold 1/4 | using cached data
+trial 41/50 | fold 1/4 | MAE 0.5946 | 1.6 s
+[I 2026-11-15 19:08:49,249] Trial 40 pruned. 
+trial 42/50 | fold 1/4 | using cached data
+trial 42/50 | fold 1/4 | MAE 0.5954 | 1.3 s
+[I 2026-11-15 19:08:50,584] Trial 41 pruned. 
+trial 43/50 | fold 1/4 | using cached data
+trial 43/50 | fold 1/4 | MAE 0.5989 | 1.9 s
+[I 2026-11-15 19:08:52,476] Trial 42 pruned. 
+trial 44/50 | fold 1/4 | using cached data
+trial 44/50 | fold 1/4 | MAE 0.5949 | 1.7 s
+[I 2026-11-15 19:08:54,182] Trial 43 pruned. 
+trial 45/50 | fold 1/4 | using cached data
+trial 45/50 | fold 1/4 | MAE 0.5969 | 2.2 s
+[I 2026-11-15 19:08:56,344] Trial 44 pruned. 
+trial 46/50 | fold 1/4 | using cached data
+trial 46/50 | fold 1/4 | MAE 0.5935 | 2.9 s
+[I 2026-11-15 19:08:59,225] Trial 45 pruned. 
+trial 47/50 | fold 1/4 | using cached data
+trial 47/50 | fold 1/4 | MAE 0.5955 | 2.2 s
+[I 2026-11-15 19:09:01,418] Trial 46 pruned. 
+trial 48/50 | fold 1/4 | using cached data
+trial 48/50 | fold 1/4 | MAE 0.5936 | 2.0 s
+[I 2026-11-15 19:09:03,380] Trial 47 pruned. 
+trial 49/50 | fold 1/4 | using cached data
+trial 49/50 | fold 1/4 | MAE 0.5994 | 1.6 s
+[I 2026-11-15 19:09:04,951] Trial 48 pruned. 
+trial 50/50 | fold 1/4 | using cached data
+trial 50/50 | fold 1/4 | MAE 0.5916 | 2.8 s
+trial 50/50 | fold 2/4 | using cached data
+trial 50/50 | fold 2/4 | MAE 0.5949 | 3.2 s
+trial 50/50 | fold 3/4 | using cached data
+trial 50/50 | fold 3/4 | MAE 0.5810 | 3.8 s
+trial 50/50 | fold 4/4 | using cached data
+trial 50/50 | fold 4/4 | MAE 0.5960 | 2.2 s
+[I 2026-11-15 19:09:17,023] Trial 49 finished with value: 0.590881967341103 and parameters: {'n_estimators': 500, 'max_depth': 3, 'learning_rate': 0.17716917692923742, 'min_child_weight': 17.760101954373038, 'subsample': 0.9321236855811421, 'colsample_bytree': 0.7751475179185897, 'reg_lambda': 0.6633994717193198, 'reg_alpha': 6.774098782354908}. Best is trial 20 with value: 0.5906184678540498.
+Mean validation MAE: 0.5906184678540498
+Best parameters: {'n_estimators': 500, 'max_depth': 5, 'learning_rate': 0.1532613133492773, 'min_child_weight': 14.49814282421438, 'subsample': 0.9506860346235533, 'colsample_bytree': 0.8357246268372629, 'reg_lambda': 2.098923853620025, 'reg_alpha': 3.0913907367732985}
+   mean_absolute_error  constant_pdo_mean_absolute_error
+0             0.597357                          0.546128
+Saved results to: C:\Users\lucas\dev\crossings\results\severity_panel_20261115_233914\regression_xgboost
+
+=== classification_mlp === 19:09:19
+[I 2026-11-15 19:09:31,391] A new study created in memory with name: conditional_severity_classification_mlp
+severity_target  property_damage_only  injury  fatal
+asof_year                                           
+2019                             1041     465    257
+2020                              877     424    182
+2021                             1045     413    219
+2022                             1070     463    249
+2023                             1040     468    237
+2024                             1043     467    246
+Dataset: C:\Users\lucas\dev\crossings\data\final\final_dataset_incidents.parquet
+Using 224 predictors: 187 numeric + 37 categorical
+trial 1/50 | fold 1/4 | preparing data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.814935
+trial 1/50 | fold 1/4 | log loss 0.9029 | 9.7 s
+trial 1/50 | fold 2/4 | preparing data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.804572
+trial 1/50 | fold 2/4 | log loss 0.8765 | 6.5 s
+trial 1/50 | fold 3/4 | preparing data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.797222
+trial 1/50 | fold 3/4 | log loss 1.1819 | 9.7 s
+trial 1/50 | fold 4/4 | preparing data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.797344
+trial 1/50 | fold 4/4 | log loss 0.9011 | 13.2 s
+[I 2026-11-15 19:10:10,495] Trial 0 finished with value: 0.9656203193748825 and parameters: {'hidden_width': 128, 'n_layers': 1, 'dropout': 0.07799726016810132, 'learning_rate': 6.533369619026643e-05, 'weight_decay': 0.0015741890047456662}. Best is trial 0 with value: 0.9656203193748825.
+trial 2/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.059580
+trial 2/50 | fold 1/4 | log loss 2.5661 | 15.0 s
+trial 2/50 | fold 2/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.069938
+trial 2/50 | fold 2/4 | log loss 2.6903 | 27.3 s
+trial 2/50 | fold 3/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.075572
+trial 2/50 | fold 3/4 | log loss 2.9303 | 42.3 s
+trial 2/50 | fold 4/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.086048
+trial 2/50 | fold 4/4 | log loss 2.9023 | 57.5 s
+[I 2026-11-15 19:12:32,673] Trial 1 finished with value: 2.772256411651183 and parameters: {'hidden_width': 512, 'n_layers': 4, 'dropout': 0.10616955533913808, 'learning_rate': 0.00011551009439226474, 'weight_decay': 1.2601639723276798e-07}. Best is trial 0 with value: 0.9656203193748825.
+trial 3/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.339376
+trial 3/50 | fold 1/4 | log loss 1.3807 | 4.8 s
+trial 3/50 | fold 2/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.286086
+trial 3/50 | fold 2/4 | log loss 1.5768 | 9.0 s
+trial 3/50 | fold 3/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.297475
+trial 3/50 | fold 3/4 | log loss 1.6572 | 13.7 s
+trial 3/50 | fold 4/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.284453
+trial 3/50 | fold 4/4 | log loss 1.7969 | 18.7 s
+[I 2026-11-15 19:13:18,900] Trial 2 finished with value: 1.6029114879465851 and parameters: {'hidden_width': 128, 'n_layers': 3, 'dropout': 0.06974693032602092, 'learning_rate': 0.0001919814649902086, 'weight_decay': 1.5782327810795563e-06}. Best is trial 0 with value: 0.9656203193748825.
+trial 4/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.015701
+trial 4/50 | fold 1/4 | log loss 3.5596 | 4.9 s
+trial 4/50 | fold 2/4 | using cached data
+PyTorch MLP | device=cpu | epochs=47 | loss=0.038874
+trial 4/50 | fold 2/4 | log loss 3.5408 | 8.5 s
+trial 4/50 | fold 3/4 | using cached data
+PyTorch MLP | device=cpu | epochs=42 | loss=0.050417
+trial 4/50 | fold 3/4 | log loss 3.2952 | 11.6 s
+trial 4/50 | fold 4/4 | using cached data
+PyTorch MLP | device=cpu | epochs=49 | loss=0.041726
+trial 4/50 | fold 4/4 | log loss 3.7987 | 18.5 s
+[I 2026-11-15 19:14:02,368] Trial 3 finished with value: 3.5485463109132587 and parameters: {'hidden_width': 128, 'n_layers': 3, 'dropout': 0.023225206359998862, 'learning_rate': 0.0008204643365323959, 'weight_decay': 1.0547383621352015e-07}. Best is trial 0 with value: 0.9656203193748825.
+trial 5/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=39 | loss=0.011638
+trial 5/50 | fold 1/4 | log loss 3.0322 | 4.5 s
+trial 5/50 | fold 2/4 | using cached data
+PyTorch MLP | device=cpu | epochs=35 | loss=0.034450
+trial 5/50 | fold 2/4 | log loss 3.0427 | 7.4 s
+trial 5/50 | fold 3/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.022338
+trial 5/50 | fold 3/4 | log loss 3.5637 | 15.8 s
+trial 5/50 | fold 4/4 | using cached data
+PyTorch MLP | device=cpu | epochs=43 | loss=0.032497
+trial 5/50 | fold 4/4 | log loss 3.6345 | 18.3 s
+[I 2026-11-15 19:14:48,261] Trial 4 finished with value: 3.3182508114081535 and parameters: {'hidden_width': 256, 'n_layers': 2, 'dropout': 0.048836057003191935, 'learning_rate': 0.0011679817513130801, 'weight_decay': 4.374364439939069e-06}. Best is trial 0 with value: 0.9656203193748825.
+trial 6/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.187542
+trial 6/50 | fold 1/4 | log loss 1.5819 | 8.6 s
+trial 6/50 | fold 2/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.186726
+trial 6/50 | fold 2/4 | log loss 1.7370 | 15.4 s
+trial 6/50 | fold 3/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.178716
+trial 6/50 | fold 3/4 | log loss 2.0681 | 23.3 s
+trial 6/50 | fold 4/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.212754
+trial 6/50 | fold 4/4 | log loss 1.8336 | 32.0 s
+[I 2026-11-15 19:16:07,517] Trial 5 finished with value: 1.8051516367495966 and parameters: {'hidden_width': 512, 'n_layers': 2, 'dropout': 0.331261142176991, 'learning_rate': 0.00021008360271862668, 'weight_decay': 1.319496149042566e-05}. Best is trial 0 with value: 0.9656203193748825.
+trial 7/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.107583
+trial 7/50 | fold 1/4 | log loss 2.7704 | 8.7 s
+[I 2026-11-15 19:16:16,257] Trial 6 pruned. 
+trial 8/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=26 | loss=0.044090
+trial 8/50 | fold 1/4 | log loss 3.1824 | 4.4 s
+[I 2026-11-15 19:16:20,699] Trial 7 pruned. 
+trial 9/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.085563
+trial 9/50 | fold 1/4 | log loss 1.9488 | 5.1 s
+trial 9/50 | fold 2/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.123478
+trial 9/50 | fold 2/4 | log loss 1.9116 | 9.4 s
+trial 9/50 | fold 3/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.162630
+trial 9/50 | fold 3/4 | log loss 1.9722 | 14.9 s
+trial 9/50 | fold 4/4 | using cached data
+PyTorch MLP | device=cpu | epochs=49 | loss=0.208702
+trial 9/50 | fold 4/4 | log loss 1.7064 | 19.8 s
+[I 2026-11-15 19:17:09,944] Trial 8 finished with value: 1.884748595809259 and parameters: {'hidden_width': 512, 'n_layers': 1, 'dropout': 0.49344346830025865, 'learning_rate': 0.0017516992455793442, 'weight_decay': 1.5570196345516594e-07}. Best is trial 0 with value: 0.9656203193748825.
+trial 10/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.084602
+trial 10/50 | fold 1/4 | log loss 2.4278 | 5.8 s
+[I 2026-11-15 19:17:15,752] Trial 9 pruned. 
+trial 11/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.868881
+trial 11/50 | fold 1/4 | log loss 0.9014 | 4.1 s
+trial 11/50 | fold 2/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.839569
+trial 11/50 | fold 2/4 | log loss 0.8680 | 7.5 s
+trial 11/50 | fold 3/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.832677
+trial 11/50 | fold 3/4 | log loss 0.9956 | 11.5 s
+trial 11/50 | fold 4/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.822311
+trial 11/50 | fold 4/4 | log loss 0.8926 | 15.5 s
+[I 2026-11-15 19:17:54,429] Trial 10 finished with value: 0.9143781168568526 and parameters: {'hidden_width': 128, 'n_layers': 2, 'dropout': 0.24446432451848868, 'learning_rate': 5.111267781788509e-05, 'weight_decay': 0.0009693851426902226}. Best is trial 10 with value: 0.9143781168568526.
+trial 12/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.809153
+trial 12/50 | fold 1/4 | log loss 0.9043 | 4.1 s
+trial 12/50 | fold 2/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.779908
+trial 12/50 | fold 2/4 | log loss 0.8849 | 7.7 s
+trial 12/50 | fold 3/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.781552
+trial 12/50 | fold 3/4 | log loss 1.0084 | 11.6 s
+trial 12/50 | fold 4/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.766171
+trial 12/50 | fold 4/4 | log loss 0.9160 | 15.5 s
+[I 2026-11-15 19:18:33,254] Trial 11 finished with value: 0.928390233876997 and parameters: {'hidden_width': 128, 'n_layers': 2, 'dropout': 0.19533968717846217, 'learning_rate': 8.105802303441828e-05, 'weight_decay': 0.0006990532559132332}. Best is trial 10 with value: 0.9143781168568526.
+trial 13/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.851930
+trial 13/50 | fold 1/4 | log loss 0.8996 | 4.2 s
+trial 13/50 | fold 2/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.823379
+trial 13/50 | fold 2/4 | log loss 0.8695 | 7.4 s
+trial 13/50 | fold 3/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.819166
+trial 13/50 | fold 3/4 | log loss 0.9971 | 11.6 s
+trial 13/50 | fold 4/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.807679
+trial 13/50 | fold 4/4 | log loss 0.8975 | 15.5 s
+[I 2026-11-15 19:19:12,003] Trial 12 finished with value: 0.9159478990357788 and parameters: {'hidden_width': 128, 'n_layers': 2, 'dropout': 0.24416205513607678, 'learning_rate': 6.130017959577041e-05, 'weight_decay': 0.0008635600945745063}. Best is trial 10 with value: 0.9143781168568526.
+trial 14/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.744640
+trial 14/50 | fold 1/4 | log loss 0.9446 | 5.8 s
+trial 14/50 | fold 2/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.667988
+trial 14/50 | fold 2/4 | log loss 1.0201 | 10.4 s
+trial 14/50 | fold 3/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.654857
+trial 14/50 | fold 3/4 | log loss 1.2876 | 16.1 s
+trial 14/50 | fold 4/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.651717
+trial 14/50 | fold 4/4 | log loss 1.0923 | 21.7 s
+[I 2026-11-15 19:20:05,951] Trial 13 finished with value: 1.0861244798459273 and parameters: {'hidden_width': 128, 'n_layers': 4, 'dropout': 0.17651824440986874, 'learning_rate': 9.494440170284276e-05, 'weight_decay': 0.0007196435604696759}. Best is trial 10 with value: 0.9143781168568526.
+trial 15/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.423989
+trial 15/50 | fold 1/4 | log loss 1.2137 | 4.3 s
+trial 15/50 | fold 2/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.398370
+trial 15/50 | fold 2/4 | log loss 1.2840 | 7.4 s
+trial 15/50 | fold 3/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.410204
+trial 15/50 | fold 3/4 | log loss 1.3396 | 11.5 s
+trial 15/50 | fold 4/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.405941
+trial 15/50 | fold 4/4 | log loss 1.3781 | 15.6 s
+[I 2026-11-15 19:20:44,713] Trial 14 finished with value: 1.3038483346986178 and parameters: {'hidden_width': 128, 'n_layers': 2, 'dropout': 0.30059776865592097, 'learning_rate': 0.0003306521381945355, 'weight_decay': 0.0014773062088253297}. Best is trial 10 with value: 0.9143781168568526.
+trial 16/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.875459
+trial 16/50 | fold 1/4 | log loss 0.8970 | 4.9 s
+trial 16/50 | fold 2/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.850297
+trial 16/50 | fold 2/4 | log loss 0.8689 | 9.1 s
+trial 16/50 | fold 3/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.828376
+trial 16/50 | fold 3/4 | log loss 0.9899 | 13.7 s
+trial 16/50 | fold 4/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.817984
+trial 16/50 | fold 4/4 | log loss 0.9042 | 18.8 s
+[I 2026-11-15 19:21:31,199] Trial 15 finished with value: 0.9150346017589368 and parameters: {'hidden_width': 128, 'n_layers': 3, 'dropout': 0.31528170442793874, 'learning_rate': 6.258393553215465e-05, 'weight_decay': 0.0006115136890877921}. Best is trial 10 with value: 0.9143781168568526.
+trial 17/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.885128
+trial 17/50 | fold 1/4 | log loss 0.8991 | 4.8 s
+trial 17/50 | fold 2/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.867166
+trial 17/50 | fold 2/4 | log loss 0.8706 | 9.1 s
+trial 17/50 | fold 3/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.844702
+trial 17/50 | fold 3/4 | log loss 0.9884 | 13.6 s
+trial 17/50 | fold 4/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.835247
+trial 17/50 | fold 4/4 | log loss 0.8967 | 18.6 s
+[I 2026-11-15 19:22:17,362] Trial 16 finished with value: 0.9136763891950695 and parameters: {'hidden_width': 128, 'n_layers': 3, 'dropout': 0.4244073019843657, 'learning_rate': 7.063430544029163e-05, 'weight_decay': 4.039238773459426e-05}. Best is trial 16 with value: 0.9136763891950695.
+trial 18/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.818067
+trial 18/50 | fold 1/4 | log loss 0.8985 | 7.2 s
+trial 18/50 | fold 2/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.780704
+trial 18/50 | fold 2/4 | log loss 0.8919 | 13.0 s
+trial 18/50 | fold 3/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.772435
+trial 18/50 | fold 3/4 | log loss 1.0081 | 19.7 s
+trial 18/50 | fold 4/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.748372
+trial 18/50 | fold 4/4 | log loss 0.9661 | 27.1 s
+[I 2026-11-15 19:23:24,304] Trial 17 finished with value: 0.9411466918164375 and parameters: {'hidden_width': 256, 'n_layers': 3, 'dropout': 0.42046935592602863, 'learning_rate': 7.596384486136136e-05, 'weight_decay': 3.1655912322190614e-05}. Best is trial 16 with value: 0.9136763891950695.
+trial 19/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.339298
+trial 19/50 | fold 1/4 | log loss 1.3002 | 3.9 s
+[I 2026-11-15 19:23:28,261] Trial 18 pruned. 
+trial 20/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.865443
+trial 20/50 | fold 1/4 | log loss 0.8985 | 4.0 s
+trial 20/50 | fold 2/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.838013
+trial 20/50 | fold 2/4 | log loss 0.8667 | 7.5 s
+trial 20/50 | fold 3/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.832072
+trial 20/50 | fold 3/4 | log loss 0.9946 | 11.3 s
+trial 20/50 | fold 4/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.821532
+trial 20/50 | fold 4/4 | log loss 0.8946 | 15.5 s
+[I 2026-11-15 19:24:06,613] Trial 19 finished with value: 0.9136029649366889 and parameters: {'hidden_width': 128, 'n_layers': 2, 'dropout': 0.4032142021255479, 'learning_rate': 7.218873638810301e-05, 'weight_decay': 1.5857866621163927e-06}. Best is trial 19 with value: 0.9136029649366889.
+trial 21/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.860006
+trial 21/50 | fold 1/4 | log loss 0.8978 | 3.9 s
+trial 21/50 | fold 2/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.834578
+trial 21/50 | fold 2/4 | log loss 0.8670 | 7.6 s
+trial 21/50 | fold 3/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.827267
+trial 21/50 | fold 3/4 | log loss 0.9951 | 11.3 s
+trial 21/50 | fold 4/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.816710
+trial 21/50 | fold 4/4 | log loss 0.8963 | 15.5 s
+[I 2026-11-15 19:24:44,901] Trial 20 finished with value: 0.9140355954126299 and parameters: {'hidden_width': 128, 'n_layers': 2, 'dropout': 0.4339872791248918, 'learning_rate': 8.228404593172786e-05, 'weight_decay': 8.781903708667235e-07}. Best is trial 19 with value: 0.9136029649366889.
+trial 22/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.839333
+trial 22/50 | fold 1/4 | log loss 0.8991 | 4.2 s
+trial 22/50 | fold 2/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.813523
+trial 22/50 | fold 2/4 | log loss 0.8717 | 7.6 s
+trial 22/50 | fold 3/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.813525
+trial 22/50 | fold 3/4 | log loss 0.9985 | 11.4 s
+trial 22/50 | fold 4/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.801230
+trial 22/50 | fold 4/4 | log loss 0.9026 | 15.6 s
+[I 2026-11-15 19:25:23,695] Trial 21 finished with value: 0.9179691630277249 and parameters: {'hidden_width': 128, 'n_layers': 2, 'dropout': 0.33659971942182304, 'learning_rate': 8.00336541285204e-05, 'weight_decay': 5.811663129978128e-08}. Best is trial 19 with value: 0.9136029649366889.
+trial 23/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=44 | loss=0.901362
+trial 23/50 | fold 1/4 | log loss 0.9094 | 3.6 s
+[I 2026-11-15 19:25:27,319] Trial 22 pruned. 
+trial 24/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.786784
+trial 24/50 | fold 1/4 | log loss 0.9128 | 4.0 s
+[I 2026-11-15 19:25:31,293] Trial 23 pruned. 
+trial 25/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.749115
+trial 25/50 | fold 1/4 | log loss 0.9137 | 3.4 s
+[I 2026-11-15 19:25:34,688] Trial 24 pruned. 
+trial 26/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.633651
+trial 26/50 | fold 1/4 | log loss 1.0369 | 4.9 s
+[I 2026-11-15 19:25:39,584] Trial 25 pruned. 
+trial 27/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.859221
+trial 27/50 | fold 1/4 | log loss 0.8945 | 4.8 s
+trial 27/50 | fold 2/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.837865
+trial 27/50 | fold 2/4 | log loss 0.8718 | 8.8 s
+trial 27/50 | fold 3/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.818019
+trial 27/50 | fold 3/4 | log loss 0.9894 | 13.7 s
+trial 27/50 | fold 4/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.805760
+trial 27/50 | fold 4/4 | log loss 0.9156 | 18.6 s
+[I 2026-11-15 19:26:25,481] Trial 26 finished with value: 0.9178219706969769 and parameters: {'hidden_width': 128, 'n_layers': 3, 'dropout': 0.4398068336050061, 'learning_rate': 9.881605024749917e-05, 'weight_decay': 8.365978249378027e-07}. Best is trial 19 with value: 0.9136029649366889.
+trial 28/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.886977
+trial 28/50 | fold 1/4 | log loss 0.9016 | 4.0 s
+trial 28/50 | fold 2/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.862917
+trial 28/50 | fold 2/4 | log loss 0.8661 | 7.4 s
+trial 28/50 | fold 3/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.850591
+trial 28/50 | fold 3/4 | log loss 0.9938 | 11.6 s
+trial 28/50 | fold 4/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.840813
+trial 28/50 | fold 4/4 | log loss 0.8896 | 15.5 s
+[I 2026-11-15 19:27:03,965] Trial 27 finished with value: 0.9127784846655723 and parameters: {'hidden_width': 128, 'n_layers': 2, 'dropout': 0.46191843593114357, 'learning_rate': 6.181061228731851e-05, 'weight_decay': 0.00018936527338853196}. Best is trial 27 with value: 0.9127784846655723.
+trial 29/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.780966
+trial 29/50 | fold 1/4 | log loss 0.9215 | 4.9 s
+[I 2026-11-15 19:27:08,869] Trial 28 pruned. 
+trial 30/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.876319
+trial 30/50 | fold 1/4 | log loss 0.8995 | 4.0 s
+trial 30/50 | fold 2/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.850674
+trial 30/50 | fold 2/4 | log loss 0.8656 | 7.7 s
+trial 30/50 | fold 3/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.840544
+trial 30/50 | fold 3/4 | log loss 0.9937 | 11.6 s
+trial 30/50 | fold 4/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.830183
+trial 30/50 | fold 4/4 | log loss 0.8916 | 15.5 s
+[I 2026-11-15 19:27:47,608] Trial 29 finished with value: 0.9125816432911333 and parameters: {'hidden_width': 128, 'n_layers': 2, 'dropout': 0.43748463389971187, 'learning_rate': 6.845165920128114e-05, 'weight_decay': 5.467068494174871e-05}. Best is trial 29 with value: 0.9125816432911333.
+trial 31/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.836215
+trial 31/50 | fold 1/4 | log loss 0.9007 | 3.2 s
+trial 31/50 | fold 2/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.826888
+trial 31/50 | fold 2/4 | log loss 0.8730 | 6.0 s
+trial 31/50 | fold 3/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.817689
+trial 31/50 | fold 3/4 | log loss 1.1789 | 9.2 s
+trial 31/50 | fold 4/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.818290
+trial 31/50 | fold 4/4 | log loss 0.8981 | 12.5 s
+[I 2026-11-15 19:28:18,594] Trial 30 finished with value: 0.9626846521110114 and parameters: {'hidden_width': 128, 'n_layers': 1, 'dropout': 0.4917723161802458, 'learning_rate': 7.943192847299396e-05, 'weight_decay': 0.00019941953779643455}. Best is trial 29 with value: 0.9125816432911333.
+trial 32/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.862226
+trial 32/50 | fold 1/4 | log loss 0.8972 | 4.1 s
+trial 32/50 | fold 2/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.838049
+trial 32/50 | fold 2/4 | log loss 0.8670 | 7.5 s
+trial 32/50 | fold 3/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.831476
+trial 32/50 | fold 3/4 | log loss 0.9947 | 11.6 s
+trial 32/50 | fold 4/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.820673
+trial 32/50 | fold 4/4 | log loss 0.8959 | 15.5 s
+[I 2026-11-15 19:28:57,304] Trial 31 finished with value: 0.9136804198610471 and parameters: {'hidden_width': 128, 'n_layers': 2, 'dropout': 0.47411248983407867, 'learning_rate': 8.774253886202111e-05, 'weight_decay': 0.00014008968958341143}. Best is trial 29 with value: 0.9125816432911333.
+trial 33/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.837441
+trial 33/50 | fold 1/4 | log loss 0.9022 | 3.5 s
+[I 2026-11-15 19:29:00,771] Trial 32 pruned. 
+trial 34/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.795803
+trial 34/50 | fold 1/4 | log loss 0.9027 | 3.2 s
+[I 2026-11-15 19:29:04,017] Trial 33 pruned. 
+trial 35/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.904632
+trial 35/50 | fold 1/4 | log loss 0.9003 | 3.4 s
+trial 35/50 | fold 2/4 | using cached data
+PyTorch MLP | device=cpu | epochs=45 | loss=0.893858
+trial 35/50 | fold 2/4 | log loss 0.8765 | 5.7 s
+[I 2026-11-15 19:29:13,168] Trial 34 pruned. 
+trial 36/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=36 | loss=0.917552
+trial 36/50 | fold 1/4 | log loss 0.9164 | 3.0 s
+[I 2026-11-15 19:29:16,214] Trial 35 pruned. 
+trial 37/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.899676
+trial 37/50 | fold 1/4 | log loss 0.9032 | 5.0 s
+[I 2026-11-15 19:29:21,200] Trial 36 pruned. 
+trial 38/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.829476
+trial 38/50 | fold 1/4 | log loss 0.9000 | 4.9 s
+trial 38/50 | fold 2/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.798003
+trial 38/50 | fold 2/4 | log loss 0.8909 | 9.1 s
+[I 2026-11-15 19:29:35,145] Trial 37 pruned. 
+trial 39/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.699943
+trial 39/50 | fold 1/4 | log loss 0.9602 | 4.2 s
+[I 2026-11-15 19:29:39,342] Trial 38 pruned. 
+trial 40/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.824117
+trial 40/50 | fold 1/4 | log loss 0.9010 | 3.3 s
+trial 40/50 | fold 2/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.813952
+trial 40/50 | fold 2/4 | log loss 0.8748 | 6.0 s
+[I 2026-11-15 19:29:48,654] Trial 39 pruned. 
+trial 41/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.786680
+trial 41/50 | fold 1/4 | log loss 0.9116 | 4.2 s
+[I 2026-11-15 19:29:52,872] Trial 40 pruned. 
+trial 42/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=36 | loss=0.921499
+trial 42/50 | fold 1/4 | log loss 0.9193 | 2.9 s
+[I 2026-11-15 19:29:55,767] Trial 41 pruned. 
+trial 43/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.826468
+trial 43/50 | fold 1/4 | log loss 0.8984 | 5.6 s
+trial 43/50 | fold 2/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.809029
+trial 43/50 | fold 2/4 | log loss 0.8739 | 10.3 s
+trial 43/50 | fold 3/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.799372
+trial 43/50 | fold 3/4 | log loss 0.9945 | 15.7 s
+trial 43/50 | fold 4/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.795879
+trial 43/50 | fold 4/4 | log loss 0.9195 | 21.3 s
+[I 2026-11-15 19:30:48,686] Trial 42 finished with value: 0.9215875513425721 and parameters: {'hidden_width': 256, 'n_layers': 2, 'dropout': 0.44120286051759167, 'learning_rate': 6.488890492550003e-05, 'weight_decay': 2.749038451143796e-05}. Best is trial 29 with value: 0.9125816432911333.
+trial 44/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.856713
+trial 44/50 | fold 1/4 | log loss 0.9043 | 3.3 s
+[I 2026-11-15 19:30:51,969] Trial 43 pruned. 
+trial 45/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.838105
+trial 45/50 | fold 1/4 | log loss 0.8972 | 4.1 s
+trial 45/50 | fold 2/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.815310
+trial 45/50 | fold 2/4 | log loss 0.8732 | 7.6 s
+trial 45/50 | fold 3/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.812780
+trial 45/50 | fold 3/4 | log loss 0.9994 | 11.6 s
+trial 45/50 | fold 4/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.801677
+trial 45/50 | fold 4/4 | log loss 0.9048 | 15.9 s
+[I 2026-11-15 19:31:31,058] Trial 44 finished with value: 0.9186462663035329 and parameters: {'hidden_width': 128, 'n_layers': 2, 'dropout': 0.47892409656326, 'learning_rate': 0.00011193321759223214, 'weight_decay': 0.00013084969072485442}. Best is trial 29 with value: 0.9125816432911333.
+trial 46/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.784974
+trial 46/50 | fold 1/4 | log loss 0.9186 | 4.9 s
+[I 2026-11-15 19:31:36,002] Trial 45 pruned. 
+trial 47/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.847587
+trial 47/50 | fold 1/4 | log loss 0.8979 | 4.0 s
+trial 47/50 | fold 2/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.820626
+trial 47/50 | fold 2/4 | log loss 0.8698 | 7.6 s
+trial 47/50 | fold 3/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.817912
+trial 47/50 | fold 3/4 | log loss 0.9973 | 11.3 s
+trial 47/50 | fold 4/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.807307
+trial 47/50 | fold 4/4 | log loss 0.9005 | 15.6 s
+[I 2026-11-15 19:32:14,486] Trial 46 finished with value: 0.9163708954354399 and parameters: {'hidden_width': 128, 'n_layers': 2, 'dropout': 0.4025559005824155, 'learning_rate': 8.648416906426352e-05, 'weight_decay': 3.372032269933577e-05}. Best is trial 29 with value: 0.9125816432911333.
+trial 48/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.882257
+trial 48/50 | fold 1/4 | log loss 0.9006 | 4.1 s
+[I 2026-11-15 19:32:18,607] Trial 47 pruned. 
+trial 49/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=50 | loss=0.859191
+trial 49/50 | fold 1/4 | log loss 0.9040 | 3.2 s
+[I 2026-11-15 19:32:21,843] Trial 48 pruned. 
+trial 50/50 | fold 1/4 | using cached data
+PyTorch MLP | device=cpu | epochs=46 | loss=0.892333
+trial 50/50 | fold 1/4 | log loss 0.9034 | 4.5 s
+[I 2026-11-15 19:32:26,355] Trial 49 pruned. 
+Mean validation log loss: 0.9125816432911333
+Best parameters: {'hidden_width': 128, 'n_layers': 2, 'dropout': 0.43748463389971187, 'learning_rate': 6.845165920128114e-05, 'weight_decay': 5.467068494174871e-05}
+PyTorch MLP | device=cpu | epochs=50 | loss=0.856686
+   multiclass_log_loss  macro_f1  ordinal_mae
+0              0.92757  0.322763     0.534738
+Continuous expected-severity MAE: 0.6060006744954527
+Saved results to: C:\Users\lucas\dev\crossings\results\severity_panel_20261115_233914\classification_mlp
+
+=== regression_mlp === 19:32:50
+[I 2026-11-15 19:33:03,864] A new study created in memory with name: conditional_severity_regression_mlp
+           crash_rows  mean_severity
+asof_year                           
+2019             1763       1.555303
+2020             1483       1.531355
+2021             1677       1.507454
+2022             1782       1.539282
+2023             1745       1.539828
+2024             1756       1.546128
+Dataset: C:\Users\lucas\dev\crossings\data\final\final_dataset_incidents.parquet
+Using 224 predictors: 187 numeric + 37 categorical
+trial 1/50 | fold 1/4 | preparing data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.442019
+trial 1/50 | fold 1/4 | MAE 0.6145 | 9.2 s
+trial 1/50 | fold 2/4 | preparing data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.420518
+trial 1/50 | fold 2/4 | MAE 0.6141 | 6.8 s
+trial 1/50 | fold 3/4 | preparing data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.427769
+trial 1/50 | fold 3/4 | MAE 0.6167 | 9.5 s
+trial 1/50 | fold 4/4 | preparing data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.425195
+trial 1/50 | fold 4/4 | MAE 0.6028 | 13.0 s
+[I 2026-11-15 19:33:42,462] Trial 0 finished with value: 0.6120068568000113 and parameters: {'hidden_width': 128, 'n_layers': 1, 'dropout': 0.07799726016810132, 'learning_rate': 6.533369619026643e-05, 'weight_decay': 0.0015741890047456662}. Best is trial 0 with value: 0.6120068568000113.
+trial 2/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.067683
+trial 2/50 | fold 1/4 | MAE 0.5909 | 14.7 s
+trial 2/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.065702
+trial 2/50 | fold 2/4 | MAE 0.5719 | 27.0 s
+trial 2/50 | fold 3/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.065476
+trial 2/50 | fold 3/4 | MAE 0.6058 | 41.7 s
+trial 2/50 | fold 4/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.063365
+trial 2/50 | fold 4/4 | MAE 0.6099 | 56.0 s
+[I 2026-11-15 19:36:01,777] Trial 1 finished with value: 0.5946286205490063 and parameters: {'hidden_width': 512, 'n_layers': 4, 'dropout': 0.10616955533913808, 'learning_rate': 0.00011551009439226474, 'weight_decay': 1.2601639723276798e-07}. Best is trial 1 with value: 0.5946286205490063.
+trial 3/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.130358
+trial 3/50 | fold 1/4 | MAE 0.6198 | 4.8 s
+trial 3/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.107344
+trial 3/50 | fold 2/4 | MAE 0.5785 | 8.9 s
+trial 3/50 | fold 3/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.126879
+trial 3/50 | fold 3/4 | MAE 0.6134 | 13.4 s
+trial 3/50 | fold 4/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.127276
+trial 3/50 | fold 4/4 | MAE 0.6050 | 18.3 s
+[I 2026-11-15 19:36:47,237] Trial 2 finished with value: 0.604183254027937 and parameters: {'hidden_width': 128, 'n_layers': 3, 'dropout': 0.06974693032602092, 'learning_rate': 0.0001919814649902086, 'weight_decay': 1.5782327810795563e-06}. Best is trial 1 with value: 0.5946286205490063.
+trial 4/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.029936
+trial 4/50 | fold 1/4 | MAE 0.6309 | 4.8 s
+trial 4/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.026171
+trial 4/50 | fold 2/4 | MAE 0.5702 | 9.0 s
+trial 4/50 | fold 3/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.033186
+trial 4/50 | fold 3/4 | MAE 0.6090 | 13.5 s
+trial 4/50 | fold 4/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.034840
+trial 4/50 | fold 4/4 | MAE 0.6083 | 18.5 s
+[I 2026-11-15 19:37:33,037] Trial 3 finished with value: 0.6045927480429714 and parameters: {'hidden_width': 128, 'n_layers': 3, 'dropout': 0.023225206359998862, 'learning_rate': 0.0008204643365323959, 'weight_decay': 1.0547383621352015e-07}. Best is trial 1 with value: 0.5946286205490063.
+trial 5/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=48 | loss=0.020836
+trial 5/50 | fold 1/4 | MAE 0.6035 | 5.2 s
+trial 5/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.019939
+trial 5/50 | fold 2/4 | MAE 0.5621 | 10.0 s
+trial 5/50 | fold 3/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.019726
+trial 5/50 | fold 3/4 | MAE 0.5825 | 15.4 s
+trial 5/50 | fold 4/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.020726
+trial 5/50 | fold 4/4 | MAE 0.6031 | 20.8 s
+[I 2026-11-15 19:38:24,499] Trial 4 finished with value: 0.5878108420995114 and parameters: {'hidden_width': 256, 'n_layers': 2, 'dropout': 0.048836057003191935, 'learning_rate': 0.0011679817513130801, 'weight_decay': 4.374364439939069e-06}. Best is trial 4 with value: 0.5878108420995114.
+trial 6/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.091051
+trial 6/50 | fold 1/4 | MAE 0.5841 | 8.1 s
+trial 6/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.094716
+trial 6/50 | fold 2/4 | MAE 0.5711 | 14.8 s
+trial 6/50 | fold 3/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.104898
+trial 6/50 | fold 3/4 | MAE 0.5738 | 22.8 s
+trial 6/50 | fold 4/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.106342
+trial 6/50 | fold 4/4 | MAE 0.5892 | 31.2 s
+[I 2026-11-15 19:39:41,429] Trial 5 finished with value: 0.5795333637951521 and parameters: {'hidden_width': 512, 'n_layers': 2, 'dropout': 0.331261142176991, 'learning_rate': 0.00021008360271862668, 'weight_decay': 1.319496149042566e-05}. Best is trial 5 with value: 0.5795333637951521.
+trial 7/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.056604
+trial 7/50 | fold 1/4 | MAE 0.5946 | 8.7 s
+trial 7/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.074236
+trial 7/50 | fold 2/4 | MAE 0.5562 | 15.8 s
+trial 7/50 | fold 3/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.101890
+trial 7/50 | fold 3/4 | MAE 0.5763 | 24.1 s
+trial 7/50 | fold 4/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.108202
+trial 7/50 | fold 4/4 | MAE 0.5896 | 32.7 s
+[I 2026-11-15 19:41:02,760] Trial 6 finished with value: 0.5791648573122347 and parameters: {'hidden_width': 256, 'n_layers': 4, 'dropout': 0.4474136752138244, 'learning_rate': 0.0007848198194330578, 'weight_decay': 0.0033981724150106006}. Best is trial 6 with value: 0.5791648573122347.
+trial 8/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.003785
+trial 8/50 | fold 1/4 | MAE 0.5955 | 8.1 s
+trial 8/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=46 | loss=0.019597
+trial 8/50 | fold 2/4 | MAE 0.5768 | 13.9 s
+[I 2026-11-15 19:41:24,729] Trial 7 pruned. 
+trial 9/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.062914
+trial 9/50 | fold 1/4 | MAE 0.6036 | 4.9 s
+[I 2026-11-15 19:41:29,660] Trial 8 pruned. 
+trial 10/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.069069
+trial 10/50 | fold 1/4 | MAE 0.6200 | 5.6 s
+[I 2026-11-15 19:41:35,264] Trial 9 pruned. 
+trial 11/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.048374
+trial 11/50 | fold 1/4 | MAE 0.5926 | 5.3 s
+trial 11/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.063382
+trial 11/50 | fold 2/4 | MAE 0.5499 | 10.0 s
+trial 11/50 | fold 3/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.086797
+trial 11/50 | fold 3/4 | MAE 0.5708 | 15.5 s
+trial 11/50 | fold 4/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.096448
+trial 11/50 | fold 4/4 | MAE 0.5981 | 21.0 s
+[I 2026-11-15 19:42:27,142] Trial 10 finished with value: 0.5778378626701492 and parameters: {'hidden_width': 256, 'n_layers': 2, 'dropout': 0.425322458265457, 'learning_rate': 0.0014648158246210498, 'weight_decay': 0.0050413645133812884}. Best is trial 10 with value: 0.5778378626701492.
+trial 12/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.052559
+trial 12/50 | fold 1/4 | MAE 0.5965 | 8.5 s
+trial 12/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.078668
+trial 12/50 | fold 2/4 | MAE 0.5753 | 15.7 s
+[I 2026-11-15 19:42:51,414] Trial 11 pruned. 
+trial 13/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.041233
+trial 13/50 | fold 1/4 | MAE 0.5878 | 5.5 s
+trial 13/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.060818
+trial 13/50 | fold 2/4 | MAE 0.5440 | 10.2 s
+trial 13/50 | fold 3/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.081605
+trial 13/50 | fold 3/4 | MAE 0.5784 | 15.3 s
+trial 13/50 | fold 4/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.099626
+trial 13/50 | fold 4/4 | MAE 0.5802 | 20.8 s
+[I 2026-11-15 19:43:43,312] Trial 12 finished with value: 0.5726066211223029 and parameters: {'hidden_width': 256, 'n_layers': 2, 'dropout': 0.410814911569475, 'learning_rate': 0.0018799032545020124, 'weight_decay': 0.003468321469797556}. Best is trial 12 with value: 0.5726066211223029.
+trial 14/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.114686
+trial 14/50 | fold 1/4 | MAE 0.5760 | 3.4 s
+trial 14/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.140159
+trial 14/50 | fold 2/4 | MAE 0.5572 | 6.2 s
+trial 14/50 | fold 3/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.181360
+trial 14/50 | fold 3/4 | MAE 0.5658 | 9.3 s
+trial 14/50 | fold 4/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.201527
+trial 14/50 | fold 4/4 | MAE 0.5720 | 12.8 s
+[I 2026-11-15 19:44:15,043] Trial 13 finished with value: 0.5677536401956004 and parameters: {'hidden_width': 64, 'n_layers': 2, 'dropout': 0.39355501372726476, 'learning_rate': 0.0017589566489133173, 'weight_decay': 0.005891990176323691}. Best is trial 13 with value: 0.5677536401956004.
+trial 15/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.070660
+trial 15/50 | fold 1/4 | MAE 0.5913 | 3.4 s
+trial 15/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.115894
+trial 15/50 | fold 2/4 | MAE 0.5869 | 6.1 s
+[I 2026-11-15 19:44:24,537] Trial 14 pruned. 
+trial 16/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.244342
+trial 16/50 | fold 1/4 | MAE 0.5909 | 4.0 s
+trial 16/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.213994
+trial 16/50 | fold 2/4 | MAE 0.5807 | 7.1 s
+[I 2026-11-15 19:44:35,643] Trial 15 pruned. 
+trial 17/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.278895
+trial 17/50 | fold 1/4 | MAE 0.5877 | 3.5 s
+trial 17/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.240783
+trial 17/50 | fold 2/4 | MAE 0.5792 | 6.3 s
+[I 2026-11-15 19:44:45,399] Trial 16 pruned. 
+trial 18/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.056980
+trial 18/50 | fold 1/4 | MAE 0.5924 | 4.0 s
+trial 18/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.071236
+trial 18/50 | fold 2/4 | MAE 0.5979 | 7.2 s
+[I 2026-11-15 19:44:56,585] Trial 17 pruned. 
+trial 19/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=45 | loss=0.022404
+trial 19/50 | fold 1/4 | MAE 0.5976 | 5.1 s
+[I 2026-11-15 19:45:01,730] Trial 18 pruned. 
+trial 20/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.224595
+trial 20/50 | fold 1/4 | MAE 0.6037 | 3.2 s
+[I 2026-11-15 19:45:04,910] Trial 19 pruned. 
+trial 21/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.147045
+trial 21/50 | fold 1/4 | MAE 0.6060 | 2.9 s
+[I 2026-11-15 19:45:07,789] Trial 20 pruned. 
+trial 22/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.041483
+trial 22/50 | fold 1/4 | MAE 0.5913 | 5.5 s
+trial 22/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=49 | loss=0.046641
+trial 22/50 | fold 2/4 | MAE 0.5527 | 10.1 s
+trial 22/50 | fold 3/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.055037
+trial 22/50 | fold 3/4 | MAE 0.5590 | 15.3 s
+trial 22/50 | fold 4/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.062645
+trial 22/50 | fold 4/4 | MAE 0.5961 | 20.9 s
+[I 2026-11-15 19:45:59,568] Trial 21 finished with value: 0.5747776502163956 and parameters: {'hidden_width': 256, 'n_layers': 2, 'dropout': 0.29639719717705904, 'learning_rate': 0.0010169086936421266, 'weight_decay': 0.0093287483786438}. Best is trial 13 with value: 0.5677536401956004.
+trial 23/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.046120
+trial 23/50 | fold 1/4 | MAE 0.6064 | 3.9 s
+[I 2026-11-15 19:46:03,433] Trial 22 pruned. 
+trial 24/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.060635
+trial 24/50 | fold 1/4 | MAE 0.5917 | 7.1 s
+trial 24/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.058977
+trial 24/50 | fold 2/4 | MAE 0.5522 | 13.0 s
+trial 24/50 | fold 3/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.068882
+trial 24/50 | fold 3/4 | MAE 0.5826 | 19.5 s
+trial 24/50 | fold 4/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.068687
+trial 24/50 | fold 4/4 | MAE 0.6071 | 27.1 s
+[I 2026-11-15 19:47:10,056] Trial 23 finished with value: 0.583423674665262 and parameters: {'hidden_width': 256, 'n_layers': 3, 'dropout': 0.257608868033278, 'learning_rate': 0.000378666494629086, 'weight_decay': 0.0028752057028005097}. Best is trial 13 with value: 0.5677536401956004.
+trial 25/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=41 | loss=0.051309
+trial 25/50 | fold 1/4 | MAE 0.6157 | 5.7 s
+[I 2026-11-15 19:47:15,801] Trial 24 pruned. 
+trial 26/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.033087
+trial 26/50 | fold 1/4 | MAE 0.5815 | 8.3 s
+trial 26/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.029645
+trial 26/50 | fold 2/4 | MAE 0.5614 | 15.1 s
+trial 26/50 | fold 3/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.039451
+trial 26/50 | fold 3/4 | MAE 0.5697 | 23.0 s
+trial 26/50 | fold 4/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.045638
+trial 26/50 | fold 4/4 | MAE 0.5835 | 31.4 s
+[I 2026-11-15 19:48:33,531] Trial 25 finished with value: 0.5740062508615814 and parameters: {'hidden_width': 512, 'n_layers': 2, 'dropout': 0.34273812830098044, 'learning_rate': 0.000880274379710243, 'weight_decay': 0.00039226977727273695}. Best is trial 13 with value: 0.5677536401956004.
+trial 27/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.140755
+trial 27/50 | fold 1/4 | MAE 0.6021 | 2.8 s
+[I 2026-11-15 19:48:36,341] Trial 26 pruned. 
+trial 28/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.107284
+trial 28/50 | fold 1/4 | MAE 0.5945 | 3.8 s
+[I 2026-11-15 19:48:40,189] Trial 27 pruned. 
+trial 29/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.044617
+trial 29/50 | fold 1/4 | MAE 0.5986 | 5.6 s
+[I 2026-11-15 19:48:45,812] Trial 28 pruned. 
+trial 30/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.172833
+trial 30/50 | fold 1/4 | MAE 0.5912 | 3.9 s
+trial 30/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.210716
+trial 30/50 | fold 2/4 | MAE 0.5729 | 7.2 s
+[I 2026-11-15 19:48:56,923] Trial 29 pruned. 
+trial 31/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=40 | loss=0.026942
+trial 31/50 | fold 1/4 | MAE 0.6057 | 9.2 s
+[I 2026-11-15 19:49:06,125] Trial 30 pruned. 
+trial 32/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.036991
+trial 32/50 | fold 1/4 | MAE 0.5878 | 5.6 s
+trial 32/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.061531
+trial 32/50 | fold 2/4 | MAE 0.5567 | 10.1 s
+trial 32/50 | fold 3/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.088677
+trial 32/50 | fold 3/4 | MAE 0.5534 | 15.5 s
+trial 32/50 | fold 4/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.089540
+trial 32/50 | fold 4/4 | MAE 0.5904 | 21.0 s
+[I 2026-11-15 19:49:58,278] Trial 31 finished with value: 0.5720677963009488 and parameters: {'hidden_width': 256, 'n_layers': 2, 'dropout': 0.4108147488752602, 'learning_rate': 0.0024842295664789754, 'weight_decay': 0.0010411336500392029}. Best is trial 13 with value: 0.5677536401956004.
+trial 33/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.043438
+trial 33/50 | fold 1/4 | MAE 0.6017 | 5.6 s
+[I 2026-11-15 19:50:03,922] Trial 32 pruned. 
+trial 34/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.027399
+trial 34/50 | fold 1/4 | MAE 0.5952 | 5.4 s
+[I 2026-11-15 19:50:09,373] Trial 33 pruned. 
+trial 35/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.081059
+trial 35/50 | fold 1/4 | MAE 0.5858 | 5.5 s
+trial 35/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.093067
+trial 35/50 | fold 2/4 | MAE 0.5458 | 10.1 s
+trial 35/50 | fold 3/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.115735
+trial 35/50 | fold 3/4 | MAE 0.5651 | 15.5 s
+trial 35/50 | fold 4/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.121327
+trial 35/50 | fold 4/4 | MAE 0.5839 | 20.9 s
+[I 2026-11-15 19:51:01,346] Trial 34 finished with value: 0.5701529689993496 and parameters: {'hidden_width': 256, 'n_layers': 2, 'dropout': 0.4823078229848713, 'learning_rate': 0.0007093596647922966, 'weight_decay': 0.002350817061795287}. Best is trial 13 with value: 0.5677536401956004.
+trial 36/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.076130
+trial 36/50 | fold 1/4 | MAE 0.5783 | 5.6 s
+trial 36/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.093774
+trial 36/50 | fold 2/4 | MAE 0.5458 | 10.1 s
+trial 36/50 | fold 3/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.115931
+trial 36/50 | fold 3/4 | MAE 0.5581 | 15.4 s
+trial 36/50 | fold 4/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.125863
+trial 36/50 | fold 4/4 | MAE 0.5818 | 20.9 s
+[I 2026-11-15 19:51:53,375] Trial 35 finished with value: 0.5660130846896966 and parameters: {'hidden_width': 256, 'n_layers': 2, 'dropout': 0.49985962093532643, 'learning_rate': 0.0008935249712333812, 'weight_decay': 0.003450438931416929}. Best is trial 35 with value: 0.5660130846896966.
+trial 37/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.082520
+trial 37/50 | fold 1/4 | MAE 0.5822 | 5.5 s
+trial 37/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.095516
+trial 37/50 | fold 2/4 | MAE 0.5495 | 10.0 s
+trial 37/50 | fold 3/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.111973
+trial 37/50 | fold 3/4 | MAE 0.5660 | 15.3 s
+trial 37/50 | fold 4/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.120464
+trial 37/50 | fold 4/4 | MAE 0.5885 | 20.9 s
+[I 2026-11-15 19:52:45,073] Trial 36 finished with value: 0.5715586229265608 and parameters: {'hidden_width': 256, 'n_layers': 2, 'dropout': 0.46209600330764883, 'learning_rate': 0.0006526279504860984, 'weight_decay': 0.008100098354896291}. Best is trial 35 with value: 0.5660130846896966.
+trial 38/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.059617
+trial 38/50 | fold 1/4 | MAE 0.5903 | 5.5 s
+trial 38/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.069169
+trial 38/50 | fold 2/4 | MAE 0.5387 | 10.0 s
+trial 38/50 | fold 3/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.085567
+trial 38/50 | fold 3/4 | MAE 0.5681 | 15.5 s
+trial 38/50 | fold 4/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.099347
+trial 38/50 | fold 4/4 | MAE 0.5928 | 20.9 s
+[I 2026-11-15 19:53:37,036] Trial 37 finished with value: 0.572478187742772 and parameters: {'hidden_width': 256, 'n_layers': 2, 'dropout': 0.4324707176598767, 'learning_rate': 0.001035213777068485, 'weight_decay': 0.0008166879241936444}. Best is trial 35 with value: 0.5660130846896966.
+trial 39/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.148510
+trial 39/50 | fold 1/4 | MAE 0.5962 | 4.0 s
+[I 2026-11-15 19:53:41,079] Trial 38 pruned. 
+trial 40/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.068665
+trial 40/50 | fold 1/4 | MAE 0.5771 | 5.4 s
+trial 40/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.079385
+trial 40/50 | fold 2/4 | MAE 0.5479 | 10.0 s
+trial 40/50 | fold 3/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.106298
+trial 40/50 | fold 3/4 | MAE 0.5740 | 15.4 s
+trial 40/50 | fold 4/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.112794
+trial 40/50 | fold 4/4 | MAE 0.5859 | 21.0 s
+[I 2026-11-15 19:54:32,890] Trial 39 finished with value: 0.5712203425196454 and parameters: {'hidden_width': 256, 'n_layers': 2, 'dropout': 0.4643453010303958, 'learning_rate': 0.0008696127171764556, 'weight_decay': 0.009137339838384525}. Best is trial 35 with value: 0.5660130846896966.
+trial 41/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.088759
+trial 41/50 | fold 1/4 | MAE 0.5859 | 5.4 s
+trial 41/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.094452
+trial 41/50 | fold 2/4 | MAE 0.5499 | 10.1 s
+trial 41/50 | fold 3/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.109497
+trial 41/50 | fold 3/4 | MAE 0.5645 | 15.5 s
+trial 41/50 | fold 4/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.115204
+trial 41/50 | fold 4/4 | MAE 0.5963 | 21.1 s
+[I 2026-11-15 19:55:25,069] Trial 40 finished with value: 0.5741350627334377 and parameters: {'hidden_width': 256, 'n_layers': 2, 'dropout': 0.3678934046419544, 'learning_rate': 0.0004173057195747707, 'weight_decay': 0.0007447422475353444}. Best is trial 35 with value: 0.5660130846896966.
+trial 42/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.063738
+trial 42/50 | fold 1/4 | MAE 0.5752 | 5.5 s
+trial 42/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.081893
+trial 42/50 | fold 2/4 | MAE 0.5535 | 10.1 s
+trial 42/50 | fold 3/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.105549
+trial 42/50 | fold 3/4 | MAE 0.5502 | 15.4 s
+trial 42/50 | fold 4/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.117228
+trial 42/50 | fold 4/4 | MAE 0.6029 | 20.8 s
+[I 2026-11-15 19:56:16,872] Trial 41 finished with value: 0.5704623941931479 and parameters: {'hidden_width': 256, 'n_layers': 2, 'dropout': 0.48281821244608664, 'learning_rate': 0.0011929381720500634, 'weight_decay': 0.003913859479166215}. Best is trial 35 with value: 0.5660130846896966.
+trial 43/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.136454
+trial 43/50 | fold 1/4 | MAE 0.5886 | 5.7 s
+[I 2026-11-15 19:56:22,561] Trial 42 pruned. 
+trial 44/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.055943
+trial 44/50 | fold 1/4 | MAE 0.5809 | 5.4 s
+trial 44/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.096665
+trial 44/50 | fold 2/4 | MAE 0.5710 | 10.1 s
+[I 2026-11-15 19:56:38,079] Trial 43 pruned. 
+trial 45/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.063691
+trial 45/50 | fold 1/4 | MAE 0.5879 | 5.6 s
+[I 2026-11-15 19:56:43,660] Trial 44 pruned. 
+trial 46/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.054306
+trial 46/50 | fold 1/4 | MAE 0.5875 | 5.6 s
+trial 46/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.099317
+trial 46/50 | fold 2/4 | MAE 0.5641 | 10.2 s
+[I 2026-11-15 19:56:59,401] Trial 45 pruned. 
+trial 47/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.151580
+trial 47/50 | fold 1/4 | MAE 0.5946 | 4.0 s
+[I 2026-11-15 19:57:03,391] Trial 46 pruned. 
+trial 48/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.180107
+trial 48/50 | fold 1/4 | MAE 0.5850 | 3.4 s
+trial 48/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.197507
+trial 48/50 | fold 2/4 | MAE 0.5604 | 6.4 s
+[I 2026-11-15 19:57:13,150] Trial 47 pruned. 
+trial 49/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.095907
+trial 49/50 | fold 1/4 | MAE 0.6078 | 7.2 s
+[I 2026-11-15 19:57:20,328] Trial 48 pruned. 
+trial 50/50 | fold 1/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.057742
+trial 50/50 | fold 1/4 | MAE 0.5863 | 5.5 s
+trial 50/50 | fold 2/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.061689
+trial 50/50 | fold 2/4 | MAE 0.5399 | 10.2 s
+trial 50/50 | fold 3/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.081617
+trial 50/50 | fold 3/4 | MAE 0.5646 | 15.3 s
+trial 50/50 | fold 4/4 | using cached data
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.085469
+trial 50/50 | fold 4/4 | MAE 0.5876 | 20.8 s
+[I 2026-11-15 19:58:12,141] Trial 49 finished with value: 0.5695886800934906 and parameters: {'hidden_width': 256, 'n_layers': 2, 'dropout': 0.38755648549132415, 'learning_rate': 0.0009125825099400101, 'weight_decay': 0.0017073799150217138}. Best is trial 35 with value: 0.5660130846896966.
+Mean validation MAE: 0.5660130846896966
+Best parameters: {'hidden_width': 256, 'n_layers': 2, 'dropout': 0.49985962093532643, 'learning_rate': 0.0008935249712333812, 'weight_decay': 0.003450438931416929}
+PyTorch severity regressor | device=cpu | epochs=50 | loss=0.187206
+   mean_absolute_error  constant_pdo_mean_absolute_error
+0              0.57968                          0.546128
+Saved results to: C:\Users\lucas\dev\crossings\results\severity_panel_20261115_233914\regression_mlp
+
+Done: C:\Users\lucas\dev\crossings\results\severity_panel_20261115_233914

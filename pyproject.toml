@@ -5,7 +5,7 @@ description = "FT-Transformer for grade crossing incident risk"
 readme = "README.md"
 requires-python = ">=3.11,<3.14"
 dependencies = [
-    "collab-sol",
+    "collab-sol[models]",
     "pyarrow",
     "torch",
     "rtdl-revisiting-models",

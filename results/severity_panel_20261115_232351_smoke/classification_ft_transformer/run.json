@@ -1,0 +1,61 @@
+{
+  "task": "conditional_severity_classification",
+  "model": "ft_transformer",
+  "dataset_path": "C:\\Users\\lucas\\dev\\crossings\\data\\final\\final_dataset_incidents.parquet",
+  "holdout_year": 2024,
+  "feature_count": 224,
+  "excluded_features": {
+    "latitude": "Near-unique crossing coordinate that can act like an ID.",
+    "longitude": "Near-unique crossing coordinate that can act like an ID.",
+    "latlongsourcecode": "Coordinate-provenance metadata and record-quality proxy.",
+    "B01001_E001": "ACS total population duplicated by B01003_E001.",
+    "B03002_E001": "ACS total population duplicated by B01003_E001."
+  },
+  "severity_classes": [
+    "property_damage_only",
+    "injury",
+    "fatal"
+  ],
+  "severity_weights": [
+    1.0,
+    2.0,
+    3.0
+  ],
+  "mean_validation_log_loss": 0.9242311797663574,
+  "validation_fold_scores": [
+    0.9300276258377993,
+    0.9046349444984988,
+    0.931250448144314,
+    0.9310117005848177
+  ],
+  "test_continuous_severity_mae": 0.6442778781059217,
+  "test_metrics": {
+    "multiclass_log_loss": 0.9318962582369774,
+    "macro_f1": 0.24842205549601049,
+    "ordinal_mae": 0.5461275626423691
+  },
+  "best_params": {
+    "n_blocks": 1,
+    "d_block": 64,
+    "attention_dropout": 0.1,
+    "ffn_dropout": 0.1,
+    "residual_dropout": 0.0,
+    "learning_rate": 0.0001,
+    "weight_decay": 1e-05
+  },
+  "final_params": {
+    "n_blocks": 1,
+    "d_block": 64,
+    "attention_dropout": 0.1,
+    "ffn_dropout": 0.1,
+    "residual_dropout": 0.0,
+    "learning_rate": 0.0001,
+    "weight_decay": 1e-05
+  },
+  "fixed_epochs": 2,
+  "n_trials": 1,
+  "smoke_run": true,
+  "seed": 42,
+  "python_version": "3.12.4",
+  "command": "C:\\Users\\lucas\\dev\\crossings\\collab-sol\\scripts\\train_severity_classification.py --model ft_transformer --dataset C:\\Users\\lucas\\dev\\crossings\\data\\final\\final_dataset_incidents.parquet --output-dir C:\\Users\\lucas\\dev\\crossings\\results\\severity_panel_20261115_232351_smoke\\classification_ft_transformer --trials 50 --max-epochs 50 --patience 5 --n-jobs -1 --xgboost-device cpu --seed 42 --batch-size 64 --smoke"
+}

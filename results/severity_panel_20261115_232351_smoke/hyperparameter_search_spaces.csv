@@ -1,0 +1,44 @@
+formulation,model,parameter,distribution,low,high,choices,step,log_scale
+classification,ft_transformer,n_blocks,int,1,3,,,False
+classification,ft_transformer,d_block,categorical,,,64 | 128 | 192,,False
+classification,ft_transformer,attention_dropout,float,0.0,0.5,,,False
+classification,ft_transformer,ffn_dropout,float,0.0,0.5,,,False
+classification,ft_transformer,residual_dropout,float,0.0,0.2,,,False
+classification,ft_transformer,learning_rate,float,1e-05,0.001,,,True
+classification,ft_transformer,weight_decay,float,1e-06,0.001,,,True
+classification,logistic_regression,C,float,0.001,1000.0,,,True
+classification,logistic_regression,class_weight,categorical,,,None | balanced,,False
+classification,mlp,hidden_width,categorical,,,64 | 128 | 256 | 512,,False
+classification,mlp,n_layers,int,1,4,,,False
+classification,mlp,dropout,float,0.0,0.5,,,False
+classification,mlp,learning_rate,float,5e-05,0.005,,,True
+classification,mlp,weight_decay,float,1e-08,0.01,,,True
+classification,xgboost,n_estimators,int,100,800,,100,False
+classification,xgboost,max_depth,int,2,8,,,False
+classification,xgboost,learning_rate,float,0.01,0.2,,,True
+classification,xgboost,min_child_weight,float,1.0,30.0,,,True
+classification,xgboost,subsample,float,0.6,1.0,,,False
+classification,xgboost,colsample_bytree,float,0.5,1.0,,,False
+classification,xgboost,reg_lambda,float,0.001,100.0,,,True
+classification,xgboost,reg_alpha,float,1e-05,10.0,,,True
+regression,ft_transformer,n_blocks,int,1,3,,,False
+regression,ft_transformer,d_block,categorical,,,64 | 128 | 192,,False
+regression,ft_transformer,attention_dropout,float,0.0,0.5,,,False
+regression,ft_transformer,ffn_dropout,float,0.0,0.5,,,False
+regression,ft_transformer,residual_dropout,float,0.0,0.2,,,False
+regression,ft_transformer,learning_rate,float,1e-05,0.001,,,True
+regression,ft_transformer,weight_decay,float,1e-06,0.001,,,True
+regression,mlp,hidden_width,categorical,,,64 | 128 | 256 | 512,,False
+regression,mlp,n_layers,int,1,4,,,False
+regression,mlp,dropout,float,0.0,0.5,,,False
+regression,mlp,learning_rate,float,5e-05,0.005,,,True
+regression,mlp,weight_decay,float,1e-08,0.01,,,True
+regression,ridge,alpha,float,0.0001,100.0,,,True
+regression,xgboost,n_estimators,int,100,800,,100,False
+regression,xgboost,max_depth,int,2,8,,,False
+regression,xgboost,learning_rate,float,0.01,0.2,,,True
+regression,xgboost,min_child_weight,float,1.0,30.0,,,True
+regression,xgboost,subsample,float,0.6,1.0,,,False
+regression,xgboost,colsample_bytree,float,0.5,1.0,,,False
+regression,xgboost,reg_lambda,float,0.001,100.0,,,True
+regression,xgboost,reg_alpha,float,1e-05,10.0,,,True

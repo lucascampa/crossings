@@ -1,0 +1,51 @@
+{
+  "task": "conditional_severity_classification",
+  "model": "logistic_regression",
+  "dataset_path": "C:\\Users\\lucas\\dev\\crossings\\data\\final\\final_dataset_incidents.parquet",
+  "holdout_year": 2024,
+  "feature_count": 224,
+  "excluded_features": {
+    "latitude": "Near-unique crossing coordinate that can act like an ID.",
+    "longitude": "Near-unique crossing coordinate that can act like an ID.",
+    "latlongsourcecode": "Coordinate-provenance metadata and record-quality proxy.",
+    "B01001_E001": "ACS total population duplicated by B01003_E001.",
+    "B03002_E001": "ACS total population duplicated by B01003_E001."
+  },
+  "severity_classes": [
+    "property_damage_only",
+    "injury",
+    "fatal"
+  ],
+  "severity_weights": [
+    1.0,
+    2.0,
+    3.0
+  ],
+  "mean_validation_log_loss": 0.9635023168240775,
+  "validation_fold_scores": [
+    0.8990306197567096,
+    0.8764741046256302,
+    1.1826182793847797,
+    0.8958862635291903
+  ],
+  "test_continuous_severity_mae": 0.6127226947292498,
+  "test_metrics": {
+    "multiclass_log_loss": 0.9032332980440303,
+    "macro_f1": 0.3085616080946634,
+    "ordinal_mae": 0.5392938496583144
+  },
+  "best_params": {
+    "C": 0.001017488883880302,
+    "class_weight": null
+  },
+  "final_params": {
+    "C": 0.001017488883880302,
+    "class_weight": null
+  },
+  "fixed_epochs": null,
+  "n_trials": 50,
+  "smoke_run": false,
+  "seed": 42,
+  "python_version": "3.12.4",
+  "command": "C:\\Users\\lucas\\dev\\crossings\\collab-sol\\scripts\\train_severity_classification.py --model logistic_regression --dataset C:\\Users\\lucas\\dev\\crossings\\data\\final\\final_dataset_incidents.parquet --output-dir C:\\Users\\lucas\\dev\\crossings\\results\\severity_panel_20261115_233914\\classification_logistic_regression --trials 50 --max-epochs 50 --patience 5 --n-jobs -1 --xgboost-device cpu --seed 42"
+}

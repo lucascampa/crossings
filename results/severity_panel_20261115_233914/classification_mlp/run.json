@@ -1,0 +1,57 @@
+{
+  "task": "conditional_severity_classification",
+  "model": "mlp",
+  "dataset_path": "C:\\Users\\lucas\\dev\\crossings\\data\\final\\final_dataset_incidents.parquet",
+  "holdout_year": 2024,
+  "feature_count": 224,
+  "excluded_features": {
+    "latitude": "Near-unique crossing coordinate that can act like an ID.",
+    "longitude": "Near-unique crossing coordinate that can act like an ID.",
+    "latlongsourcecode": "Coordinate-provenance metadata and record-quality proxy.",
+    "B01001_E001": "ACS total population duplicated by B01003_E001.",
+    "B03002_E001": "ACS total population duplicated by B01003_E001."
+  },
+  "severity_classes": [
+    "property_damage_only",
+    "injury",
+    "fatal"
+  ],
+  "severity_weights": [
+    1.0,
+    2.0,
+    3.0
+  ],
+  "mean_validation_log_loss": 0.9125816432911333,
+  "validation_fold_scores": [
+    0.8994586200838017,
+    0.8655665199097915,
+    0.9936971593063129,
+    0.8916042738646268
+  ],
+  "test_continuous_severity_mae": 0.6060006744954527,
+  "test_metrics": {
+    "multiclass_log_loss": 0.927570489542248,
+    "macro_f1": 0.3227634127136552,
+    "ordinal_mae": 0.534738041002278
+  },
+  "best_params": {
+    "hidden_width": 128,
+    "n_layers": 2,
+    "dropout": 0.43748463389971187,
+    "learning_rate": 6.845165920128114e-05,
+    "weight_decay": 5.467068494174871e-05
+  },
+  "final_params": {
+    "hidden_width": 128,
+    "n_layers": 2,
+    "dropout": 0.43748463389971187,
+    "learning_rate": 6.845165920128114e-05,
+    "weight_decay": 5.467068494174871e-05
+  },
+  "fixed_epochs": null,
+  "n_trials": 50,
+  "smoke_run": false,
+  "seed": 42,
+  "python_version": "3.12.4",
+  "command": "C:\\Users\\lucas\\dev\\crossings\\collab-sol\\scripts\\train_severity_classification.py --model mlp --dataset C:\\Users\\lucas\\dev\\crossings\\data\\final\\final_dataset_incidents.parquet --output-dir C:\\Users\\lucas\\dev\\crossings\\results\\severity_panel_20261115_233914\\classification_mlp --trials 50 --max-epochs 50 --patience 5 --n-jobs -1 --xgboost-device cpu --seed 42 --batch-size 256"
+}

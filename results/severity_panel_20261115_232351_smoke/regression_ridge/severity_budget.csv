@@ -1,0 +1,4 @@
+severity_review_budget_incidents,fatal_incidents_captured,fatal_precision,fatal_recall,injury_or_fatal_incidents_captured,injury_or_fatal_precision,injury_or_fatal_recall,mean_observed_severity,severity_lift_over_all_incidents,severity_score_cutoff
+10,4,0.4,0.125,7,0.7,0.06930693069306931,2.1,1.351206434316354,2.4589016437530518
+50,12,0.24,0.375,27,0.54,0.26732673267326734,1.78,1.145308310991957,1.8651002645492554
+100,18,0.18,0.5625,51,0.51,0.504950495049505,1.69,1.0873994638069704,1.6019209623336792

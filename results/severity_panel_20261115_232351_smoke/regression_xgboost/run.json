@@ -1,0 +1,60 @@
+{
+  "task": "conditional_severity_regression",
+  "model": "xgboost",
+  "dataset_path": "C:\\Users\\lucas\\dev\\crossings\\data\\final\\final_dataset_incidents.parquet",
+  "holdout_year": 2024,
+  "feature_count": 224,
+  "excluded_features": {
+    "latitude": "Near-unique crossing coordinate that can act like an ID.",
+    "longitude": "Near-unique crossing coordinate that can act like an ID.",
+    "latlongsourcecode": "Coordinate-provenance metadata and record-quality proxy.",
+    "B01001_E001": "ACS total population duplicated by B01003_E001.",
+    "B03002_E001": "ACS total population duplicated by B01003_E001."
+  },
+  "target_definition": {
+    "property_damage_only": 1.0,
+    "injury": 2.0,
+    "fatal": 3.0
+  },
+  "score_range": [
+    1.0,
+    3.0
+  ],
+  "mean_validation_mae": 0.6008617115517457,
+  "validation_fold_scores": [
+    0.5965082128842671,
+    0.5911503940820694,
+    0.628900886575381,
+    0.5868873526652654
+  ],
+  "test_metrics": {
+    "mean_absolute_error": 0.6025453438361486,
+    "constant_pdo_mean_absolute_error": 0.5541666666666667
+  },
+  "best_params": {
+    "n_estimators": 30,
+    "max_depth": 3,
+    "learning_rate": 0.1,
+    "min_child_weight": 1.0,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "reg_lambda": 1.0,
+    "reg_alpha": 0.0
+  },
+  "final_params": {
+    "n_estimators": 18,
+    "max_depth": 3,
+    "learning_rate": 0.1,
+    "min_child_weight": 1.0,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "reg_lambda": 1.0,
+    "reg_alpha": 0.0
+  },
+  "fixed_epochs": null,
+  "n_trials": 1,
+  "smoke_run": true,
+  "seed": 42,
+  "python_version": "3.12.4",
+  "command": "C:\\Users\\lucas\\dev\\crossings\\collab-sol\\scripts\\train_severity_regression.py --model xgboost --dataset C:\\Users\\lucas\\dev\\crossings\\data\\final\\final_dataset_incidents.parquet --output-dir C:\\Users\\lucas\\dev\\crossings\\results\\severity_panel_20261115_232351_smoke\\regression_xgboost --trials 50 --max-epochs 50 --patience 5 --n-jobs -1 --xgboost-device cpu --seed 42 --smoke"
+}

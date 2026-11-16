@@ -3,3 +3,4 @@ final_dataset.parquet
 __pycache__/
 *.pt
 collab-sol/
+data/
