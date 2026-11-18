@@ -10,6 +10,7 @@ dependencies = [
     "torch",
     "rtdl-revisiting-models",
     "ipykernel",
+    "shap>=0.51.0",
 ]
 
 [tool.uv]

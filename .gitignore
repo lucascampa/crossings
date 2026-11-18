@@ -4,3 +4,5 @@ __pycache__/
 *.pt
 collab-sol/
 data/
+results/google drive/
+*.joblib

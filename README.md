@@ -131,6 +131,21 @@ uv run python scripts/train_severity_ft_transformer.py --smoke    # CPU check on
 
 Flags are the same as the likelihood script, except there is no `pos_weight` and `--batch-size` defaults to 256 (the cohort is ~1% of the rows). Output goes to `results/severity_ft_transformer_<UTC timestamp>/`. The sample has only 510 incident rows (90 fatal), so smoke-run numbers mean nothing.
 
+## Feature interpretation (SHAP)
+
+`scripts/shap_xgboost.py` draws SHAP beeswarm plots for the team's final XGBoost models (likelihood and severity regression) from their saved `model.joblib` and `preprocessor.joblib`. No retraining. Run folders live on the team Drive (copied to `results/google drive/`, which is gitignored).
+
+```sh
+uv run python scripts/shap_xgboost.py --task likelihood --run-dir "results/google drive/likelihood_20261031/xgboost"
+uv run python scripts/shap_xgboost.py --task severity --run-dir "results/google drive/severity_comparison_20261115_50trials/regression_xgboost"
+```
+
+- **Rows explained:** likelihood explains 2024 rows (up to `--max-rows`, default 5000); severity explains incident rows only. Defaults to the 50k sample; pass `--dataset final_dataset.parquet` for the full file.
+- **Units:** SHAP values are in log-odds of an incident (likelihood) and severity points, 1 = property damage only to 3 = fatal (severity).
+- **Output:** `results/shap_<task>_xgboost/` with `beeswarm.png`, `importance_bar.png` (one-hot levels and missing flags summed back to the original column) and two importance CSVs.
+- **Loading workaround:** the GPU-trained pickles fail to unpickle on CPU ("input stream corrupted") even with the same xgboost version, so the script loads only the model section (`load_xgb`). Not tested on other machines.
+- **Caveat:** the committed plots come from the 50k sample, so treat them as indicative. The severity model barely beats a constant prediction, so its plot is descriptive.
+
 ## Notebooks
 
 - `notebooks/utils_demo_local.ipynb`: the team's logistic regression demo adapted to local paths on the 50k sample. It shows the `collab-sol` workflow that `scripts/train_ft_transformer.py` follows.
