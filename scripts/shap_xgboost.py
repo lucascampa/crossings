@@ -1,14 +1,15 @@
 """SHAP beeswarm plots for the team's final XGBoost models (no retraining).
 
 Loads `model.joblib` + `preprocessor.joblib` from a finished run folder, pushes
-rows through the saved preprocessor, and explains the booster with TreeExplainer.
+rows through the saved preprocessor, and gets exact tree SHAP values from XGBoost
+(`pred_contribs`) on the SPARSE matrix the models were trained on (see comment below).
 
 Likelihood model: explains the 2024 rows (the held-out test year).
 Severity model:   explains incident rows only (what it was trained on).
 SHAP values are in the model's raw output: log-odds for likelihood, severity
 points (1 = PDO, 2 = injury, 3 = fatal) for the regression.
 
-Example (sample, local):
+Example (50k sample by default):
   uv run python scripts/shap_xgboost.py --task likelihood \
       --run-dir "results/google drive/likelihood_20261031/xgboost"
   uv run python scripts/shap_xgboost.py --task severity \
@@ -95,19 +96,30 @@ def main() -> None:
         frame[c] = frame[c].astype("category")
     print(f"Explaining {len(frame):,} rows ({args.task})")
 
-    X = preprocessor.transform(frame[cols])
-    X = X.toarray() if hasattr(X, "toarray") else np.asarray(X)
+    # Keep the matrix SPARSE for the model. The team trained on this sparse output,
+    # and XGBoost treats entries absent from a sparse matrix as *missing* (not 0).
+    # A dense copy changes how every split routes zeros: on the full 2024 data it
+    # drops average precision from 0.0957 to 0.0397, i.e. a different model.
+    X_sparse = preprocessor.transform(frame[cols])
+    X = X_sparse.toarray() if hasattr(X_sparse, "toarray") else np.asarray(X_sparse)  # colours only
     names = list(preprocessor.get_feature_names_out())
     # ColumnTransformer prefixes: "numeric__x", "categorical__col_level"
     names = [re.sub(r"^(numeric|categorical)__", "", n) for n in names]
     assert X.shape[1] == len(names) == model.get_booster().num_features(), (
         X.shape, len(names), model.get_booster().num_features())
 
-    explainer = shap.TreeExplainer(model)
-    sv = explainer.shap_values(X)
+    # Exact tree SHAP from XGBoost itself (last column is the bias term).
+    import xgboost as xgb
+
+    booster = model.get_booster()
+    dmatrix = xgb.DMatrix(X_sparse)
+    contribs = booster.predict(dmatrix, pred_contribs=True)
+    margin = booster.predict(dmatrix, output_margin=True)
+    assert np.allclose(contribs.sum(axis=1), margin, atol=1e-3), "SHAP values do not sum to the model output"
+    sv, base = contribs[:, :-1], contribs[:, -1]
 
     unit = "log-odds of incident" if args.task == "likelihood" else "severity points (1=PDO, 3=fatal)"
-    explanation = shap.Explanation(values=sv, base_values=explainer.expected_value,
+    explanation = shap.Explanation(values=sv, base_values=base,
                                    data=X, feature_names=names)
 
     plt.figure()
@@ -141,8 +153,7 @@ def main() -> None:
     plt.barh(top.index, top.values)
     plt.xlabel(f"mean |SHAP| ({unit}), summed over encoded columns")
     plt.title(f"Top original features: {args.task} XGBoost")
-    plt.tight_layout()
-    plt.savefig(out_dir / "importance_bar.png", dpi=160)
+    plt.savefig(out_dir / "importance_bar.png", dpi=160, bbox_inches="tight")
     plt.close()
     print(grouped.head(15).to_string())
     print("Wrote", out_dir)

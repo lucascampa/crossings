@@ -143,8 +143,9 @@ uv run python scripts/shap_xgboost.py --task severity --run-dir "results/google 
 - **Rows explained:** likelihood explains 2024 rows (up to `--max-rows`, default 5000); severity explains incident rows only. Defaults to the 50k sample; pass `--dataset final_dataset.parquet` for the full file.
 - **Units:** SHAP values are in log-odds of an incident (likelihood) and severity points, 1 = property damage only to 3 = fatal (severity).
 - **Output:** `results/shap_<task>_xgboost/` with `beeswarm.png`, `importance_bar.png` (one-hot levels and missing flags summed back to the original column) and two importance CSVs.
+- **Sparse input:** the script keeps the preprocessed matrix sparse and uses XGBoost's own SHAP values. A dense copy gives a different model (XGBoost treats sparse zeros as missing), so don't densify it.
 - **Loading workaround:** the GPU-trained pickles fail to unpickle on CPU ("input stream corrupted") even with the same xgboost version, so the script loads only the model section (`load_xgb`). Not tested on other machines.
-- **Plots:** `results/shap_*_xgboost_full/` are from the full dataset (the ones to use); `results/shap_*_xgboost/` are an earlier pass on the 50k sample. The severity model barely beats a constant prediction, so its plot is descriptive.
+- **Plots:** `results/shap_*_xgboost_full/`, from the full dataset. The severity model barely beats a constant prediction, so its plot is descriptive.
 - **Findings and how to read the plots:** [`docs/shap_findings.md`](docs/shap_findings.md).
 
 ## Notebooks

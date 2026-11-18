@@ -19,7 +19,6 @@ One row per folder or file. Run folders are never overwritten; new runs get a ne
 | `*.log` (`panel_smoke_...`, `severity_panel_..._233914.log`) | Console logs of the two panel runs above. | | |
 | `logistic_demo/` | Output of `notebooks/utils_demo_local.ipynb` (team logistic regression demo on the sample). | notebook | Demo |
 | `shap_likelihood_xgboost_full/`, `shap_severity_xgboost_full/` | SHAP beeswarm and importance plots for the team's final XGBoost models, on the **full data**: 20,000 of the 163,706 rows from 2024 (likelihood) and all 10,206 incident rows (severity). Findings in `docs/shap_findings.md`. | `scripts/shap_xgboost.py --dataset data/drive/final_dataset.parquet --max-rows 20000` | Real |
-| `shap_likelihood_xgboost/`, `shap_severity_xgboost/` | The same plots from an earlier pass on the 50k **sample** (5,000 rows from 2024; 510 incident rows). Same rankings; kept for reference. | `scripts/shap_xgboost.py` | Real, sample-based |
 
 ## Not in git (`google drive/`, gitignored, copied by hand from the team Drive)
 
