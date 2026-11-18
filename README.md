@@ -144,7 +144,8 @@ uv run python scripts/shap_xgboost.py --task severity --run-dir "results/google 
 - **Units:** SHAP values are in log-odds of an incident (likelihood) and severity points, 1 = property damage only to 3 = fatal (severity).
 - **Output:** `results/shap_<task>_xgboost/` with `beeswarm.png`, `importance_bar.png` (one-hot levels and missing flags summed back to the original column) and two importance CSVs.
 - **Loading workaround:** the GPU-trained pickles fail to unpickle on CPU ("input stream corrupted") even with the same xgboost version, so the script loads only the model section (`load_xgb`). Not tested on other machines.
-- **Caveat:** the committed plots come from the 50k sample, so treat them as indicative. The severity model barely beats a constant prediction, so its plot is descriptive.
+- **Plots:** `results/shap_*_xgboost_full/` are from the full dataset (the ones to use); `results/shap_*_xgboost/` are an earlier pass on the 50k sample. The severity model barely beats a constant prediction, so its plot is descriptive.
+- **Findings and how to read the plots:** [`docs/shap_findings.md`](docs/shap_findings.md).
 
 ## Notebooks
 
@@ -153,4 +154,4 @@ uv run python scripts/shap_xgboost.py --task severity --run-dir "results/google 
 
 ## Results
 
-Run outputs go in `results/<run_name>/`. Don't overwrite earlier runs.
+Run outputs go in `results/<run_name>/`. Don't overwrite earlier runs. See [`results/README.md`](results/README.md) for an index of every folder, which are smoke runs and which came from the full data.
